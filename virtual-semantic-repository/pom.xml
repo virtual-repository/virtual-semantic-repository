@@ -1,18 +1,41 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.virtualrepository</groupId>
-  <artifactId>virtual-semantic-repository</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <name>Virtual Semantic Repository</name>
-  <description>A Virtual Repository Plugin for the Semantic Repository	</description>
-  
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.virtualrepository</groupId>
+	<artifactId>virtual-semantic-repository</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>Virtual Semantic Repository</name>
+	<description>A Virtual Repository Plugin for the Semantic Repository	</description>
+
 	<repositories>
-	    <repository>
-          <snapshots />
-          <id>fao-snapshots</id>
-          <name>libs-snapshot</name>
-          <url>http://artifactory.fao.org/artifactory/libs-snapshot</url>
-        </repository>
+		<repository>
+			<snapshots />
+			<id>fao-snapshots</id>
+			<name>libs-snapshot</name>
+			<url>http://artifactory.fao.org/artifactory/libs-snapshot</url>
+		</repository>
+		<repository>
+			<id>gcube-snapshots</id>
+			<name>gCube Snapshots</name>
+			<url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>gcube-externals</id>
+			<name>gCube Externals</name>
+			<url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-externals</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
 
 
@@ -24,6 +47,17 @@
 			<version>[1.0.0-SNAPSHOT,2.0.0-SNAPSHOT)</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.hp.hpl.jena</groupId>
+			<artifactId>jena</artifactId>
+			<version>2.6.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.gcube.data.publishing</groupId>
+			<artifactId>sdmx-registry-client</artifactId>
+			<version>[1.1.0-SNAPSHOT,1.2.0)</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -81,5 +115,5 @@
 			</distributionManagement>
 		</profile>
 	</profiles>
-	
+
 </project>
