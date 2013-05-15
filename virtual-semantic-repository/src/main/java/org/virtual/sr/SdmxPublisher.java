@@ -19,9 +19,16 @@ import org.xml.sax.InputSource;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
+@SuppressWarnings("unused")
 public class SdmxPublisher implements Publisher<SdmxCodelist,CodelistBean> {
 
+	private final RepositoryConfiguration configuration;
+	
 	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	
+	public SdmxPublisher(RepositoryConfiguration configuration) {
+		this.configuration=configuration;
+	}
 	
 	@Override
 	public Type<SdmxCodelist> type() {
@@ -41,11 +48,10 @@ public class SdmxPublisher implements Publisher<SdmxCodelist,CodelistBean> {
 		
 		RDFConverter converter = new RDFConverter();
 		
-		@SuppressWarnings("unused")
 		Model rdf = converter.convert(xml);
 		
 		
-		//TODO send RDF to endpoint
+		//TODO send RDF to endpoint in configuration
 	}
 
 	
