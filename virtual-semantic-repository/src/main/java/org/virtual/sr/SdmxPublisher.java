@@ -37,7 +37,7 @@ public class SdmxPublisher implements Publisher<SdmxCodelist,CodelistBean> {
 	public void publish(SdmxCodelist asset, CodelistBean content) throws Exception {
 
 		//convert content into XML
-		Document xml = factory.newDocumentBuilder().parse(toXML(content));
+		Document xml = factory.newDocumentBuilder().parse(xmlOf(content));
 		
 		RDFConverter converter = new RDFConverter();
 		
@@ -51,7 +51,7 @@ public class SdmxPublisher implements Publisher<SdmxCodelist,CodelistBean> {
 	
 	//helpers
 	
-	InputSource toXML(CodelistBean bean) {
+	InputSource xmlOf(CodelistBean bean) {
 
 		SdmxBeans beans = new SdmxBeansImpl();
 		beans.addCodelist(bean);
