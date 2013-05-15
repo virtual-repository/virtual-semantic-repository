@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import javax.xml.namespace.QName;
-
 import org.virtualrepository.spi.Browser;
 import org.virtualrepository.spi.Importer;
 import org.virtualrepository.spi.Lifecycle;
@@ -16,8 +14,6 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 
 	private static final String CONFIGURATION_FILE = "sr.properties";
 
-	public static QName name = new QName("semantic-repository");
-	
 	private final RepositoryBrowser browser = new RepositoryBrowser();
 	private final List<SdmxPublisher> publishers = new ArrayList<SdmxPublisher>();
 	private final List<SdmxImporter> importers = new ArrayList<SdmxImporter>();
