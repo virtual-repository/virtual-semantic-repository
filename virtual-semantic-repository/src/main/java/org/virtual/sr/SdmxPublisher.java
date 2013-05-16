@@ -3,7 +3,8 @@ package org.virtual.sr;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
-import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
 
 import org.sdmxsource.sdmx.api.constants.STRUCTURE_OUTPUT_FORMAT;
 import org.sdmxsource.sdmx.api.manager.output.StructureWritingManager;
@@ -14,8 +15,6 @@ import org.sdmxsource.sdmx.util.beans.container.SdmxBeansImpl;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Publisher;
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
@@ -23,8 +22,6 @@ import com.hp.hpl.jena.rdf.model.Model;
 public class SdmxPublisher implements Publisher<SdmxCodelist,CodelistBean> {
 
 	private final RepositoryConfiguration configuration;
-	
-	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 	
 	public SdmxPublisher(RepositoryConfiguration configuration) {
 		this.configuration=configuration;
@@ -43,12 +40,19 @@ public class SdmxPublisher implements Publisher<SdmxCodelist,CodelistBean> {
 	@Override
 	public void publish(SdmxCodelist asset, CodelistBean content) throws Exception {
 
-		//convert content into XML
-		Document xml = factory.newDocumentBuilder().parse(xmlOf(content));
 		
-		RDFConverter converter = new RDFConverter();
+		Xml2Rdf converter = new Xml2Rdf();
 		
-		Model rdf = converter.convert(xml);
+		Source source = null;
+		
+		try {
+			source = xmlOf(content);
+		}
+		catch(Exception e) {
+			throw new Exception("cannot serialise SDMX codelist "+content.getId()+" to XML (see cause)",e);
+		}
+		
+		Model rdf = converter.triplify(source);
 		
 		
 		//TODO send RDF to endpoint in configuration
@@ -57,7 +61,7 @@ public class SdmxPublisher implements Publisher<SdmxCodelist,CodelistBean> {
 	
 	//helpers
 	
-	InputSource xmlOf(CodelistBean bean) {
+	Source xmlOf(CodelistBean bean) {
 
 		SdmxBeans beans = new SdmxBeansImpl();
 		beans.addCodelist(bean);
@@ -69,6 +73,6 @@ public class SdmxPublisher implements Publisher<SdmxCodelist,CodelistBean> {
 		StructureWritingManager manager = new StructureWritingManagerImpl();
 		manager.writeStructures(beans,format, stream);
 		
-		return new InputSource(new ByteArrayInputStream(stream.toByteArray()));
+		return new StreamSource(new ByteArrayInputStream(stream.toByteArray()));
 	}
 }

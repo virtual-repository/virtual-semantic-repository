@@ -7,6 +7,11 @@
 	<name>Virtual Semantic Repository</name>
 	<description>A Virtual Repository Plugin for the Semantic Repository	</description>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+
 	<repositories>
 		<repository>
 			<snapshots />
