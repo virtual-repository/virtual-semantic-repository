@@ -13,12 +13,12 @@
 
 
 	<repositories>
-<!-- 		<repository>
+		<repository>
 			<snapshots />
 			<id>fao-snapshots</id>
 			<name>libs-snapshot</name>
 			<url>http://artifactory.fao.org/artifactory/libs-snapshot</url>
-		</repository> -->
+		</repository>
 		<repository>
 			<id>gcube-snapshots</id>
 			<name>gCube Snapshots</name>

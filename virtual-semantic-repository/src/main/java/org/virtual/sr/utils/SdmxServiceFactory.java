@@ -28,7 +28,7 @@ public class SdmxServiceFactory {
 	//upon first access to this factory, Spring is configured programmatically
 	static {
 		
-		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("/sdmxsource-context.xml");
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("/sdmxsource-sr-config.xml");
 		
 		//fetch singleton instance of this factory
 		instance=ctx.getBean(SdmxServiceFactory.class);
@@ -42,9 +42,6 @@ public class SdmxServiceFactory {
 	
 	@Autowired
 	StructureWritingManager writer; 
-	
-	//add more services if and when needed...
-	
 	
 	//factory methods for generic clients and CDI clients
 	
