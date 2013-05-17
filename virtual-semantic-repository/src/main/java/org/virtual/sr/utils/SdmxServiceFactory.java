@@ -9,13 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 
  * A factory of SDMX services.
  * <p>
- * This is a utility class that:
- * 
- * <ul>
- * 	<li> bootstraps the Spring container required by MetadataTechnology SdmxSource, without any XML configuration
- *  <li> makes available SdmxSource services from the Spring container, to DI-agnostic clients as well as CDI-enabled clients 
- * </ul>
- *  
+ * This is a utility class that bootstraps the Spring container required by MetadataTechnology's SdmxSource.  
  *  
  * @author Fabio Simeoni
  *

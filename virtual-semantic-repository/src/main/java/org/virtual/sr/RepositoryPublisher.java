@@ -13,14 +13,18 @@ import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.sdmx.structureparser.manager.impl.StructureWritingManagerImpl;
 import org.sdmxsource.sdmx.util.beans.container.SdmxBeansImpl;
 import org.virtualrepository.Asset;
-import org.virtualrepository.AssetType;
 import org.virtualrepository.impl.Type;
-import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Publisher;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
-@SuppressWarnings("unused")
+/**
+ * A {@link Publisher} for the Semantic Repository that works with RDF models of arbitrary asset types.
+ * 
+ * @author Fabio Simeoni
+ *
+ * @param <A> the type of Assets published by this publisher
+ */
 public class RepositoryPublisher<A extends Asset> implements Publisher<A,Model> {
 
 	private final RepositoryConfiguration configuration;

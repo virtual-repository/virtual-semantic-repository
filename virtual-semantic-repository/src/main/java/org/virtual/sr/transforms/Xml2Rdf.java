@@ -1,4 +1,4 @@
-package org.virtual.sr;
+package org.virtual.sr.transforms;
 
 import static javax.xml.stream.XMLStreamConstants.*;
 
@@ -14,6 +14,12 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
 
+/**
+ * Converts XML data into RDF data.
+ * 
+ * @author Fabio Simeoni
+ *
+ */
 public class Xml2Rdf {
 
 	private static final String pseudoNS = "s:r/";
@@ -27,6 +33,12 @@ public class Xml2Rdf {
 		factory.setProperty(XMLInputFactory.IS_COALESCING, true);
 	}
 	
+	/**
+	 * Converts XML data into RDF data.
+	 * @param xml the XML data
+	 * @return the RDF conversion
+	 * @throws Exception if the data cannot not be converted
+	 */
 	public Model triplify(Source xml) throws Exception {
 		
 		try {

@@ -11,12 +11,21 @@ import org.sdmxsource.sdmx.api.manager.output.StructureWritingManager;
 import org.sdmxsource.sdmx.api.model.beans.SdmxBeans;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.sdmx.util.beans.container.SdmxBeansImpl;
+import org.virtual.sr.transforms.Xml2Rdf;
 import org.virtual.sr.utils.SdmxServiceFactory;
+import org.virtualrepository.RepositoryService;
 import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Transform;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
+/**
+ * Transforms {@link SdmxCodelist}s into RDF.
+ * <p>
+ * Used to adapt {@link RepositoryService} to 
+ * @author Fabio Simeoni
+ *
+ */
 public class SdmxCodelistTransform implements Transform<SdmxCodelist,CodelistBean,Model> {
 
 	@Override
@@ -30,7 +39,7 @@ public class SdmxCodelistTransform implements Transform<SdmxCodelist,CodelistBea
 			source = xmlOf(content);
 		}
 		catch(Exception e) {
-			throw new Exception("cannot transform SDMX codelist "+content.getId()+" to XML (see cause)",e);
+			throw new Exception("cannot transform "+asset.type()+" "+content.getId()+" to XML (see cause)",e);
 		}
 		
 		return converter.triplify(source);

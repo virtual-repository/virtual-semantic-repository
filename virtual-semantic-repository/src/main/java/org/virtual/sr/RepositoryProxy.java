@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import org.virtual.sr.transforms.Asset2Rdf;
+import org.virtual.sr.transforms.Sdmx2Xml;
+import org.virtual.sr.transforms.XmlTransform;
 import org.virtualrepository.Asset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.sdmx.SdmxCodelist;
@@ -14,12 +17,18 @@ import org.virtualrepository.spi.Importer;
 import org.virtualrepository.spi.Lifecycle;
 import org.virtualrepository.spi.Publisher;
 import org.virtualrepository.spi.ServiceProxy;
-import org.virtualrepository.spi.Transform;
 
-import com.hp.hpl.jena.rdf.model.Model;
-
+/**
+ * The {@link ServiceProxy} for the Semantic Repository.
+ * 
+ * @author Fabio Simeoni
+ *
+ */
 public class RepositoryProxy implements ServiceProxy, Lifecycle {
 
+	/**
+	 * The name of the configuration file used by this proxy.
+	 */
 	private static final String CONFIGURATION_FILE = "sr.properties";
 
 	private final RepositoryBrowser browser = new RepositoryBrowser();
@@ -49,7 +58,7 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 		
 		
 		
-		publishers.add(publisherFor(SdmxCodelist.type,new SdmxCodelistTransform(),configuration));
+		publishers.add(publisherFor(SdmxCodelist.type,new Sdmx2Xml(),configuration));
 		
 		//importers.add(new SdmxImporter(configuration));
 		
@@ -72,9 +81,9 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 	}
 
 	//helper
-	private <A extends Asset,API> Publisher<A,API> publisherFor(Type<A> type, Transform<A,API,Model> t, RepositoryConfiguration configuration) {
+	private <A extends Asset,API> Publisher<A,API> publisherFor(Type<A> type, XmlTransform<API> transform, RepositoryConfiguration configuration) {
 		RepositoryPublisher<A> p = new RepositoryPublisher<A>(type, configuration);
-		return adapt(p,t);
+		return adapt(p,new Asset2Rdf<A,API>(transform));
 	}
 	
 }
