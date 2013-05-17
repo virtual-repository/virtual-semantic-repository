@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>IDREF124</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2013-05-14T09:48:33.367Z</mes:Prepared>
+    <mes:Sender id="unknown"/>
+    <mes:Receiver id="unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:Codelists>
+      <str:Codelist id="cotrix-testlist" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:cotrix-testlist(1.0)" agencyID="SDMX" version="1.0">
+        <com:Name xml:lang="en">cotrix-testlist</com:Name>
+        <str:Code id="code1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:cotrix-testlist(1.0).code1">
+          <com:Name xml:lang="en">code1</com:Name>
+        </str:Code>
+        <str:Code id="code2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:cotrix-testlist(1.0).code2">
+          <com:Annotations>
+            <com:Annotation>
+              <com:AnnotationTitle>attr1</com:AnnotationTitle>
+              <com:AnnotationText xml:lang="en">value1</com:AnnotationText>
+            </com:Annotation>
+            <com:Annotation>
+              <com:AnnotationTitle>attr3</com:AnnotationTitle>
+              <com:AnnotationText xml:lang="en">value3</com:AnnotationText>
+            </com:Annotation>
+          </com:Annotations>
+          <com:Name xml:lang="en">code2</com:Name>
+          <com:Description xml:lang="fr">value2</com:Description>
+          <com:Description xml:lang="sp">value4</com:Description>
+        </str:Code>
+      </str:Codelist>
+    </str:Codelists>
+  </mes:Structures>
+</mes:Structure>

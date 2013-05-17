@@ -16,6 +16,8 @@ import com.hp.hpl.jena.rdf.model.Resource;
 
 public class Xml2Rdf {
 
+	private static final String pseudoNS = "s:r/";
+
 	static XMLInputFactory factory = XMLInputFactory.newInstance(); 
 	
 	private XMLStreamReader reader;
@@ -33,16 +35,24 @@ public class Xml2Rdf {
 			
 			model = ModelFactory.createDefaultModel();
 			
-			reader.nextTag(); //move to root
-			
-			mapComplex(null);
+			mapRoot();
 			
 		}
 		catch(Exception e) {
 			throw new Exception("cannot triplify xml source (see cause) ",e);
 		}
 		
-		return model; //TODO
+		return model;
+	}
+	
+	
+	//helpers
+	
+	private void mapRoot() throws Exception {
+		
+		reader.nextTag(); //move to root
+		
+		mapComplex(null);
 	}
 	
 	private URI mapComplex(URI parentUri) throws Exception {
@@ -93,25 +103,25 @@ public class Xml2Rdf {
 	}
 	
 	void emit(URI source,QName predicate,String literal) {
-		System.out.println(source+"->"+predicate+"->"+literal);
+		//System.out.println(source+"->"+predicate+"->"+literal);
 		Resource s = model.createResource(source.toString());
-		Property p = model.createProperty(predicate.getNamespaceURI(),predicate.getLocalPart());
+		Property p = model.createProperty(pseudoNS,predicate.getLocalPart());
 		model.add(s,p,literal);
 	}
 	
 	void emit(URI source,QName predicate,URI target) {
-		System.out.println(source+"->"+predicate+"->"+target);
+		//System.out.println(source+"->"+predicate+"->"+target);
 		Resource s = model.createResource(source.toString());
-		Property p = model.createProperty(predicate.getNamespaceURI(),predicate.getLocalPart());
+		Property p = model.createProperty(pseudoNS,predicate.getLocalPart());
 		Resource o = model.createResource(target.toString());
 		model.add(s, p, o);
 	}
 	
 	URI mint(QName name) throws Exception {
-		return URI.create(name.getNamespaceURI()+"/"+name.getLocalPart());
+		return URI.create(pseudoNS+name.getLocalPart());
 	}
 	
-	
+//	
 //	public static void main(String[] args) throws Exception {
 //		
 //		String xml = "<t:root xmlns:t='http://acme.org/' t:ra='r'><t:c1>text</t:c1><t:c2 t:attr='a'/><t:c3><t:c4>text2</t:c4></t:c3></t:root>";

@@ -10,36 +10,17 @@ import org.sdmxsource.sdmx.api.constants.STRUCTURE_OUTPUT_FORMAT;
 import org.sdmxsource.sdmx.api.manager.output.StructureWritingManager;
 import org.sdmxsource.sdmx.api.model.beans.SdmxBeans;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
-import org.sdmxsource.sdmx.structureparser.manager.impl.StructureWritingManagerImpl;
 import org.sdmxsource.sdmx.util.beans.container.SdmxBeansImpl;
-import org.virtualrepository.impl.Type;
+import org.virtual.sr.utils.SdmxServiceFactory;
 import org.virtualrepository.sdmx.SdmxCodelist;
-import org.virtualrepository.spi.Publisher;
+import org.virtualrepository.spi.Transform;
 
 import com.hp.hpl.jena.rdf.model.Model;
 
-@SuppressWarnings("unused")
-public class SdmxPublisher implements Publisher<SdmxCodelist,CodelistBean> {
-
-	private final RepositoryConfiguration configuration;
-	
-	public SdmxPublisher(RepositoryConfiguration configuration) {
-		this.configuration=configuration;
-	}
-	
-	@Override
-	public Type<SdmxCodelist> type() {
-		return SdmxCodelist.type;
-	}
+public class SdmxCodelistTransform implements Transform<SdmxCodelist,CodelistBean,Model> {
 
 	@Override
-	public Class<CodelistBean> api() {
-		return CodelistBean.class;
-	}
-
-	@Override
-	public void publish(SdmxCodelist asset, CodelistBean content) throws Exception {
-
+	public Model apply(SdmxCodelist asset, CodelistBean content) throws Exception {
 		
 		Xml2Rdf converter = new Xml2Rdf();
 		
@@ -49,19 +30,26 @@ public class SdmxPublisher implements Publisher<SdmxCodelist,CodelistBean> {
 			source = xmlOf(content);
 		}
 		catch(Exception e) {
-			throw new Exception("cannot serialise SDMX codelist "+content.getId()+" to XML (see cause)",e);
+			throw new Exception("cannot transform SDMX codelist "+content.getId()+" to XML (see cause)",e);
 		}
 		
-		Model rdf = converter.triplify(source);
-		
-		
-		//TODO send RDF to endpoint in configuration
+		return converter.triplify(source);
+	}
+
+	@Override
+	public Class<CodelistBean> inputAPI() {
+		return CodelistBean.class;
+	}
+
+	@Override
+	public Class<Model> outputAPI() {
+		return Model.class;
 	}
 
 	
 	//helpers
 	
-	Source xmlOf(CodelistBean bean) {
+	private Source xmlOf(CodelistBean bean) {
 
 		SdmxBeans beans = new SdmxBeansImpl();
 		beans.addCodelist(bean);
@@ -70,7 +58,7 @@ public class SdmxPublisher implements Publisher<SdmxCodelist,CodelistBean> {
 		
 		STRUCTURE_OUTPUT_FORMAT format = STRUCTURE_OUTPUT_FORMAT.SDMX_V21_STRUCTURE_DOCUMENT;
 		
-		StructureWritingManager manager = new StructureWritingManagerImpl();
+		StructureWritingManager manager = SdmxServiceFactory.writer();
 		manager.writeStructures(beans,format, stream);
 		
 		return new StreamSource(new ByteArrayInputStream(stream.toByteArray()));

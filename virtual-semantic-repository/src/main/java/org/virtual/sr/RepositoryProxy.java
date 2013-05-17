@@ -1,21 +1,30 @@
 package org.virtual.sr;
 
+import static org.virtualrepository.spi.PublishAdapter.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import org.virtualrepository.Asset;
+import org.virtualrepository.impl.Type;
+import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Browser;
 import org.virtualrepository.spi.Importer;
 import org.virtualrepository.spi.Lifecycle;
 import org.virtualrepository.spi.Publisher;
 import org.virtualrepository.spi.ServiceProxy;
+import org.virtualrepository.spi.Transform;
+
+import com.hp.hpl.jena.rdf.model.Model;
 
 public class RepositoryProxy implements ServiceProxy, Lifecycle {
 
 	private static final String CONFIGURATION_FILE = "sr.properties";
 
 	private final RepositoryBrowser browser = new RepositoryBrowser();
-	private final List<SdmxPublisher> publishers = new ArrayList<SdmxPublisher>();
+	
+	private final List<Publisher<?,?>> publishers = new ArrayList<Publisher<?,?>>();
 	private final List<SdmxImporter> importers = new ArrayList<SdmxImporter>();
 	
 	@Override
@@ -39,8 +48,10 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 		}
 		
 		
-		publishers.add(new SdmxPublisher(configuration));
-		importers.add(new SdmxImporter(configuration));
+		
+		publishers.add(publisherFor(SdmxCodelist.type,new SdmxCodelistTransform(),configuration));
+		
+		//importers.add(new SdmxImporter(configuration));
 		
 	}
 	
@@ -60,6 +71,10 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 		return publishers;
 	}
 
-	
+	//helper
+	private <A extends Asset,API> Publisher<A,API> publisherFor(Type<A> type, Transform<A,API,Model> t, RepositoryConfiguration configuration) {
+		RepositoryPublisher<A> p = new RepositoryPublisher<A>(type, configuration);
+		return adapt(p,t);
+	}
 	
 }
