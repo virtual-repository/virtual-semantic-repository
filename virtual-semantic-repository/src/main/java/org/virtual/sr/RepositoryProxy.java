@@ -60,7 +60,7 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 		browser = new RepositoryBrowser(configuration);
 		publishers.add(publisherFor(SdmxCodelist.type,new Sdmx2Xml(),configuration));
 		
-		//importers.add(new SdmxCodelistImporter(configuration));
+		importers.add(new SdmxCodelistImporter(configuration));
 		
 	}
 	

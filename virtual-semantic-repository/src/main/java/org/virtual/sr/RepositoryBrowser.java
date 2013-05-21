@@ -57,7 +57,6 @@ public class RepositoryBrowser implements Browser {
             String uri = next.getResource("uri").getURI();
             String name = next.getLiteral("name").getLexicalForm();
 
-            //TODO build asset from result
             SdmxCodelist asset = new SdmxCodelist(uri, uri, "unknown", name);
             assets.add(asset);
         } 

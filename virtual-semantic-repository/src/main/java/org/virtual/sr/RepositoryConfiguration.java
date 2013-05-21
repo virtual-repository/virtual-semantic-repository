@@ -15,6 +15,7 @@ public class RepositoryConfiguration {
 		notNull("configuration", properties);
 		notNull("publish URI", properties.getProperty("publishURI"));
 		notNull("discovery URI", properties.getProperty("discoveryURI"));
+		notNull("discovery query", properties.getProperty("sparqlQueryForCodelists"));
 	}
 	
 	public URI publishURI() {
