@@ -29,4 +29,8 @@ public class RepositoryConfiguration {
 	public String sparqlQueryForCodelists() {
 		return properties.getProperty("sparqlQueryForCodelists");
 	}
+	public String sparqlQueryForCodelist(String codelistUri) {
+		String p = properties.getProperty("sparqlQueryForCodelist");
+                return  p.replace("cl_uri", codelistUri);
+	}
 }
