@@ -34,8 +34,6 @@ public class RdfImporter<A extends Asset> implements Importer<A, ResultSet> {
 
         Query q = QueryFactory.create(configuration.sparqlQueryForCodelist(asset.id()));
         String endpoint = configuration.discoveryURI().toString();
-        ResultSet codes = QueryExecutionFactory.sparqlService(endpoint, q).execSelect();
-        System.out.println(configuration);
-        return codes;
+        return QueryExecutionFactory.sparqlService(endpoint, q).execSelect();
     }
 }
