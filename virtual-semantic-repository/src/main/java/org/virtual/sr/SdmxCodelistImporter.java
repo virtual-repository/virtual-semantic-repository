@@ -5,11 +5,11 @@ import org.virtualrepository.impl.Type;
 import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Importer;
 
-public class SdmxImporter implements Importer<SdmxCodelist,CodelistBean> {
+public class SdmxCodelistImporter implements Importer<SdmxCodelist,CodelistBean> {
 
 	private final RepositoryConfiguration configuration;
 
-	public SdmxImporter(RepositoryConfiguration configuration) {
+	public SdmxCodelistImporter(RepositoryConfiguration configuration) {
 		this.configuration = configuration;
 	}
 

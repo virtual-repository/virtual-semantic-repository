@@ -34,7 +34,7 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 	private final RepositoryBrowser browser = new RepositoryBrowser();
 	
 	private final List<Publisher<?,?>> publishers = new ArrayList<Publisher<?,?>>();
-	private final List<SdmxImporter> importers = new ArrayList<SdmxImporter>();
+	private final List<SdmxCodelistImporter> importers = new ArrayList<SdmxCodelistImporter>();
 	
 	@Override
 	public void init() throws Exception {
@@ -60,7 +60,7 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 		
 		publishers.add(publisherFor(SdmxCodelist.type,new Sdmx2Xml(),configuration));
 		
-		//importers.add(new SdmxImporter(configuration));
+		//importers.add(new SdmxCodelistImporter(configuration));
 		
 	}
 	
