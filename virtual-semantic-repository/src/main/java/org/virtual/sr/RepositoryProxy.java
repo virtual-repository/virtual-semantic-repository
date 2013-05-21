@@ -31,7 +31,7 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 	 */
 	private static final String CONFIGURATION_FILE = "sr.properties";
 
-	private final RepositoryBrowser browser = new RepositoryBrowser();
+	private RepositoryBrowser browser;
 	
 	private final List<Publisher<?,?>> publishers = new ArrayList<Publisher<?,?>>();
 	private final List<SdmxCodelistImporter> importers = new ArrayList<SdmxCodelistImporter>();
@@ -57,7 +57,7 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 		}
 		
 		
-		
+		browser = new RepositoryBrowser(configuration);
 		publishers.add(publisherFor(SdmxCodelist.type,new Sdmx2Xml(),configuration));
 		
 		//importers.add(new SdmxCodelistImporter(configuration));

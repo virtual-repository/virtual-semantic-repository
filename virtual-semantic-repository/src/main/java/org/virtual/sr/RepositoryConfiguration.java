@@ -24,4 +24,8 @@ public class RepositoryConfiguration {
 	public URI discoveryURI() {
 		return URI.create(properties.getProperty("discoveryURI"));
 	}
+        
+	public String sparqlQueryForCodelists() {
+		return properties.getProperty("sparqlQueryForCodelists");
+	}
 }
