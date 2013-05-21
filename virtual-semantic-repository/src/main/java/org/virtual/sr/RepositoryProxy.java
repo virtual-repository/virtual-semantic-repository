@@ -7,16 +7,21 @@ import java.util.List;
 import java.util.Properties;
 
 import org.virtual.sr.transforms.Asset2Rdf;
+import org.virtual.sr.transforms.Rdf2SdmxCodelist;
 import org.virtual.sr.transforms.Sdmx2Xml;
 import org.virtual.sr.transforms.XmlTransform;
 import org.virtualrepository.Asset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Browser;
+import org.virtualrepository.spi.ImportAdapter;
 import org.virtualrepository.spi.Importer;
 import org.virtualrepository.spi.Lifecycle;
 import org.virtualrepository.spi.Publisher;
 import org.virtualrepository.spi.ServiceProxy;
+import org.virtualrepository.spi.Transform;
+
+import com.hp.hpl.jena.query.ResultSet;
 
 /**
  * The {@link ServiceProxy} for the Semantic Repository.
@@ -34,7 +39,7 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 	private RepositoryBrowser browser;
 	
 	private final List<Publisher<?,?>> publishers = new ArrayList<Publisher<?,?>>();
-	private final List<SdmxCodelistImporter> importers = new ArrayList<SdmxCodelistImporter>();
+	private final List<Importer<?,?>> importers = new ArrayList<Importer<?,?>>();
 	
 	@Override
 	public void init() throws Exception {
@@ -60,7 +65,7 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 		browser = new RepositoryBrowser(configuration);
 		publishers.add(publisherFor(SdmxCodelist.type,new Sdmx2Xml(),configuration));
 		
-		importers.add(new SdmxCodelistImporter(configuration));
+		importers.add(importerWith(SdmxCodelist.type,new Rdf2SdmxCodelist(),configuration));
 		
 	}
 	
@@ -84,6 +89,11 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 	private <A extends Asset,API> Publisher<A,API> publisherFor(Type<A> type, XmlTransform<API> transform, RepositoryConfiguration configuration) {
 		RepositoryPublisher<A> p = new RepositoryPublisher<A>(type, configuration);
 		return adapt(p,new Asset2Rdf<A,API>(transform));
+	}
+	
+	//helper
+	private <A extends Asset, API> Importer<A,API> importerWith(Type<A> type,Transform<A,ResultSet,API> transform, RepositoryConfiguration configuration) {
+		return ImportAdapter.adapt(new RdfImporter<A>(type,configuration),transform);
 	}
 	
 }
