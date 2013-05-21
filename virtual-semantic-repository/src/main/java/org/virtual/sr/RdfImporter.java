@@ -36,6 +36,6 @@ public class RdfImporter<A extends Asset> implements Importer<A, ResultSet> {
         String endpoint = configuration.discoveryURI().toString();
         ResultSet codes = QueryExecutionFactory.sparqlService(endpoint, q).execSelect();
         System.out.println(configuration);
-        return null;
+        return codes;
     }
 }
