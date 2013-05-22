@@ -21,7 +21,11 @@ public class SdmxServiceFactory {
 	
 	//upon first access to this factory, Spring is configured programmatically
 	static {
-		
+		init();
+	}
+	
+	public static void init() {
+
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("/sdmxsource-sr-config.xml");
 		
 		//fetch singleton instance of this factory

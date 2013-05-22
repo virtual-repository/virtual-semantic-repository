@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Properties;
 
 import org.virtual.sr.transforms.Asset2Rdf;
-import org.virtual.sr.transforms.Rdf2SdmxCodelist;
 import org.virtual.sr.transforms.Sdmx2Xml;
 import org.virtual.sr.transforms.XmlTransform;
+import org.virtual.sr.transforms.codelist.Rdf2SdmxCodelist;
 import org.virtualrepository.Asset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.sdmx.SdmxCodelist;
