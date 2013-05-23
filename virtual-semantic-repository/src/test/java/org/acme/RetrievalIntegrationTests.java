@@ -7,6 +7,8 @@ import org.virtualrepository.Asset;
 import org.virtualrepository.VirtualRepository;
 import org.virtualrepository.impl.Repository;
 import org.virtualrepository.sdmx.SdmxCodelist;
+import org.virtualrepository.tabular.Row;
+import org.virtualrepository.tabular.Table;
 
 
 public class RetrievalIntegrationTests {
@@ -22,8 +24,26 @@ public class RetrievalIntegrationTests {
 		
 		Asset codelist = repo.iterator().next();
 		
-		CodelistBean content = repo.retrieve(codelist,CodelistBean.class);
+		CodelistBean bean = repo.retrieve(codelist,CodelistBean.class);
 		
-		System.out.println(content);
+		System.out.println(bean);
+	}
+	
+	@Test
+	public void retrieveTableCodelists() {
+		
+		SdmxServiceFactory.init();
+		
+		VirtualRepository repo = new Repository();
+		
+		repo.discover(SdmxCodelist.type);
+		
+		Asset codelist = repo.iterator().next();
+		
+		Table table = repo.retrieve(codelist,Table.class);
+		
+		System.out.println(table.columns());
+		for (Row row : table)
+			System.out.println(row);
 	}
 }
