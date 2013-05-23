@@ -1,7 +1,9 @@
 package org.virtual.sr.transforms.codelist;
 
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
+import org.sdmxsource.sdmx.api.model.mutable.codelist.CodeMutableBean;
 import org.sdmxsource.sdmx.api.model.mutable.codelist.CodelistMutableBean;
+import org.sdmxsource.sdmx.sdmxbeans.model.mutable.codelist.CodeMutableBeanImpl;
 import org.sdmxsource.sdmx.sdmxbeans.model.mutable.codelist.CodelistMutableBeanImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +14,7 @@ import org.virtualrepository.RepositoryService;
 import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Transform;
 
+import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 
 /**
@@ -27,7 +30,7 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist,ResultSet,Codeli
 	private static Logger log = LoggerFactory.getLogger(Rdf2SdmxCodelist.class);
 	
 	@Override
-	public CodelistBean apply(SdmxCodelist asset, ResultSet content) throws Exception {
+	public CodelistBean apply(SdmxCodelist asset, ResultSet results) throws Exception {
 		
 		log.info("transforming codelist "+asset.id()+" to sdmx");
 
@@ -38,7 +41,17 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist,ResultSet,Codeli
 		codelist.setUri(asset.id());
 		codelist.addName("en",asset.name());
 		
-		//TODO to be continued;
+		while (results.hasNext()) {
+            
+			QuerySolution next = results.next();
+            CodeMutableBean code = new CodeMutableBeanImpl();
+            
+            code.setId(next.getLiteral("code_lit").getLexicalForm().replace(".", "_"));
+            code.setUri(next.getResource("code").getURI());
+            code.addName("en",next.getLiteral("en_name").getLexicalForm());
+            
+            codelist.addItem(code);
+        } 
 		
 		return codelist.getImmutableInstance(); 
 	}

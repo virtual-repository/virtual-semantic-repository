@@ -2,6 +2,7 @@ package org.acme;
 
 import org.junit.Test;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
+import org.virtual.sr.utils.SdmxServiceFactory;
 import org.virtualrepository.Asset;
 import org.virtualrepository.VirtualRepository;
 import org.virtualrepository.impl.Repository;
@@ -12,6 +13,8 @@ public class RetrievalIntegrationTests {
 
 	@Test
 	public void retrieveSdmxCodelists() {
+		
+		SdmxServiceFactory.init();
 		
 		VirtualRepository repo = new Repository();
 		
