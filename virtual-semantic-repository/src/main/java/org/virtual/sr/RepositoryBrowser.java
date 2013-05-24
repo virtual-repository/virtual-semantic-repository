@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+
+import org.virtual.sr.utils.Constants;
 import org.virtualrepository.AssetType;
 import org.virtualrepository.csv.CsvCodelist;
 import org.virtualrepository.sdmx.SdmxCodelist;
@@ -44,7 +46,8 @@ public class RepositoryBrowser implements Browser {
     
     @SuppressWarnings("all")
     public Collection<SdmxCodelist> discoverSdmxCodelists() throws Exception {
-        List<SdmxCodelist> assets = new ArrayList<SdmxCodelist>();        
+    	
+    	List<SdmxCodelist> assets = new ArrayList<SdmxCodelist>();        
         String endpoint = configuration.discoveryURI().toString();
 
         Query q = QueryFactory.create(configuration.sparqlQueryForCodelists());
@@ -52,12 +55,18 @@ public class RepositoryBrowser implements Browser {
         
         
         while (codelists.hasNext()) {
+        	
             QuerySolution next = codelists.next();
             
             String uri = next.getResource("uri").getURI();
             String name = next.getLiteral("name").getLexicalForm();
 
             SdmxCodelist asset = new SdmxCodelist(uri, uri, "unknown", name);
+            
+            //TODO: pull owner in query and add it as property if it exists
+            String owner = next.getLiteral("owner").getLexicalForm();
+            asset.properties().add(Constants.ownerProperty(owner));
+            
             assets.add(asset);
         } 
         return assets;
