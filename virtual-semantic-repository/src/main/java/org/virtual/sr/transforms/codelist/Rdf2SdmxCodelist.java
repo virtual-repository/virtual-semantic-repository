@@ -9,7 +9,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.virtual.sr.transforms.Xml2Rdf;
 import org.virtual.sr.transforms.XmlTransform;
+import org.virtual.sr.utils.Constants;
 import org.virtualrepository.Asset;
+import org.virtualrepository.Properties;
 import org.virtualrepository.RepositoryService;
 import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Transform;
@@ -36,7 +38,13 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist,ResultSet,Codeli
 
 		CodelistMutableBean codelist = new CodelistMutableBeanImpl();
 		
-		codelist.setAgencyId("SDMX");
+		Properties props = asset.properties();
+		
+		if (props.contains(Constants.ownerName))
+			codelist.setAgencyId(props.lookup(Constants.ownerName).value(String.class));
+		else
+			codelist.setAgencyId("SDMX");
+		
 		codelist.setId(asset.name());
 		codelist.setUri(asset.id());
 		codelist.addName("en",asset.name());
@@ -48,7 +56,13 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist,ResultSet,Codeli
             
             code.setId(next.getLiteral("code_lit").getLexicalForm().replace(".", "_"));
             code.setUri(next.getResource("code").getURI());
-            code.addName("en",next.getLiteral("en_name").getLexicalForm());
+            
+            //TODO: replace with for loop over known bindings
+            if (!next.getLiteral("en_name").getLexicalForm().isEmpty())
+            	code.addName("en",next.getLiteral("en_name").getLexicalForm());
+            
+            //TODO: pull all comments and map them onto SDMX description
+            //code.addDescription(locale, name)
             
             codelist.addItem(code);
         } 
