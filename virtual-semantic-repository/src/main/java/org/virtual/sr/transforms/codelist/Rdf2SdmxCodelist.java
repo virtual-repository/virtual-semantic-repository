@@ -58,10 +58,12 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist, Model, Codelist
         ResIterator codes = m.listSubjects();
 
         while (codes.hasNext()) {
-            Resource code_resource = codes.next();
+           
+        	Resource code_resource = codes.next();
             
             CodeMutableBean code = new CodeMutableBeanImpl();
-            code.setId(code_resource.getPropertyResourceValue(RDF.value).asLiteral().getLexicalForm().replace(".", "_"));
+            
+            code.setId(adaptId(code_resource.getPropertyResourceValue(RDF.value).asLiteral().getLexicalForm()));
             code.setUri(code_resource.getURI());
             StmtIterator names = code_resource.listProperties(RDFS.label);
             while (names.hasNext()) {
@@ -77,7 +79,7 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist, Model, Codelist
                 Statement desc_lit = descriptions.next();
                 //TODO: replace with for loop over known bindings
                 if (!desc_lit.getLiteral().getLexicalForm().isEmpty()) {
-                    code.ddDescription("en", desc_lit.getLiteral().getLexicalForm());
+                    code.addDescription("en", desc_lit.getLiteral().getLexicalForm());
                 }
             }
 
@@ -95,5 +97,13 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist, Model, Codelist
     @Override
     public Class<CodelistBean> outputAPI() {
         return CodelistBean.class;
+    }
+    
+    //helpers
+    
+    private String adaptId(String id) {
+    	
+    	//TODO add to this simple adaptation
+    	return id.replace(".", "_");
     }
 }

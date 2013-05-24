@@ -1,15 +1,15 @@
 package org.virtual.sr;
 
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.QueryFactory;
 import org.virtualrepository.Asset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.spi.Importer;
 
-import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.rdf.model.Model;
 
-public class RdfImporter<A extends Asset> implements Importer<A, ResultSet> {
+public class RdfImporter<A extends Asset> implements Importer<A, Model> {
 
     private final RepositoryConfiguration configuration;
     private final Type<A> type;
@@ -25,15 +25,15 @@ public class RdfImporter<A extends Asset> implements Importer<A, ResultSet> {
     }
 
     @Override
-    public Class<ResultSet> api() {
-        return ResultSet.class;
+    public Class<Model> api() {
+        return Model.class;
     }
 
     @Override
-    public ResultSet retrieve(A asset) throws Exception {
+    public Model retrieve(A asset) throws Exception {
 
         Query q = QueryFactory.create(configuration.sparqlQueryForCodelist(asset.id()));
         String endpoint = configuration.discoveryURI().toString();
-        return QueryExecutionFactory.sparqlService(endpoint, q).execSelect();
+        return QueryExecutionFactory.sparqlService(endpoint, q).execConstruct();
     }
 }

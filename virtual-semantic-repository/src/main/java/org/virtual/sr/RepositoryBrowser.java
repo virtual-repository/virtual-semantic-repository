@@ -63,9 +63,8 @@ public class RepositoryBrowser implements Browser {
 
             SdmxCodelist asset = new SdmxCodelist(uri, uri, "unknown", name);
             
-            //TODO: pull owner in query and add it as property if it exists
-            String owner = next.getLiteral("owner").getLexicalForm();
-            asset.properties().add(Constants.ownerProperty(owner));
+            if (next.getLiteral("owner")!=null)
+            	asset.properties().add(Constants.ownerProperty(next.getLiteral("owner").getLexicalForm()));
             
             assets.add(asset);
         } 
