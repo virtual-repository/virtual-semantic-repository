@@ -53,7 +53,7 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist, Model, Codelist
         codelist.setId(asset.name());
         codelist.setUri(asset.id());
         codelist.addName("en", asset.name());
-        
+        m.write(System.out);
         ResIterator codes = m.listSubjectsWithProperty(RDF.value);
         
         while (codes.hasNext()) {
