@@ -65,23 +65,25 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist, Model, Codelist
             code.setId(adaptId(code_resource.getRequiredProperty(RDF.value).getLiteral().getLexicalForm()));
             code.setUri(code_resource.getURI());
             StmtIterator names = code_resource.listProperties(RDFS.label);
+            
+            boolean hasName=false;
             while (names.hasNext()) {
+            	hasName=true;
                 Statement name_lit = names.next();
-                //TODO: replace with for loop over known bindings
-                if (!name_lit.getLiteral().getLexicalForm().isEmpty()) {
+                if (!name_lit.getLiteral().getLexicalForm().isEmpty())
                     code.addName(name_lit.getLanguage(), name_lit.getLiteral().getLexicalForm());
-                }
             }
+            
+            if (!hasName)
+            	code.addName("en","");
             
             StmtIterator descriptions = code_resource.listProperties(RDFS.comment);
             while (descriptions.hasNext()) {
                 Statement desc_lit = descriptions.next();
-                //TODO: replace with for loop over known bindings
-                if (!desc_lit.getLiteral().getLexicalForm().isEmpty()) {
+                if (!desc_lit.getLiteral().getLexicalForm().isEmpty())
                     code.addDescription("en", desc_lit.getLiteral().getLexicalForm());
-                }
             }
-            log.info("adding code : "+ code.getId());
+            
             codelist.addItem(code);
         }
 
