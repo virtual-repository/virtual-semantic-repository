@@ -33,32 +33,33 @@ import com.hp.hpl.jena.vocabulary.RDFS;
  *
  */
 public class Rdf2SdmxCodelist implements Transform<SdmxCodelist, Model, CodelistBean> {
-
+    
     private static Logger log = LoggerFactory.getLogger(Rdf2SdmxCodelist.class);
-
+    
     @Override
     public CodelistBean apply(SdmxCodelist asset, Model m) throws Exception {
-
-        log.info("transforming codelist " + asset.id() + " to sdmx");
-        CodelistMutableBean codelist = new CodelistMutableBeanImpl();
-
+        
+    	log.info("transforming codelist " + asset.id() + " to sdmx");
+          
+       	CodelistMutableBean codelist = new CodelistMutableBeanImpl();
+        
         Properties props = asset.properties();
-
+        
         if (props.contains(Constants.ownerName)) {
             codelist.setAgencyId(props.lookup(Constants.ownerName).value(String.class));
         } else {
             codelist.setAgencyId("SDMX");
         }
-
+        
         codelist.setId(asset.name());
         codelist.setUri(asset.id());
         codelist.addName("en", asset.name());
-
-        ResIterator codes = m.listSubjects();
-
+        m.write(System.out);
+        ResIterator codes = m.listSubjectsWithProperty(RDF.value);
+        
         while (codes.hasNext()) {
-           
-        	Resource code_resource = codes.next();
+            
+            Resource code_resource = codes.next();
             
             CodeMutableBean code = new CodeMutableBeanImpl();
             
@@ -86,25 +87,24 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist, Model, Codelist
             
             codelist.addItem(code);
         }
-
+        
         return codelist.getImmutableInstance();
     }
-
+    
     @Override
     public Class<Model> inputAPI() {
         return Model.class;
     }
-
+    
     @Override
     public Class<CodelistBean> outputAPI() {
         return CodelistBean.class;
     }
-    
+
     //helpers
-    
     private String adaptId(String id) {
-    	
-    	//TODO add to this simple adaptation
-    	return id.replace(".", "_");
+
+        //TODO add to this simple adaptation
+        return id.replace(".", "_");
     }
 }
