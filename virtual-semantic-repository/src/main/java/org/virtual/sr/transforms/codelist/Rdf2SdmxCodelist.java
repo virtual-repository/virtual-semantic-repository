@@ -40,7 +40,6 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist, Model, Codelist
     public CodelistBean apply(SdmxCodelist asset, Model m) throws Exception {
 
         log.info("transforming codelist " + asset.id() + " to sdmx");
-
         CodelistMutableBean codelist = new CodelistMutableBeanImpl();
 
         Properties props = asset.properties();
@@ -63,7 +62,7 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist, Model, Codelist
             
             CodeMutableBean code = new CodeMutableBeanImpl();
             
-            code.setId(adaptId(code_resource.getPropertyResourceValue(RDF.value).asLiteral().getLexicalForm()));
+            code.setId(adaptId(code_resource.getRequiredProperty(RDF.value).getLiteral().getLexicalForm()));
             code.setUri(code_resource.getURI());
             StmtIterator names = code_resource.listProperties(RDFS.label);
             while (names.hasNext()) {
@@ -82,7 +81,7 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist, Model, Codelist
                     code.addDescription("en", desc_lit.getLiteral().getLexicalForm());
                 }
             }
-
+            log.info("adding code : "+ code.getId());
             codelist.addItem(code);
         }
 

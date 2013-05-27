@@ -6,8 +6,8 @@ import static org.virtualrepository.spi.PublishAdapter.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
+
 import org.virtual.sr.transforms.Asset2Rdf;
 import org.virtual.sr.transforms.Sdmx2Table;
 import org.virtual.sr.transforms.Sdmx2Xml;
@@ -16,11 +16,7 @@ import org.virtual.sr.transforms.codelist.Rdf2SdmxCodelist;
 import org.virtualrepository.Asset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.sdmx.SdmxCodelist;
-import org.virtualrepository.spi.Browser;
-import org.virtualrepository.spi.Importer;
-import org.virtualrepository.spi.Lifecycle;
-import org.virtualrepository.spi.Publisher;
-import org.virtualrepository.spi.ServiceProxy;
+import org.virtualrepository.spi.*;
 import org.virtualrepository.tabular.Table;
 
 /**
@@ -69,11 +65,11 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 		RdfImporter<SdmxCodelist> rdfCodelistImporter = new RdfImporter<SdmxCodelist>(SdmxCodelist.type,configuration);
 		
 		//sdmx codelist importer
-		Importer<SdmxCodelist,CodelistBean> sdmxCodelistImporter = adapt(rdfCodelistImporter,new Rdf2SdmxCodelist()); 
+		Importer<SdmxCodelist,CodelistBean> sdmxCodelistImporter = ImportAdapter.adapt(rdfCodelistImporter, new Rdf2SdmxCodelist()); 
 		importers.add(sdmxCodelistImporter);
 		
-		//table codelist importer
-		Importer<SdmxCodelist,Table> tableCodelistImporter = adapt(sdmxCodelistImporter,new Sdmx2Table()); 
+
+                Importer<SdmxCodelist,Table> tableCodelistImporter = adapt(sdmxCodelistImporter,new Sdmx2Table()); 
 		importers.add(tableCodelistImporter);
 		
 	}
