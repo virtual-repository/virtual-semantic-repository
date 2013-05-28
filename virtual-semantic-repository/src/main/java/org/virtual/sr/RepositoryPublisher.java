@@ -67,6 +67,7 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
             Statement s = stmts.next();
             triples = FmtUtils.stringForTriple(s.asTriple()) + ".";
         }
+        
         UpdateExecutionFactory.createRemote(UpdateFactory.create("insert data {" + triples + "}"), configuration.publishURI().toString()).execute();
         System.out.println(QueryExecutionFactory.sparqlService("http://168.202.3.223:3030/ds/query", "ask {" + triples + "}").execAsk());
 
