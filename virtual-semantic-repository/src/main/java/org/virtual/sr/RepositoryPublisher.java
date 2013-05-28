@@ -1,5 +1,9 @@
 package org.virtual.sr;
 
+import com.hp.hpl.jena.graph.Triple;
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
@@ -17,58 +21,71 @@ import org.virtualrepository.impl.Type;
 import org.virtualrepository.spi.Publisher;
 
 import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.Statement;
+import com.hp.hpl.jena.rdf.model.StmtIterator;
+import com.hp.hpl.jena.sparql.util.FmtUtils;
+import com.hp.hpl.jena.update.UpdateExecutionFactory;
+import com.hp.hpl.jena.update.UpdateFactory;
+import com.hp.hpl.jena.update.UpdateRequest;
 
 /**
- * A {@link Publisher} for the Semantic Repository that works with RDF models of arbitrary asset types.
- * 
+ * A {@link Publisher} for the Semantic Repository that works with RDF models of
+ * arbitrary asset types.
+ *
  * @author Fabio Simeoni
  *
  * @param <A> the type of Assets published by this publisher
  */
-public class RepositoryPublisher<A extends Asset> implements Publisher<A,Model> {
+public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model> {
 
-	private final RepositoryConfiguration configuration;
-	private final Type<A> assetType;
-	
-	
-	public RepositoryPublisher(Type<A> assetType,RepositoryConfiguration configuration) {
-		this.assetType=assetType;
-		this.configuration=configuration;
-	}
-	
-	@Override
-	public Type<A> type() {
-		return assetType;
-	}
+    private final RepositoryConfiguration configuration;
+    private final Type<A> assetType;
 
-	@Override
-	public Class<Model> api() {
-		return Model.class;
-	}
+    public RepositoryPublisher(Type<A> assetType, RepositoryConfiguration configuration) {
+        this.assetType = assetType;
+        this.configuration = configuration;
+    }
 
-	@Override
-	public void publish(A asset, Model rdf) throws Exception {
+    @Override
+    public Type<A> type() {
+        return assetType;
+    }
 
-		
-		System.out.println("publishing to "+configuration.publishURI());
-		
-	}
+    @Override
+    public Class<Model> api() {
+        return Model.class;
+    }
 
-	
-	//helpers
-	
-	Source xmlOf(CodelistBean bean) {
+    @Override
+    public void publish(A asset, Model rdf) throws Exception {
 
-		SdmxBeans beans = new SdmxBeansImpl();
-		beans.addCodelist(bean);
-		
-		ByteArrayOutputStream stream = new ByteArrayOutputStream(1024);
-		
-		STRUCTURE_OUTPUT_FORMAT format = STRUCTURE_OUTPUT_FORMAT.SDMX_V21_STRUCTURE_DOCUMENT;
-		
-		StructureWritingManager manager = new StructureWritingManagerImpl();
-		manager.writeStructures(beans,format, stream);
-		
-		return new StreamSource(new ByteArrayInputStream(stream.toByteArray()));
-	}
+        System.out.println("publishing to " + configuration.publishURI());
+        rdf.write(System.out);
+        StmtIterator stmts = rdf.listStatements();
+        String triples = "";
+        while (stmts.hasNext()) {
+            Statement s = stmts.next();
+            triples = FmtUtils.stringForTriple(s.asTriple()) + ".";
+        }
+        UpdateExecutionFactory.createRemote(UpdateFactory.create("insert data {" + triples + "}"), configuration.publishURI().toString()).execute();
+        System.out.println(QueryExecutionFactory.sparqlService("http://168.202.3.223:3030/ds/query", "ask {" + triples + "}").execAsk());
+
+
+    }
+
+    //helpers
+    Source xmlOf(CodelistBean bean) {
+
+        SdmxBeans beans = new SdmxBeansImpl();
+        beans.addCodelist(bean);
+
+        ByteArrayOutputStream stream = new ByteArrayOutputStream(1024);
+
+        STRUCTURE_OUTPUT_FORMAT format = STRUCTURE_OUTPUT_FORMAT.SDMX_V21_STRUCTURE_DOCUMENT;
+
+        StructureWritingManager manager = new StructureWritingManagerImpl();
+        manager.writeStructures(beans, format, stream);
+
+        return new StreamSource(new ByteArrayInputStream(stream.toByteArray()));
+    }
 }
