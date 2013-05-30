@@ -65,11 +65,11 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
         String triples = "";
         while (stmts.hasNext()) {
             Statement s = stmts.next();
-            triples = FmtUtils.stringForTriple(s.asTriple()) + ".";
+            triples+= FmtUtils.stringForTriple(s.asTriple()) + " . ";
         }
         
         UpdateExecutionFactory.createRemote(UpdateFactory.create("insert data {" + triples + "}"), configuration.publishURI().toString()).execute();
-        System.out.println(QueryExecutionFactory.sparqlService("http://168.202.3.223:3030/ds/query", "ask {" + triples + "}").execAsk());
+        System.out.println(QueryExecutionFactory.sparqlService("http://168.202.3.223:3030/sr_staging/query", "ask {" + triples + "}").execAsk());
 
 
     }
