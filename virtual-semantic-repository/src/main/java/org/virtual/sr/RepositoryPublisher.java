@@ -56,7 +56,7 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
     public void publish(A asset, Model rdf) throws Exception {
 
         System.out.println("publishing to " + configuration.publishURI());
-        rdf.write(System.out);
+//        rdf.write(System.out);
         StmtIterator stmts = rdf.listStatements();
         String triples = "";
         while (stmts.hasNext()) {

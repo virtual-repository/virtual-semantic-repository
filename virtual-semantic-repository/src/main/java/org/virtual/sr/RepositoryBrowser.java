@@ -1,7 +1,5 @@
 package org.virtual.sr;
 
-
-
 import com.hp.hpl.jena.query.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,12 +20,10 @@ public class RepositoryBrowser implements Browser {
     public RepositoryBrowser(RepositoryConfiguration configuration) {
         this.configuration = configuration;
     }
-    
-    
-    
+
     @Override
     public Iterable<? extends MutableAsset> discover(Collection<? extends AssetType> types) throws Exception {
-        
+
         List<MutableAsset> assets = new ArrayList<MutableAsset>();
         for (AssetType type : types) {
             if (type.equals(SdmxCodelist.type)) {
@@ -40,39 +36,40 @@ public class RepositoryBrowser implements Browser {
                 throw new IllegalArgumentException("type " + type + " is not supported by this service");
             }
         }
-        
+
         return assets;
     }
-    
+
     @SuppressWarnings("all")
     public Collection<SdmxCodelist> discoverSdmxCodelists() throws Exception {
-    	
-    	List<SdmxCodelist> assets = new ArrayList<SdmxCodelist>();        
+
+        List<SdmxCodelist> assets = new ArrayList<SdmxCodelist>();
         String endpoint = configuration.discoveryURI().toString();
 
         Query q = QueryFactory.create(configuration.sparqlQueryForCodelists());
         ResultSet codelists = QueryExecutionFactory.sparqlService(endpoint, q).execSelect();
-        
-        
+        System.out.println("");
+
         while (codelists.hasNext()) {
-        	
+
             QuerySolution next = codelists.next();
-            
+
             String uri = next.getResource("uri").getURI();
             String name = next.getLiteral("name").getLexicalForm();
+            String version = next.getLiteral("version").getLexicalForm();
+            String creator = next.getLiteral("creator").getLexicalForm();
 
-            SdmxCodelist asset = new SdmxCodelist(uri, uri, "unknown", name);
-            
-            if (next.getLiteral("owner")!=null)
-            	asset.properties().add(Constants.ownerProperty(next.getLiteral("owner").getLexicalForm()));
-            
+            SdmxCodelist asset = new SdmxCodelist(uri, uri, version, name);
+
+            asset.properties().add(Constants.ownerProperty(creator));
+
             assets.add(asset);
-        } 
+        }
         return assets;
     }
-    
+
     public Collection<SdmxCodelist> discoverCsvCodelists() throws Exception {
-        
+
         return Collections.emptyList();
     }
 }

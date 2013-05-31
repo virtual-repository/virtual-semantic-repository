@@ -31,6 +31,7 @@ public class PublishIntegrationTests {
 		SdmxCodelist asset = new SdmxCodelist("test", service);
 		
 		repo.publish(asset,list);
+                
 		
 	}
 }
