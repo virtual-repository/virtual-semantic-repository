@@ -3,6 +3,7 @@ package org.virtual.sr.transforms;
 import static javax.xml.stream.XMLStreamConstants.*;
 
 import java.net.URI;
+import java.util.UUID;
 
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLInputFactory;
@@ -102,7 +103,8 @@ public class Xml2Rdf {
 				
 				case CHARACTERS: //content of this element
 					
-					emit(complex?uri:parentUri,name,reader.getText());
+					if (!reader.getText().trim().isEmpty())
+						emit(complex?uri:parentUri,name,reader.getText());
 					
 					break;
 				
@@ -130,7 +132,7 @@ public class Xml2Rdf {
 	}
 	
 	URI mint(QName name) throws Exception {
-		return URI.create(pseudoNS+name.getLocalPart());
+		return URI.create(pseudoNS+name.getLocalPart()+"/"+UUID.randomUUID());
 	}
 	
 //	
