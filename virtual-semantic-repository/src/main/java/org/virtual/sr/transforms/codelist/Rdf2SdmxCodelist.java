@@ -1,6 +1,5 @@
 package org.virtual.sr.transforms.codelist;
 
-import com.hp.hpl.jena.rdf.model.*;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.sdmx.api.model.mutable.codelist.CodeMutableBean;
 import org.sdmxsource.sdmx.api.model.mutable.codelist.CodelistMutableBean;
@@ -11,15 +10,19 @@ import org.slf4j.LoggerFactory;
 import org.virtual.sr.transforms.Xml2Rdf;
 import org.virtual.sr.transforms.XmlTransform;
 import org.virtual.sr.utils.Constants;
+import org.virtual.sr.vocabularies.SKOS_CORE;
 import org.virtualrepository.Asset;
 import org.virtualrepository.Properties;
 import org.virtualrepository.RepositoryService;
 import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Transform;
 
+import com.hp.hpl.jena.rdf.model.Literal;
+import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.NodeIterator;
+import com.hp.hpl.jena.rdf.model.ResIterator;
+import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.vocabulary.DCTerms;
-import com.hp.hpl.jena.vocabulary.RDFS;
-import org.virtual.sr.vocabularies.SKOS_CORE;
 
 /**
  * A {@link Transform}s from arbitrary {@link Asset}s in given APIs to RDF. <p>
