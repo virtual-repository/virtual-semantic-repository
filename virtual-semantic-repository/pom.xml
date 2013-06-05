@@ -15,9 +15,9 @@
 	<repositories>
 		<repository>
 			<snapshots />
-			<id>fao-snapshots</id>
-			<name>libs-snapshot</name>
-			<url>http://artifactory.fao.org/artifactory/libs-snapshot</url>
+			<id>fips-snapshots</id>
+			<name>fips-snapshot</name>
+			<url>http://artifactory.fao.org/artifactory/fips</url>
 		</repository>
 		<repository>
 			<id>sdmxsource</id>
