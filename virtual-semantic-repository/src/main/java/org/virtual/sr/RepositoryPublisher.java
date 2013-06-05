@@ -23,6 +23,8 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.sparql.util.FmtUtils;
 import com.hp.hpl.jena.update.UpdateExecutionFactory;
 import com.hp.hpl.jena.update.UpdateFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * A {@link Publisher} for the Semantic Repository that works with RDF models of
@@ -36,6 +38,7 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
     private final RepositoryConfiguration configuration;
     private final Type<A> assetType;
+    private static Logger log = LoggerFactory.getLogger(RepositoryPublisher.class);
 
     public RepositoryPublisher(Type<A> assetType, RepositoryConfiguration configuration) {
         this.assetType = assetType;
@@ -65,8 +68,8 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
         }
         
         UpdateExecutionFactory.createRemote(UpdateFactory.create("insert data {" + triples + "}"), configuration.publishURI().toString()).execute();
-        System.out.println(QueryExecutionFactory.sparqlService("http://168.202.3.223:3030/sr_staging/query", "ask {" + triples + "}").execAsk());
-
+        boolean success = QueryExecutionFactory.sparqlService("http://168.202.3.223:3030/sr_staging/query", "ask {" + triples + "}").execAsk();
+        log.info("Update was successful : "+success);
 
     }
 
