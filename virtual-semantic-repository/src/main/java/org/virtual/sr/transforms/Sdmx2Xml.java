@@ -36,4 +36,9 @@ public class Sdmx2Xml implements XmlTransform<CodelistBean> {
 	public Class<CodelistBean> api() {
 		return CodelistBean.class;
 	}
+	
+	@Override
+	public String type() {
+		return "codelist";
+	}
 }

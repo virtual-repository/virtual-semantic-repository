@@ -31,7 +31,7 @@ public class Asset2Rdf<A extends Asset,T> implements Transform<A,T,Model> {
 	@Override
 	public Model apply(A asset, T content) throws Exception {
 		
-		Xml2Rdf converter = new Xml2Rdf();
+		Xml2Rdf converter = new Xml2Rdf(transform.type());
 		
 		Source source = null;
 		

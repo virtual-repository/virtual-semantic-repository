@@ -23,4 +23,10 @@ public interface XmlTransform<T> {
 	 * @return the type
 	 */
 	Class<T> api();
+	
+	/**
+	 * Returns a name for the transformed type.
+	 * @return the name
+	 */
+	String type();
 }

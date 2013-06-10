@@ -27,11 +27,16 @@ public class Xml2Rdf {
 
 	static XMLInputFactory factory = XMLInputFactory.newInstance(); 
 	
+	private final String assetType;
 	private XMLStreamReader reader;
 	private Model model;
 	
 	static {
 		factory.setProperty(XMLInputFactory.IS_COALESCING, true);
+	}
+	
+	public Xml2Rdf(String assetType) {
+		this.assetType=assetType;
 	}
 	
 	/**
@@ -134,17 +139,5 @@ public class Xml2Rdf {
 	URI mint(QName name) throws Exception {
 		return URI.create(pseudoNS+name.getLocalPart()+"/"+UUID.randomUUID());
 	}
-	
-//	
-//	public static void main(String[] args) throws Exception {
-//		
-//		String xml = "<t:root xmlns:t='http://acme.org/' t:ra='r'><t:c1>text</t:c1><t:c2 t:attr='a'/><t:c3><t:c4>text2</t:c4></t:c3></t:root>";
-//		
-//		Source source = new StreamSource(new ByteArrayInputStream(xml.getBytes()));
-//		
-//		Model model = new Xml2Rdf().triplify(source);
-//		
-//		model.write(System.out);
-//	}
 	
 }

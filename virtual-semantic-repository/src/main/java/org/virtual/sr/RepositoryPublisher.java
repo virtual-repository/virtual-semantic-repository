@@ -12,19 +12,18 @@ import org.sdmxsource.sdmx.api.model.beans.SdmxBeans;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.sdmx.structureparser.manager.impl.StructureWritingManagerImpl;
 import org.sdmxsource.sdmx.util.beans.container.SdmxBeansImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.virtualrepository.Asset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.spi.Publisher;
 
-import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.sparql.util.FmtUtils;
 import com.hp.hpl.jena.update.UpdateExecutionFactory;
 import com.hp.hpl.jena.update.UpdateFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * A {@link Publisher} for the Semantic Repository that works with RDF models of
@@ -36,7 +35,8 @@ import org.slf4j.LoggerFactory;
  */
 public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model> {
 
-    private final RepositoryConfiguration configuration;
+    private static final int TRIPLE_BUFFER_SIZE = 5000;
+	private final RepositoryConfiguration configuration;
     private final Type<A> assetType;
     private static Logger log = LoggerFactory.getLogger(RepositoryPublisher.class);
 
@@ -58,19 +58,34 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
     @Override
     public void publish(A asset, Model rdf) throws Exception {
 
-        System.out.println("publishing to " + configuration.publishURI());
-//        rdf.write(System.out);
         StmtIterator stmts = rdf.listStatements();
-        String triples = "";
+        StringBuilder triples = new StringBuilder();
+        
+        int published=0;
+     
         while (stmts.hasNext()) {
             Statement s = stmts.next();
-            triples+= FmtUtils.stringForTriple(s.asTriple()) + " . ";
+            triples.append(FmtUtils.stringForTriple(s.asTriple()) + " . ");
+            published++;
+        	if (published==TRIPLE_BUFFER_SIZE) {
+	            flush(asset,published,triples.toString());
+	            triples = new StringBuilder();
+	            published=0;
+        	}
         }
         
-        UpdateExecutionFactory.createRemote(UpdateFactory.create("insert data {" + triples + "}"), configuration.publishURI().toString()).execute();
-        boolean success = QueryExecutionFactory.sparqlService("http://168.202.3.223:3030/sr_staging/query", "ask {" + triples + "}").execAsk();
-        log.info("Update was successful : "+success);
+        if (published>0)
+        	flush(asset,published,triples.toString());
+        
+        
 
+    }
+    
+    private void flush(Asset asset, int accumulated, String triples) {
+    	log.info("publishing {} triples for {} ",accumulated,asset.name());
+        long time = System.currentTimeMillis();
+        UpdateExecutionFactory.createRemote(UpdateFactory.create("insert data {" + triples + "}"), configuration.publishURI().toString()).execute();
+        log.info("published {} triples for {} in {} ms.",accumulated,asset.name(),System.currentTimeMillis()-time);
     }
 
     //helpers
