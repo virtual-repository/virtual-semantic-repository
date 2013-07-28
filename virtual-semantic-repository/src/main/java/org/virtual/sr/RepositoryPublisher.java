@@ -35,7 +35,7 @@ import com.hp.hpl.jena.update.UpdateFactory;
  */
 public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model> {
 
-    private static final int TRIPLE_BUFFER_SIZE = 5000;
+    private static final int TRIPLE_BUFFER_SIZE = 20000;
 	private final RepositoryConfiguration configuration;
     private final Type<A> assetType;
     private static Logger log = LoggerFactory.getLogger(RepositoryPublisher.class);
@@ -59,33 +59,39 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
     public void publish(A asset, Model rdf) throws Exception {
 
         StmtIterator stmts = rdf.listStatements();
-        StringBuilder triples = new StringBuilder();
         
+        long time = System.currentTimeMillis();
+        
+        StringBuilder triples = new StringBuilder();
         int published=0;
+        int queries=0;
      
         while (stmts.hasNext()) {
+        	int genTime=0;
             Statement s = stmts.next();
             triples.append(FmtUtils.stringForTriple(s.asTriple()) + " . ");
             published++;
         	if (published==TRIPLE_BUFFER_SIZE) {
+        		log.trace("prepared {} triples for {} in {} ms.",TRIPLE_BUFFER_SIZE,asset.name(),System.currentTimeMillis()-genTime);
 	            flush(asset,published,triples.toString());
 	            triples = new StringBuilder();
 	            published=0;
+	            queries++;
         	}
         }
         
-        if (published>0)
+        if (published>0) {
         	flush(asset,published,triples.toString());
+        	queries++;
+        }
         
-        
+        log.info("published {} triples for {} with {} queries in {} ms.",rdf.size(),asset.name(),queries,System.currentTimeMillis()-time);
 
     }
     
     private void flush(Asset asset, int accumulated, String triples) {
-    	log.info("publishing {} triples for {} ",accumulated,asset.name());
-        long time = System.currentTimeMillis();
+    	log.trace("publishing {} triples for {} ",accumulated,asset.name());
         UpdateExecutionFactory.createRemote(UpdateFactory.create("insert data {" + triples + "}"), configuration.publishURI().toString()).execute();
-        log.info("published {} triples for {} in {} ms.",accumulated,asset.name(),System.currentTimeMillis()-time);
     }
 
     //helpers

@@ -1,9 +1,10 @@
 package org.acme;
 
-import static org.virtual.sr.utils.SdmxServiceFactory.*;
+import static org.sdmx.SdmxServiceFactory.*;
 
 import java.io.InputStream;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.util.io.ReadableDataLocationTmp;
@@ -16,6 +17,12 @@ import org.virtualrepository.sdmx.SdmxCodelist;
 
 public class PublishIntegrationTests {
 
+	@BeforeClass
+	public static void setup() {
+		
+		System.setProperty("org.slf4j.simpleLogger.log.org.virtual.sr ","trace");
+	}
+	
 	@Test
 	public void publishSdmxCodelist() {
 		

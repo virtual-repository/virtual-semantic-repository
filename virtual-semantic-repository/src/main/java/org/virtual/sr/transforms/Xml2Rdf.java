@@ -27,16 +27,11 @@ public class Xml2Rdf {
 
 	static XMLInputFactory factory = XMLInputFactory.newInstance(); 
 	
-	private final String assetType;
 	private XMLStreamReader reader;
 	private Model model;
 	
 	static {
 		factory.setProperty(XMLInputFactory.IS_COALESCING, true);
-	}
-	
-	public Xml2Rdf(String assetType) {
-		this.assetType=assetType;
 	}
 	
 	/**

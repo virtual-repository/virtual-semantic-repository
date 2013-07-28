@@ -1,6 +1,5 @@
 package org.virtual.sr;
 
-import com.hp.hpl.jena.query.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -12,6 +11,12 @@ import org.virtualrepository.csv.CsvCodelist;
 import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Browser;
 import org.virtualrepository.spi.MutableAsset;
+
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.QuerySolution;
+import com.hp.hpl.jena.query.ResultSet;
 
 public class RepositoryBrowser implements Browser {
 
