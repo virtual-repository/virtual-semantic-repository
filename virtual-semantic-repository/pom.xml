@@ -13,6 +13,12 @@
 
 	<repositories>
 		<repository>
+			<snapshots />
+			<id>fips-snapshots</id>
+			<name>fips-snapshot</name>
+			<url>http://artifactory.fao.org/artifactory/fips</url>
+		</repository>
+		<repository>
 			<id>sdmxsource</id>
 			<url>http://www.metadatatechnology.com/nexus/content/repositories/releases</url>
 			<snapshots>
