@@ -20,61 +20,56 @@ import com.hp.hpl.jena.query.ResultSet;
 
 public class RepositoryBrowser implements Browser {
 
-    private final RepositoryConfiguration configuration;
+	private final RepositoryConfiguration configuration;
 
-    public RepositoryBrowser(RepositoryConfiguration configuration) {
-        this.configuration = configuration;
-    }
+	public RepositoryBrowser(RepositoryConfiguration configuration) {
+		this.configuration = configuration;
+	}
 
-    @Override
-    public Iterable<? extends MutableAsset> discover(Collection<? extends AssetType> types) throws Exception {
+	@Override
+	public Iterable<? extends MutableAsset> discover(Collection<? extends AssetType> types) throws Exception {
 
-        List<MutableAsset> assets = new ArrayList<MutableAsset>();
-        for (AssetType type : types) {
-            if (type.equals(SdmxCodelist.type)) {
-                assets.addAll(discoverSdmxCodelists());
-            } else if (type.equals(CsvCodelist.type)) {
-                assets.addAll(discoverCsvCodelists());
-            } //else if ....when more types are supported
-            //...
-            else {
-                throw new IllegalArgumentException("type " + type + " is not supported by this service");
-            }
-        }
+		// coding cautiously below: VR should not pass us an unsupported type
 
-        return assets;
-    }
+		if (types.contains(SdmxCodelist.type))
+			return discoverSdmxCodelists();
 
-    @SuppressWarnings("all")
-    public Collection<SdmxCodelist> discoverSdmxCodelists() throws Exception {
+		if (types.contains(CsvCodelist.type))
+			return discoverCsvCodelists();
 
-        List<SdmxCodelist> assets = new ArrayList<SdmxCodelist>();
-        String endpoint = configuration.discoveryURI().toString();
+		throw new IllegalArgumentException("unsupported types " + types);
+	}
 
-        Query q = QueryFactory.create(configuration.sparqlQueryForCodelists());
-        ResultSet codelists = QueryExecutionFactory.sparqlService(endpoint, q).execSelect();
-        System.out.println("");
+	@SuppressWarnings("all")
+	public Collection<SdmxCodelist> discoverSdmxCodelists() throws Exception {
 
-        while (codelists.hasNext()) {
+		List<SdmxCodelist> assets = new ArrayList<SdmxCodelist>();
+		String endpoint = configuration.discoveryURI().toString();
 
-            QuerySolution next = codelists.next();
+		Query q = QueryFactory.create(configuration.sparqlQueryForCodelists());
+		ResultSet codelists = QueryExecutionFactory.sparqlService(endpoint, q).execSelect();
+		System.out.println("");
 
-            String uri = next.getResource("uri").getURI();
-            String name = next.getLiteral("name").getLexicalForm();
-            String version = next.getLiteral("version").getLexicalForm();
-            String creator = next.getLiteral("creator").getLexicalForm();
+		while (codelists.hasNext()) {
 
-            SdmxCodelist asset = new SdmxCodelist(uri, uri, version, name);
+			QuerySolution next = codelists.next();
 
-            asset.properties().add(Constants.ownerProperty(creator));
+			String uri = next.getResource("uri").getURI();
+			String name = next.getLiteral("name").getLexicalForm();
+			String version = next.getLiteral("version").getLexicalForm();
+			String creator = next.getLiteral("creator").getLexicalForm();
 
-            assets.add(asset);
-        }
-        return assets;
-    }
+			SdmxCodelist asset = new SdmxCodelist(uri, uri, version, name);
 
-    public Collection<SdmxCodelist> discoverCsvCodelists() throws Exception {
+			asset.properties().add(Constants.ownerProperty(creator));
 
-        return Collections.emptyList();
-    }
+			assets.add(asset);
+		}
+		return assets;
+	}
+
+	public Collection<SdmxCodelist> discoverCsvCodelists() throws Exception {
+
+		return Collections.emptyList();
+	}
 }
