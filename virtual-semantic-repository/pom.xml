@@ -55,14 +55,14 @@
 					<artifactId>log4j</artifactId>
 					<groupId>log4j</groupId>
 				</exclusion>
-				<exclusion>
+<!-- 				<exclusion>
 					<artifactId>xml-apis</artifactId>
 					<groupId>xml-apis</groupId>
 				</exclusion>
 				<exclusion>
 					<artifactId>xercesImpl</artifactId>
 					<groupId>xerces</groupId>
-				</exclusion>
+				</exclusion> -->
 			</exclusions>
 		</dependency>
 
