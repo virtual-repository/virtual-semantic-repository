@@ -6,12 +6,12 @@ import java.io.ByteArrayOutputStream;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 
+import org.sdmx.SdmxServiceFactory;
 import org.sdmxsource.sdmx.api.constants.STRUCTURE_OUTPUT_FORMAT;
 import org.sdmxsource.sdmx.api.manager.output.StructureWritingManager;
 import org.sdmxsource.sdmx.api.model.beans.SdmxBeans;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.sdmx.util.beans.container.SdmxBeansImpl;
-import org.virtual.sr.utils.SdmxServiceFactory;
 
 public class Sdmx2Xml implements XmlTransform<CodelistBean> {
 
@@ -35,5 +35,10 @@ public class Sdmx2Xml implements XmlTransform<CodelistBean> {
 	@Override
 	public Class<CodelistBean> api() {
 		return CodelistBean.class;
+	}
+	
+	@Override
+	public String type() {
+		return "codelist";
 	}
 }

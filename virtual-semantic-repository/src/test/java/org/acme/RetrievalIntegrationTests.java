@@ -1,8 +1,8 @@
 package org.acme;
 
 import org.junit.Test;
+import org.sdmx.SdmxServiceFactory;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
-import org.virtual.sr.utils.SdmxServiceFactory;
 import org.virtualrepository.Asset;
 import org.virtualrepository.VirtualRepository;
 import org.virtualrepository.impl.Repository;
