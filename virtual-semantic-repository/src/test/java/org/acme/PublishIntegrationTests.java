@@ -20,6 +20,7 @@ public class PublishIntegrationTests {
 	public void publishSdmxCodelist() {
 		
 		InputStream stream = getClass().getClassLoader().getResourceAsStream("samplesdmx.xml");
+//                InputStream stream = getClass().getClassLoader().getResourceAsStream("asfis.xml");
 		
 		CodelistBean list = parser().parseStructures(new ReadableDataLocationTmp(stream)).
 										getStructureBeans(false).getCodelists().iterator().next();

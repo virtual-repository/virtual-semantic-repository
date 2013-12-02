@@ -16,7 +16,6 @@ import org.virtualrepository.Asset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.spi.Publisher;
 
-import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
@@ -57,19 +56,19 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
     @Override
     public void publish(A asset, Model rdf) throws Exception {
-
-        System.out.println("publishing to " + configuration.publishURI());
 //        rdf.write(System.out);
         StmtIterator stmts = rdf.listStatements();
         String triples = "";
         while (stmts.hasNext()) {
             Statement s = stmts.next();
+            log.info(s.toString());
             triples+= FmtUtils.stringForTriple(s.asTriple()) + " . ";
         }
-        
+        log.info("publishing to " + configuration.publishURI());        
+//        System.out.println("insert data {" + triples + "}");
         UpdateExecutionFactory.createRemote(UpdateFactory.create("insert data {" + triples + "}"), configuration.publishURI().toString()).execute();
-        boolean success = QueryExecutionFactory.sparqlService("http://168.202.3.223:3030/sr_staging/query", "ask {" + triples + "}").execAsk();
-        log.info("Update was successful : "+success);
+//        boolean success = QueryExecutionFactory.sparqlService("http://168.202.3.223:3030/sr_staging/query", "ask {" + triples + "}").execAsk();
+//        log.info("Update was successful : "+success);
 
     }
 

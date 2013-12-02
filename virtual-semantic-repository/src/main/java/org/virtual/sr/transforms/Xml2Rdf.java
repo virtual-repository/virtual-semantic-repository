@@ -14,6 +14,7 @@ import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.Resource;
+import org.virtual.sr.utils.Constants;
 
 /**
  * Converts XML data into RDF data.
@@ -23,7 +24,6 @@ import com.hp.hpl.jena.rdf.model.Resource;
  */
 public class Xml2Rdf {
 
-	private static final String pseudoNS = "s:r/";
 
 	static XMLInputFactory factory = XMLInputFactory.newInstance(); 
 	
@@ -119,20 +119,20 @@ public class Xml2Rdf {
 	void emit(URI source,QName predicate,String literal) {
 		//System.out.println(source+"->"+predicate+"->"+literal);
 		Resource s = model.createResource(source.toString());
-		Property p = model.createProperty(pseudoNS,predicate.getLocalPart());
+		Property p = model.createProperty(Constants.pseudoNS,predicate.getLocalPart());
 		model.add(s,p,literal);
 	}
 	
 	void emit(URI source,QName predicate,URI target) {
 		//System.out.println(source+"->"+predicate+"->"+target);
 		Resource s = model.createResource(source.toString());
-		Property p = model.createProperty(pseudoNS,predicate.getLocalPart());
+		Property p = model.createProperty(Constants.pseudoNS,predicate.getLocalPart());
 		Resource o = model.createResource(target.toString());
 		model.add(s, p, o);
 	}
 	
 	URI mint(QName name) throws Exception {
-		return URI.create(pseudoNS+name.getLocalPart()+"/"+UUID.randomUUID());
+		return URI.create(Constants.pseudoNS+name.getLocalPart()+"/"+UUID.randomUUID());
 	}
 	
 //	
