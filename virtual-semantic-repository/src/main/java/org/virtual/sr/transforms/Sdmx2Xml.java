@@ -12,7 +12,6 @@ import org.sdmxsource.sdmx.api.manager.output.StructureWriterManager;
 import org.sdmxsource.sdmx.api.model.beans.SdmxBeans;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.sdmx.sdmxbeans.model.SdmxStructureFormat;
-import org.sdmxsource.sdmx.structureparser.manager.impl.StructureWriterManagerImpl;
 import org.sdmxsource.sdmx.util.beans.container.SdmxBeansImpl;
 
 public class Sdmx2Xml implements XmlTransform<CodelistBean> {
