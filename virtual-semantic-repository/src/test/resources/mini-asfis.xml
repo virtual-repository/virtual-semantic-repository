@@ -1,0 +1,2216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message:Structure xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common" xmlns:generic="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/generic" xmlns:genericmetadata="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/genericmetadata" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:cross="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/cross" xmlns:query="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:metadatareport="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/metadatareport" xmlns:utility="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/utility" xmlns:registry="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/registry" xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:compact="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/compact" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://sdmx.org/docs/2_0/SDMXMessage.xsd">
+    <message:Header>
+        <message:ID>REGISTRY_RESPONSE</message:ID>
+        <message:Test>false</message:Test>
+        <message:Prepared>2013-06-07T18:34:57</message:Prepared>
+        <message:Sender id="FAO"/>
+    </message:Header>
+    <message:CodeLists>
+        <structure:CodeList id="CL_SPECIES" agencyID="FAO" version="1.1" isFinal="true">
+            <structure:Name xml:lang="en">CL_SPECIES</structure:Name>
+            <structure:Code value="MCP">
+                <structure:Description xml:lang="en">Murray cod</structure:Description>
+                <structure:Description xml:lang="la">Maccullochella peelii</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Mitchell 1839)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="MQA">
+                <structure:Description xml:lang="en">Australian bass</structure:Description>
+                <structure:Description xml:lang="la">Macquaria australasica</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Cuvier 1830</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="MCA">
+                <structure:Description xml:lang="en">Golden perch</structure:Description>
+                <structure:Description xml:lang="la">Macquaria ambigua</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Richardson 1845)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="BIG">
+                <structure:Description xml:lang="en">Bigeyes nei</structure:Description>
+                <structure:Description xml:lang="fr">Beauclaires nca</structure:Description>
+                <structure:Description xml:lang="es">Catalufas nep</structure:Description>
+                <structure:Description xml:lang="la">Priacanthus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="THO">
+                <structure:Description xml:lang="en">Terapon perches nei</structure:Description>
+                <structure:Description xml:lang="la">Terapon spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="STB">
+                <structure:Description xml:lang="en">Striped bass</structure:Description>
+                <structure:Description xml:lang="fr">Bar d'Amérique</structure:Description>
+                <structure:Description xml:lang="es">Lubina estriada</structure:Description>
+                <structure:Description xml:lang="la">Morone saxatilis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Walbaum 1792)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SNP">
+                <structure:Description xml:lang="en">Northern elephant seal</structure:Description>
+                <structure:Description xml:lang="fr">Éléphant de mer boréal</structure:Description>
+                <structure:Description xml:lang="es">Foca elephante del norte</structure:Description>
+                <structure:Description xml:lang="la">Mirounga angustirostris</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Gill 1866)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SES">
+                <structure:Description xml:lang="en">Southern elephant seal</structure:Description>
+                <structure:Description xml:lang="fr">Éléphant de mer austral</structure:Description>
+                <structure:Description xml:lang="es">Foca elephante del sur</structure:Description>
+                <structure:Description xml:lang="la">Mirounga leonina</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SMH">
+                <structure:Description xml:lang="en">Hawaiian monk seal</structure:Description>
+                <structure:Description xml:lang="fr">Phoque moine de Hawai</structure:Description>
+                <structure:Description xml:lang="es">Foca monje del Hawaii</structure:Description>
+                <structure:Description xml:lang="la">Monachus schauinslandi</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Matschie 1905)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SKC">
+                <structure:Description xml:lang="en">Caribbean monk seal</structure:Description>
+                <structure:Description xml:lang="fr">Phoque moine des Caraïbes</structure:Description>
+                <structure:Description xml:lang="es">Foca monja del Caribe</structure:Description>
+                <structure:Description xml:lang="la">Monachus tropicalis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Gray 1850)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="RNW">
+                <structure:Description xml:lang="en">Northern right whale dolphin</structure:Description>
+                <structure:Description xml:lang="fr">Dauphin à dos lisse boréal</structure:Description>
+                <structure:Description xml:lang="es">Delfín liso del Norte</structure:Description>
+                <structure:Description xml:lang="la">Lissodelphis borealis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Peale 1848)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="ZCU">
+                <structure:Description xml:lang="en">Silver dory</structure:Description>
+                <structure:Description xml:lang="la">Cyttus australis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Richardson 1843)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OTM">
+                <structure:Description xml:lang="en">Marine otter</structure:Description>
+                <structure:Description xml:lang="fr">Loutre de mer</structure:Description>
+                <structure:Description xml:lang="es">Nutria de mar</structure:Description>
+                <structure:Description xml:lang="la">Lutra felina</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Molina 1782)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SZC">
+                <structure:Description xml:lang="en">Sauger</structure:Description>
+                <structure:Description xml:lang="fr">Sandre canadien</structure:Description>
+                <structure:Description xml:lang="es">Lucioperca canadiense</structure:Description>
+                <structure:Description xml:lang="la">Sander canadensis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Griffith &amp; Smith 1834)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="ACC">
+                <structure:Description xml:lang="en">Ruffe</structure:Description>
+                <structure:Description xml:lang="fr">Grémille</structure:Description>
+                <structure:Description xml:lang="es">Acerina</structure:Description>
+                <structure:Description xml:lang="la">Gymnocephalus cernuus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SEU">
+                <structure:Description xml:lang="en">White warehou</structure:Description>
+                <structure:Description xml:lang="es">Cojinoba del sur</structure:Description>
+                <structure:Description xml:lang="la">Seriolella caerulea</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Guichenot 1848</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="BLB">
+                <structure:Description xml:lang="en">Blue butterfish</structure:Description>
+                <structure:Description xml:lang="fr">Fiatole</structure:Description>
+                <structure:Description xml:lang="es">Palometa fiatola</structure:Description>
+                <structure:Description xml:lang="la">Stromateus fiatola</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Linnaeus 1758</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SIP">
+                <structure:Description xml:lang="en">Silver pomfret</structure:Description>
+                <structure:Description xml:lang="fr">Aileron argenté</structure:Description>
+                <structure:Description xml:lang="es">Palometón platero</structure:Description>
+                <structure:Description xml:lang="la">Pampus argenteus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Euphrasen 1788)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="HGQ">
+                <structure:Description xml:lang="en">Honey comb</structure:Description>
+                <structure:Description xml:lang="fr">Éponge commune</structure:Description>
+                <structure:Description xml:lang="es">Esponja común</structure:Description>
+                <structure:Description xml:lang="la">Hippospongia communis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lamarck 1813)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="HGH">
+                <structure:Description xml:lang="en">Sheepswool sponge</structure:Description>
+                <structure:Description xml:lang="la">Hippospongia lachne</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="QGA">
+                <structure:Description xml:lang="en">Elephant ear</structure:Description>
+                <structure:Description xml:lang="fr">Oreille d'éléphant</structure:Description>
+                <structure:Description xml:lang="es">Oreja de elefante</structure:Description>
+                <structure:Description xml:lang="la">Spongia agaricina</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Pallas 1766</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="QGB">
+                <structure:Description xml:lang="en">Yellow sponge</structure:Description>
+                <structure:Description xml:lang="la">Spongia barbara</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Duchassaing &amp; Michelotti 1864</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="QGG">
+                <structure:Description xml:lang="en">Glove sponge</structure:Description>
+                <structure:Description xml:lang="la">Spongia graminea</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Hyatt 1877</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="QGO">
+                <structure:Description xml:lang="en">Greek bathing sponge</structure:Description>
+                <structure:Description xml:lang="fr">Éponge fine grecque</structure:Description>
+                <structure:Description xml:lang="es">Esponja de bano griega</structure:Description>
+                <structure:Description xml:lang="la">Spongia officinalis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Linnaeus 1759</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GJX">
+                <structure:Description xml:lang="en">Spiny gracilaria</structure:Description>
+                <structure:Description xml:lang="fr">Gracilaire épineuse</structure:Description>
+                <structure:Description xml:lang="es">Pelillo espinoso</structure:Description>
+                <structure:Description xml:lang="la">Gracilaria spinigera</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Dawson 1949</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GCW">
+                <structure:Description xml:lang="en">Broadleaf gracilaria</structure:Description>
+                <structure:Description xml:lang="fr">Gracilaire laminée</structure:Description>
+                <structure:Description xml:lang="es">Gracilaria laminada</structure:Description>
+                <structure:Description xml:lang="la">Gracilaria textorii</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Suringar) Agardh 1876</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="YAZ">
+                <structure:Description xml:lang="en">Tattered sea moss</structure:Description>
+                <structure:Description xml:lang="fr">Houlette deguenillée</structure:Description>
+                <structure:Description xml:lang="es">Cayado andrajoso</structure:Description>
+                <structure:Description xml:lang="la">Hypnea pannosa</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>J. Agardh 1847</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="JNA">
+                <structure:Description xml:lang="en">Pacific coral moss</structure:Description>
+                <structure:Description xml:lang="fr">Janire corail du Pacifique</structure:Description>
+                <structure:Description xml:lang="es">Falsa coralina del Pacífico</structure:Description>
+                <structure:Description xml:lang="la">Jania adhaerens</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Lamouroux 1816</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OKF">
+                <structure:Description xml:lang="la">Solieria filiformis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Kutzing) Gabrielson</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="MVT">
+                <structure:Description xml:lang="la">Mastocarpus stellatus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Stackhouse) Guiry in Guiry, J.A.West, D.-H. Kim &amp; Masu</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="LJQ">
+                <structure:Description xml:lang="la">Lithothamnion corallioides</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(P.L. Crouan &amp; H.M. Crouan) P.L. Crouan &amp; H.M. Crouan</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="BMO">
+                <structure:Description xml:lang="en">Blue moki</structure:Description>
+                <structure:Description xml:lang="la">Latridopsis ciliaris</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Forster 1801)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="NEB">
+                <structure:Description xml:lang="en">New Zealand blue cod</structure:Description>
+                <structure:Description xml:lang="la">Parapercis colias</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Forster 1801)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="TAU">
+                <structure:Description xml:lang="en">Tautog</structure:Description>
+                <structure:Description xml:lang="fr">Tautogue noir</structure:Description>
+                <structure:Description xml:lang="la">Tautoga onitis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="PWT">
+                <structure:Description xml:lang="en">Parrotfishes nei</structure:Description>
+                <structure:Description xml:lang="fr">Perroquets nca</structure:Description>
+                <structure:Description xml:lang="es">Loros nep</structure:Description>
+                <structure:Description xml:lang="la">Scaridae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="ANW">
+                <structure:Description xml:lang="en">Angelfishes nei</structure:Description>
+                <structure:Description xml:lang="fr">Demoiselles nca</structure:Description>
+                <structure:Description xml:lang="es">Angeles nep</structure:Description>
+                <structure:Description xml:lang="la">Pomacanthidae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="HAW">
+                <structure:Description xml:lang="en">Peruvian morwong</structure:Description>
+                <structure:Description xml:lang="fr">Castanette pintadille</structure:Description>
+                <structure:Description xml:lang="es">Pintadilla</structure:Description>
+                <structure:Description xml:lang="la">Cheilodactylus variegatus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Valenciennes 1833</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="TAK">
+                <structure:Description xml:lang="en">Tarakihi</structure:Description>
+                <structure:Description xml:lang="la">Nemadactylus macropterus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Forster 1801)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="MOW">
+                <structure:Description xml:lang="en">Morwongs</structure:Description>
+                <structure:Description xml:lang="la">Nemadactylus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GKI">
+                <structure:Description xml:lang="en">Dichotomously branched gracila</structure:Description>
+                <structure:Description xml:lang="la">Gracilaria edulis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Gmelin) Silva 1952</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GKH">
+                <structure:Description xml:lang="en">Prostrate gracilaria</structure:Description>
+                <structure:Description xml:lang="la">Hydropuntia eucheumatoides</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Harvey) Gurgel &amp; Fredericq 2004</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="KMK">
+                <structure:Description xml:lang="en">Pacific ceramium</structure:Description>
+                <structure:Description xml:lang="fr">Céramium du Pacifique</structure:Description>
+                <structure:Description xml:lang="es">Trillo del Pacífico</structure:Description>
+                <structure:Description xml:lang="la">Ceramium pacificum</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Collins) Kylin 1925</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GJP">
+                <structure:Description xml:lang="en">Dwarf gelidium</structure:Description>
+                <structure:Description xml:lang="fr">Menue paille naine</structure:Description>
+                <structure:Description xml:lang="es">Pajilla enana</structure:Description>
+                <structure:Description xml:lang="la">Gelidium pusillum</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Stackhouse) Le Jolis 1863</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GHG">
+                <structure:Description xml:lang="en">Gigartina seaweeds nei</structure:Description>
+                <structure:Description xml:lang="fr">Gigartines nca</structure:Description>
+                <structure:Description xml:lang="es">Lugas nep</structure:Description>
+                <structure:Description xml:lang="la">Gigartinaceae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="CMR">
+                <structure:Description xml:lang="en">Mediterranean shore crab</structure:Description>
+                <structure:Description xml:lang="fr">Crabe vert de la Méditerranée</structure:Description>
+                <structure:Description xml:lang="es">Cangrejo verde mediterráneo</structure:Description>
+                <structure:Description xml:lang="la">Carcinus aestuarii</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Nardo 1847</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="MUD">
+                <structure:Description xml:lang="en">Indo-Pacific swamp crab</structure:Description>
+                <structure:Description xml:lang="fr">Crabe de palétuviers</structure:Description>
+                <structure:Description xml:lang="es">Cangrejo de manglares</structure:Description>
+                <structure:Description xml:lang="la">Scylla serrata</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Forsskål 1775)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="LIO">
+                <structure:Description xml:lang="en">Velvet swimcrab</structure:Description>
+                <structure:Description xml:lang="fr">Étrille commune</structure:Description>
+                <structure:Description xml:lang="es">Nécora</structure:Description>
+                <structure:Description xml:lang="la">Necora puber</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1767)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SCY">
+                <structure:Description xml:lang="en">Lesser slipper lobster</structure:Description>
+                <structure:Description xml:lang="fr">Petite cigale</structure:Description>
+                <structure:Description xml:lang="es">Santiaguiño</structure:Description>
+                <structure:Description xml:lang="la">Scyllarus arctus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="UGU">
+                <structure:Description xml:lang="en">Unihorn octopus</structure:Description>
+                <structure:Description xml:lang="fr">Poulpe licorne</structure:Description>
+                <structure:Description xml:lang="es">Pulpo unicornio</structure:Description>
+                <structure:Description xml:lang="la">Scaeurgus unicirrhus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(d’Orbigny 1840)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SHL">
+                <structure:Description xml:lang="en">Lanternsharks nei</structure:Description>
+                <structure:Description xml:lang="fr">Sagres nca</structure:Description>
+                <structure:Description xml:lang="es">Tollos lucero nep</structure:Description>
+                <structure:Description xml:lang="la">Etmopterus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="ETR">
+                <structure:Description xml:lang="en">Great lanternshark</structure:Description>
+                <structure:Description xml:lang="fr">Sagre rude</structure:Description>
+                <structure:Description xml:lang="es">Tollo lucero raspa</structure:Description>
+                <structure:Description xml:lang="la">Etmopterus princeps</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Collett 1904</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="MWT">
+                <structure:Description xml:lang="en">Weatherfish</structure:Description>
+                <structure:Description xml:lang="fr">Loche d'étang</structure:Description>
+                <structure:Description xml:lang="es">Misgurno</structure:Description>
+                <structure:Description xml:lang="la">Misgurnus fossilis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="DDL">
+                <structure:Description xml:lang="en">Lister's keyhole limpet</structure:Description>
+                <structure:Description xml:lang="fr">Fissurelle de Lister</structure:Description>
+                <structure:Description xml:lang="es">Lapa de Lister</structure:Description>
+                <structure:Description xml:lang="la">Diodora listeri</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(d’Orbigny 1842)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="FSB">
+                <structure:Description xml:lang="en">Barbados keyhole limpet</structure:Description>
+                <structure:Description xml:lang="fr">Fissurelle des Barbades</structure:Description>
+                <structure:Description xml:lang="es">Lapa de Barbados</structure:Description>
+                <structure:Description xml:lang="la">Fissurella barbadensis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Gmelin 1791)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="FSM">
+                <structure:Description xml:lang="en">Rayed keyhole limpet</structure:Description>
+                <structure:Description xml:lang="fr">Fissurelle rayonnante</structure:Description>
+                <structure:Description xml:lang="es">Lapa radiante</structure:Description>
+                <structure:Description xml:lang="la">Fissurella nimbosa</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="NGK">
+                <structure:Description xml:lang="en">West Indian crown conch</structure:Description>
+                <structure:Description xml:lang="fr">Mélongène des Caraïbes</structure:Description>
+                <structure:Description xml:lang="es">Melongena antillana</structure:Description>
+                <structure:Description xml:lang="la">Melongena melongena</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="UGO">
+                <structure:Description xml:lang="en">Giant hairy melongena</structure:Description>
+                <structure:Description xml:lang="fr">Mélongène noire</structure:Description>
+                <structure:Description xml:lang="es">Melongena negra</structure:Description>
+                <structure:Description xml:lang="la">Pugilina morio</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="KSB">
+                <structure:Description xml:lang="en">West Indian murex</structure:Description>
+                <structure:Description xml:lang="fr">Rocher antillais</structure:Description>
+                <structure:Description xml:lang="es">Busano antillano</structure:Description>
+                <structure:Description xml:lang="la">Chicoreus brevifrons</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lamarck 1822)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="UTH">
+                <structure:Description xml:lang="en">Goldmouth murex</structure:Description>
+                <structure:Description xml:lang="fr">Murex bouche d'or</structure:Description>
+                <structure:Description xml:lang="es">Busano boca de oro</structure:Description>
+                <structure:Description xml:lang="la">Haustellum chrysostoma</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Sowerby 1834)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="UTD">
+                <structure:Description xml:lang="en">Don Moore's murex</structure:Description>
+                <structure:Description xml:lang="fr">Murex de Moore</structure:Description>
+                <structure:Description xml:lang="es">Busano de Moore</structure:Description>
+                <structure:Description xml:lang="la">Haustellum donmoorei</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Bullis 1964)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="UTS">
+                <structure:Description xml:lang="en">Messorius murex</structure:Description>
+                <structure:Description xml:lang="fr">Murex bouche blanche</structure:Description>
+                <structure:Description xml:lang="es">Busano boca blanca</structure:Description>
+                <structure:Description xml:lang="la">Haustellum messorius</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Sowerby 1841)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="ITM">
+                <structure:Description xml:lang="en">Black bullhead</structure:Description>
+                <structure:Description xml:lang="fr">Poisson-chat</structure:Description>
+                <structure:Description xml:lang="es">Bagre torito negro</structure:Description>
+                <structure:Description xml:lang="la">Ameiurus melas</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Rafinesque 1820)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="ITE">
+                <structure:Description xml:lang="en">Brown bullhead</structure:Description>
+                <structure:Description xml:lang="fr">Barbotte brune</structure:Description>
+                <structure:Description xml:lang="la">Ameiurus nebulosus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lesueur 1819)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="TDT">
+                <structure:Description xml:lang="en">Tandan catfish</structure:Description>
+                <structure:Description xml:lang="la">Tandanus tandanus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Mitchell 1838)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="CAG">
+                <structure:Description xml:lang="en">Glass catfishes</structure:Description>
+                <structure:Description xml:lang="la">Kryptopterus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="CST">
+                <structure:Description xml:lang="en">Black catfishes nei</structure:Description>
+                <structure:Description xml:lang="la">Chrysichthys spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="CSR">
+                <structure:Description xml:lang="en">Bagrid catfish</structure:Description>
+                <structure:Description xml:lang="la">Chrysichthys nigrodigitatus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lacépède 1803)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="ITP">
+                <structure:Description xml:lang="en">Channel catfish</structure:Description>
+                <structure:Description xml:lang="fr">Barbue de rivière</structure:Description>
+                <structure:Description xml:lang="es">Bagre de canal</structure:Description>
+                <structure:Description xml:lang="la">Ictalurus punctatus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Rafinesque 1818)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="ITC">
+                <structure:Description xml:lang="en">White catfish</structure:Description>
+                <structure:Description xml:lang="la">Ameiurus catus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OVG">
+                <structure:Description xml:lang="en">Tiger olive</structure:Description>
+                <structure:Description xml:lang="la">Oliva tigrina</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Lamarck 1811</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="FLM">
+                <structure:Description xml:lang="en">Margarita murex</structure:Description>
+                <structure:Description xml:lang="fr">Murex marguerite</structure:Description>
+                <structure:Description xml:lang="es">Busano margarita</structure:Description>
+                <structure:Description xml:lang="la">Phyllonotus margaritensis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Abbott 1958)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="FLO">
+                <structure:Description xml:lang="en">Apple murex</structure:Description>
+                <structure:Description xml:lang="fr">Rocher pomme</structure:Description>
+                <structure:Description xml:lang="es">Busano manzanero</structure:Description>
+                <structure:Description xml:lang="la">Phyllonotus pomum</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Gmelin 1791)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="HSZ">
+                <structure:Description xml:lang="en">Deltoid rock shell</structure:Description>
+                <structure:Description xml:lang="fr">Pourpre deltoide</structure:Description>
+                <structure:Description xml:lang="es">Púrpura deltoide</structure:Description>
+                <structure:Description xml:lang="la">Thais deltoidea</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lamarck 1822)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="NJE">
+                <structure:Description xml:lang="en">Bleeding tooth</structure:Description>
+                <structure:Description xml:lang="fr">Nérite dent saignante</structure:Description>
+                <structure:Description xml:lang="es">Nerita diente sangrante</structure:Description>
+                <structure:Description xml:lang="la">Nerita peloronta</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Linnaeus 1758</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OVS">
+                <structure:Description xml:lang="en">Lettered olive</structure:Description>
+                <structure:Description xml:lang="fr">Olive écriture</structure:Description>
+                <structure:Description xml:lang="es">Oliva escribana</structure:Description>
+                <structure:Description xml:lang="la">Oliva sayana</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Ravenel 1834</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="LVS">
+                <structure:Description xml:lang="en">Swollen laurenzia</structure:Description>
+                <structure:Description xml:lang="fr">Laurencia renflée</structure:Description>
+                <structure:Description xml:lang="es">Laurencia hinchada</structure:Description>
+                <structure:Description xml:lang="la">Laurencia sinicola</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Setchell &amp; Gardner 1924</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="YXA">
+                <structure:Description xml:lang="en">Australian trumpet</structure:Description>
+                <structure:Description xml:lang="fr">Trompette australienne</structure:Description>
+                <structure:Description xml:lang="la">Syrinx aruanus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="FLE">
+                <structure:Description xml:lang="en">European flounder</structure:Description>
+                <structure:Description xml:lang="fr">Flet d'Europe</structure:Description>
+                <structure:Description xml:lang="es">Platija europea</structure:Description>
+                <structure:Description xml:lang="la">Platichthys flesus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="FLW">
+                <structure:Description xml:lang="en">Winter flounder</structure:Description>
+                <structure:Description xml:lang="fr">Limande-plie rouge</structure:Description>
+                <structure:Description xml:lang="es">Solla roja</structure:Description>
+                <structure:Description xml:lang="la">Pseudopleuronectes americanus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Walbaum 1792</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GHL">
+                <structure:Description xml:lang="en">Greenland halibut</structure:Description>
+                <structure:Description xml:lang="fr">Flétan noir</structure:Description>
+                <structure:Description xml:lang="es">Fletán negro</structure:Description>
+                <structure:Description xml:lang="la">Reinhardtius hippoglossoides</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Walbaum 1792)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GLZ">
+                <structure:Description xml:lang="en">Rex sole</structure:Description>
+                <structure:Description xml:lang="fr">Plie cynoglosse royale</structure:Description>
+                <structure:Description xml:lang="es">Platija rey</structure:Description>
+                <structure:Description xml:lang="la">Glyptocephalus zachirus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Lockington 1879</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="EOJ">
+                <structure:Description xml:lang="en">Petrale sole</structure:Description>
+                <structure:Description xml:lang="fr">Charlottin pétrale</structure:Description>
+                <structure:Description xml:lang="es">Limanda petrale</structure:Description>
+                <structure:Description xml:lang="la">Eopsetta jordani</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lockington 1879)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="FTS">
+                <structure:Description xml:lang="en">Flathead sole</structure:Description>
+                <structure:Description xml:lang="fr">Balai du Japon</structure:Description>
+                <structure:Description xml:lang="es">Platija japonesa</structure:Description>
+                <structure:Description xml:lang="la">Hippoglossoides elassodon</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Jordan &amp; Gilbert 1880</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="YEL">
+                <structure:Description xml:lang="en">Yellowtail flounder</structure:Description>
+                <structure:Description xml:lang="fr">Limande à queue jaune</structure:Description>
+                <structure:Description xml:lang="es">Limanda</structure:Description>
+                <structure:Description xml:lang="la">Limanda ferruginea</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Storer 1839)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="MIP">
+                <structure:Description xml:lang="en">Dover sole</structure:Description>
+                <structure:Description xml:lang="fr">Limande sole du Pacifique</structure:Description>
+                <structure:Description xml:lang="es">Soya escurridiza</structure:Description>
+                <structure:Description xml:lang="la">Microstomus pacificus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lockington 1879)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="EQX">
+                <structure:Description xml:lang="en">Ensis razor clams nei</structure:Description>
+                <structure:Description xml:lang="fr">Couteaux Ensis nca</structure:Description>
+                <structure:Description xml:lang="es">Navajas Ensis nep</structure:Description>
+                <structure:Description xml:lang="la">Ensis spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="QND">
+                <structure:Description xml:lang="en">Nototodarus flying squids nei</structure:Description>
+                <structure:Description xml:lang="fr">Encornets Nototodarus nca</structure:Description>
+                <structure:Description xml:lang="es">Potas Nototodarus nep</structure:Description>
+                <structure:Description xml:lang="la">Nototodarus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OCW">
+                <structure:Description xml:lang="la">Octopus neglectus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Nateewathana &amp; Norman 1999</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OFY">
+                <structure:Description xml:lang="la">Octopus fangsiao</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>D'Orbigny 1839-1841</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OAW">
+                <structure:Description xml:lang="es">Burgado hembra</structure:Description>
+                <structure:Description xml:lang="la">Osilinus atratus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Wood 1828)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="QOS">
+                <structure:Description xml:lang="en">Dwarf oyster</structure:Description>
+                <structure:Description xml:lang="fr">Huître naine</structure:Description>
+                <structure:Description xml:lang="es">Morruncho</structure:Description>
+                <structure:Description xml:lang="la">Ostreola stentina</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Payraudeau 1826)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="WPT">
+                <structure:Description xml:lang="es">Lapa de pie negro</structure:Description>
+                <structure:Description xml:lang="la">Patella tenuis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Gmelin 1791)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="HWS">
+                <structure:Description xml:lang="en">Black-capped petrel</structure:Description>
+                <structure:Description xml:lang="fr">Pétrel diablotin</structure:Description>
+                <structure:Description xml:lang="es">Petrel antillano</structure:Description>
+                <structure:Description xml:lang="la">Pterodroma hasitata</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Kuhl 1820)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="UIL">
+                <structure:Description xml:lang="en">Audubon's shearwater</structure:Description>
+                <structure:Description xml:lang="fr">Puffin d'Audubon</structure:Description>
+                <structure:Description xml:lang="es">Pardela de Audubon</structure:Description>
+                <structure:Description xml:lang="la">Puffinus lherminieri</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Lesson 1839</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="UIM">
+                <structure:Description xml:lang="en">Balearic shearwater</structure:Description>
+                <structure:Description xml:lang="fr">Puffin des Baléares</structure:Description>
+                <structure:Description xml:lang="es">Pardela pichoneta balear</structure:Description>
+                <structure:Description xml:lang="la">Puffinus mauretanicus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Lowe 1921</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="UIP">
+                <structure:Description xml:lang="en">Manx shearwater</structure:Description>
+                <structure:Description xml:lang="fr">Puffin des anglais</structure:Description>
+                <structure:Description xml:lang="es">Pardela pichoneta</structure:Description>
+                <structure:Description xml:lang="la">Puffinus puffinus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Brunnich 1764)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="UYE">
+                <structure:Description xml:lang="en">Yelkouan shearwater</structure:Description>
+                <structure:Description xml:lang="fr">Puffin de Méditerranée</structure:Description>
+                <structure:Description xml:lang="es">Pardela mediterránea</structure:Description>
+                <structure:Description xml:lang="la">Puffinus yelkouan</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Acerbi 1827</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GRL">
+                <structure:Description xml:lang="en">Silver grunt</structure:Description>
+                <structure:Description xml:lang="fr">Grondeur argenté</structure:Description>
+                <structure:Description xml:lang="es">Corocoro plateado</structure:Description>
+                <structure:Description xml:lang="la">Pomadasys argenteus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Forsskål 1775)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="BUR">
+                <structure:Description xml:lang="en">Sompat grunt</structure:Description>
+                <structure:Description xml:lang="fr">Grondeur sompat</structure:Description>
+                <structure:Description xml:lang="es">Ronco sompat</structure:Description>
+                <structure:Description xml:lang="la">Pomadasys jubelini</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Cuvier 1830)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="BRG">
+                <structure:Description xml:lang="en">Barred grunt</structure:Description>
+                <structure:Description xml:lang="fr">Cagna rayée</structure:Description>
+                <structure:Description xml:lang="es">Ronco canario</structure:Description>
+                <structure:Description xml:lang="la">Conodon nobilis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="DRU">
+                <structure:Description xml:lang="en">Sciaenas nei</structure:Description>
+                <structure:Description xml:lang="fr">Sciaenas nca</structure:Description>
+                <structure:Description xml:lang="es">Sciaenas nep</structure:Description>
+                <structure:Description xml:lang="la">Sciaena spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="MOB">
+                <structure:Description xml:lang="en">Monocle breams</structure:Description>
+                <structure:Description xml:lang="fr">Mamilas</structure:Description>
+                <structure:Description xml:lang="es">Besugatos</structure:Description>
+                <structure:Description xml:lang="la">Scolopsis spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="POY">
+                <structure:Description xml:lang="en">Ponyfishes(=Slipmouths)</structure:Description>
+                <structure:Description xml:lang="fr">Sapsap</structure:Description>
+                <structure:Description xml:lang="es">Motambos</structure:Description>
+                <structure:Description xml:lang="la">Leiognathus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="PIG">
+                <structure:Description xml:lang="en">Pigfish</structure:Description>
+                <structure:Description xml:lang="fr">Goret mule</structure:Description>
+                <structure:Description xml:lang="es">Corocoro burro</structure:Description>
+                <structure:Description xml:lang="la">Orthopristis chrysoptera</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1766)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GRA">
+                <structure:Description xml:lang="en">African striped grunt</structure:Description>
+                <structure:Description xml:lang="fr">Grondeur rayé</structure:Description>
+                <structure:Description xml:lang="es">Burro listado</structure:Description>
+                <structure:Description xml:lang="la">Parapristipoma octolineatum</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Valenciennes 1833)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="LXP">
+                <structure:Description xml:lang="en">Leaf coral</structure:Description>
+                <structure:Description xml:lang="fr">Corail foliace</structure:Description>
+                <structure:Description xml:lang="es">Coral foliaceo</structure:Description>
+                <structure:Description xml:lang="la">Leptoseris papyracea</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Dana 1846)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="LQZ">
+                <structure:Description xml:lang="en">Liocarcinus swimcrabs nei</structure:Description>
+                <structure:Description xml:lang="fr">Étrilles Liocarcinus nca</structure:Description>
+                <structure:Description xml:lang="es">Cangrejos Liocarcinus nep</structure:Description>
+                <structure:Description xml:lang="la">Liocarcinus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="VSE">
+                <structure:Description xml:lang="en">Ceram vase</structure:Description>
+                <structure:Description xml:lang="la">Vasum ceramicum</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SOX">
+                <structure:Description xml:lang="en">Soles nei</structure:Description>
+                <structure:Description xml:lang="fr">Soles nca</structure:Description>
+                <structure:Description xml:lang="es">Lenguados nep</structure:Description>
+                <structure:Description xml:lang="la">Soleidae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SOS">
+                <structure:Description xml:lang="en">Sand sole</structure:Description>
+                <structure:Description xml:lang="fr">Sole-pole</structure:Description>
+                <structure:Description xml:lang="es">Lenguado de arena</structure:Description>
+                <structure:Description xml:lang="la">Solea lascaris</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Ben-Tuvia 1990</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SOW">
+                <structure:Description xml:lang="en">West coast sole</structure:Description>
+                <structure:Description xml:lang="fr">Sole australe occidentale</structure:Description>
+                <structure:Description xml:lang="es">Lenguado austral oeste</structure:Description>
+                <structure:Description xml:lang="la">Austroglossus microlepis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Bleeker 1863)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SOE">
+                <structure:Description xml:lang="en">Mud sole</structure:Description>
+                <structure:Description xml:lang="fr">Sole de vase</structure:Description>
+                <structure:Description xml:lang="es">Lenguado de fango</structure:Description>
+                <structure:Description xml:lang="la">Austroglossus pectoralis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Kaup 1858)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="THS">
+                <structure:Description xml:lang="en">Thickback soles nei</structure:Description>
+                <structure:Description xml:lang="fr">Soles-perdix nca</structure:Description>
+                <structure:Description xml:lang="es">Golletas nep</structure:Description>
+                <structure:Description xml:lang="la">Microchirus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="TOX">
+                <structure:Description xml:lang="en">Tonguefishes</structure:Description>
+                <structure:Description xml:lang="fr">Cynoglossidés</structure:Description>
+                <structure:Description xml:lang="es">Cinoglósidos</structure:Description>
+                <structure:Description xml:lang="la">Cynoglossidae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SCF">
+                <structure:Description xml:lang="en">Turbots nei</structure:Description>
+                <structure:Description xml:lang="fr">Turbots nca</structure:Description>
+                <structure:Description xml:lang="es">Rodaballos nep</structure:Description>
+                <structure:Description xml:lang="la">Scophthalmidae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OVI">
+                <structure:Description xml:lang="en">Redmouth olive</structure:Description>
+                <structure:Description xml:lang="fr">Olive à bouche rouge</structure:Description>
+                <structure:Description xml:lang="la">Oliva miniacea</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Roding 1798)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="CRB">
+                <structure:Description xml:lang="en">Blue crab</structure:Description>
+                <structure:Description xml:lang="fr">Crabe bleu</structure:Description>
+                <structure:Description xml:lang="es">Cangrejo azul</structure:Description>
+                <structure:Description xml:lang="la">Callinectes sapidus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Rathbun 1896</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="CRZ">
+                <structure:Description xml:lang="en">Dana swimcrab</structure:Description>
+                <structure:Description xml:lang="fr">Crabe lénée</structure:Description>
+                <structure:Description xml:lang="es">Cangrejo sirí</structure:Description>
+                <structure:Description xml:lang="la">Callinectes danae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Smith 1869</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="CRC">
+                <structure:Description xml:lang="en">Giant swimcrab</structure:Description>
+                <structure:Description xml:lang="fr">Crabe géant</structure:Description>
+                <structure:Description xml:lang="es">Jaiba gigante</structure:Description>
+                <structure:Description xml:lang="la">Callinectes toxotes</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Ordway 1863</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="CRG">
+                <structure:Description xml:lang="en">Green crab</structure:Description>
+                <structure:Description xml:lang="fr">Crabe vert</structure:Description>
+                <structure:Description xml:lang="es">Cangrejo verde</structure:Description>
+                <structure:Description xml:lang="la">Carcinus maenas</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GUB">
+                <structure:Description xml:lang="en">Whitespotted guitarfish</structure:Description>
+                <structure:Description xml:lang="fr">Poisson-guitare à lunaires</structure:Description>
+                <structure:Description xml:lang="es">Guitarra pecosa</structure:Description>
+                <structure:Description xml:lang="la">Rhinobatos albomaculatus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Norman 1930)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="RAJ">
+                <structure:Description xml:lang="en">Rays and skates nei</structure:Description>
+                <structure:Description xml:lang="fr">Rajidés nca</structure:Description>
+                <structure:Description xml:lang="es">Rayidos nep</structure:Description>
+                <structure:Description xml:lang="la">Rajidae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="TLQ">
+                <structure:Description xml:lang="en">Spiney-horn octopus</structure:Description>
+                <structure:Description xml:lang="fr">Poulpe cornu</structure:Description>
+                <structure:Description xml:lang="es">Pulpo cornudo</structure:Description>
+                <structure:Description xml:lang="la">Tetracheledone spinicirrhus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Voss 1955</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="NID">
+                <structure:Description xml:lang="en">Dana octopus squid</structure:Description>
+                <structure:Description xml:lang="fr">Encornet poulpe dana</structure:Description>
+                <structure:Description xml:lang="es">Pulpota</structure:Description>
+                <structure:Description xml:lang="la">Taningia danae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Joubin 1931</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="YHT">
+                <structure:Description xml:lang="en">Tuberculate octopus</structure:Description>
+                <structure:Description xml:lang="fr">Pieuvre dimorphe</structure:Description>
+                <structure:Description xml:lang="es">Pulpote</structure:Description>
+                <structure:Description xml:lang="la">Ocythoe tuberculata</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Rafinesque 1814</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="PTM">
+                <structure:Description xml:lang="en">False catshark</structure:Description>
+                <structure:Description xml:lang="fr">Requin à longue dorsale</structure:Description>
+                <structure:Description xml:lang="es">Musolón de aleta larga</structure:Description>
+                <structure:Description xml:lang="la">Pseudotriakis microdon</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Capello 1868</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GSK">
+                <structure:Description xml:lang="en">Greenland shark</structure:Description>
+                <structure:Description xml:lang="fr">Laimargue du Groenland</structure:Description>
+                <structure:Description xml:lang="es">Tollo de Groenlandia</structure:Description>
+                <structure:Description xml:lang="la">Somniosus microcephalus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Bloch &amp; Schneider 1801)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="DGZ">
+                <structure:Description xml:lang="en">Dogfishes nei</structure:Description>
+                <structure:Description xml:lang="fr">Aiguillats nca</structure:Description>
+                <structure:Description xml:lang="es">Mielgas nep</structure:Description>
+                <structure:Description xml:lang="la">Squalus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="DOP">
+                <structure:Description xml:lang="en">Shortnose spurdog</structure:Description>
+                <structure:Description xml:lang="fr">Aiguillat nez court</structure:Description>
+                <structure:Description xml:lang="es">Galludo ñato</structure:Description>
+                <structure:Description xml:lang="la">Squalus megalops</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Macleay 1881)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GUQ">
+                <structure:Description xml:lang="en">Leafscale gulper shark</structure:Description>
+                <structure:Description xml:lang="fr">Squale-chagrin de l'Atlantique</structure:Description>
+                <structure:Description xml:lang="es">Quelvacho negro</structure:Description>
+                <structure:Description xml:lang="la">Centrophorus squamosus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Bonnaterre 1788)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="ETX">
+                <structure:Description xml:lang="en">Velvet belly</structure:Description>
+                <structure:Description xml:lang="fr">Sagre commun</structure:Description>
+                <structure:Description xml:lang="es">Negrito</structure:Description>
+                <structure:Description xml:lang="la">Etmopterus spinax</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="ETP">
+                <structure:Description xml:lang="en">Smooth lanternshark</structure:Description>
+                <structure:Description xml:lang="fr">Sagre nain</structure:Description>
+                <structure:Description xml:lang="es">Tollo lucero liso</structure:Description>
+                <structure:Description xml:lang="la">Etmopterus pusillus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lowe 1839)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="CYO">
+                <structure:Description xml:lang="en">Portuguese dogfish</structure:Description>
+                <structure:Description xml:lang="fr">Pailona commun</structure:Description>
+                <structure:Description xml:lang="es">Pailona</structure:Description>
+                <structure:Description xml:lang="la">Centroscymnus coelolepis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Bocage &amp; Capello 1864</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="NDH">
+                <structure:Description xml:lang="en">Hawaiian flying squid</structure:Description>
+                <structure:Description xml:lang="fr">Encornet bouquet</structure:Description>
+                <structure:Description xml:lang="es">Pota hawaiana</structure:Description>
+                <structure:Description xml:lang="la">Nototodarus hawaiiensis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Berry 1912)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OFE">
+                <structure:Description xml:lang="en">Orangeback flying squid</structure:Description>
+                <structure:Description xml:lang="fr">Encornet dos orange</structure:Description>
+                <structure:Description xml:lang="es">Pota naranja</structure:Description>
+                <structure:Description xml:lang="la">Ommastrephes pteropus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Steenstrup 1855</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OKA">
+                <structure:Description xml:lang="en">Atlantic bird squid</structure:Description>
+                <structure:Description xml:lang="fr">Encornet oiseau</structure:Description>
+                <structure:Description xml:lang="es">Pota pajara</structure:Description>
+                <structure:Description xml:lang="la">Ornithoteuthis antillarum</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Adam 1957</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OKL">
+                <structure:Description xml:lang="en">Shiny bird squid</structure:Description>
+                <structure:Description xml:lang="fr">Encornet planeur</structure:Description>
+                <structure:Description xml:lang="es">Pota planeadora</structure:Description>
+                <structure:Description xml:lang="la">Ornithoteuthis volatilis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Sasaki 1915</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="IXO">
+                <structure:Description xml:lang="en">Sharptail shortfin squid</structure:Description>
+                <structure:Description xml:lang="fr">Encornet rouge à pointe</structure:Description>
+                <structure:Description xml:lang="es">Pota puntiaguda</structure:Description>
+                <structure:Description xml:lang="la">Illex oxygonius</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Roper, Lu &amp; Mangold 1969</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="CYP">
+                <structure:Description xml:lang="en">Longnose velvet dogfish</structure:Description>
+                <structure:Description xml:lang="fr">Pailona à long nez</structure:Description>
+                <structure:Description xml:lang="es">Sapata negra</structure:Description>
+                <structure:Description xml:lang="la">Centroscymnus crepidater</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Bocage &amp; Capello 1864)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="IOS">
+                <structure:Description xml:lang="en">Indian oil sardine</structure:Description>
+                <structure:Description xml:lang="fr">Sardinelle indienne</structure:Description>
+                <structure:Description xml:lang="es">Sardinela aceitera</structure:Description>
+                <structure:Description xml:lang="la">Sardinella longiceps</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Valenciennes 1847</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="FRP">
+                <structure:Description xml:lang="en">Frilled nori</structure:Description>
+                <structure:Description xml:lang="fr">Nori froncé</structure:Description>
+                <structure:Description xml:lang="es">Nori escarolado</structure:Description>
+                <structure:Description xml:lang="la">Porphyra perforata</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>J. Agardh 1883</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="YGF">
+                <structure:Description xml:lang="la">Gymnogongrus griffithsiae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Turner) Martius</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="YGJ">
+                <structure:Description xml:lang="la">Gymnogongrus tenuis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>J. Agardh</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OTX">
+                <structure:Description xml:lang="en">Clawed sea moss</structure:Description>
+                <structure:Description xml:lang="la">Portieria hornemannii</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lyngbye) P.C. Silva 1987</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GKC">
+                <structure:Description xml:lang="en">Arcuate gracilaria</structure:Description>
+                <structure:Description xml:lang="la">Gracilaria arcuata</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Zanardini 1860</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="WEG">
+                <structure:Description xml:lang="en">Greater weever</structure:Description>
+                <structure:Description xml:lang="fr">Grande vive</structure:Description>
+                <structure:Description xml:lang="es">Escorpión</structure:Description>
+                <structure:Description xml:lang="la">Trachinus draco</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Linnaeus 1758</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="URA">
+                <structure:Description xml:lang="en">Stargazers</structure:Description>
+                <structure:Description xml:lang="fr">Uranoscopes</structure:Description>
+                <structure:Description xml:lang="es">Miracielos(=Ratas)</structure:Description>
+                <structure:Description xml:lang="la">Uranoscopus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="NOX">
+                <structure:Description xml:lang="en">Antarctic rockcods, noties nei</structure:Description>
+                <structure:Description xml:lang="fr">Bocasses, bocassons nca</structure:Description>
+                <structure:Description xml:lang="es">Tramas, doradillos nep</structure:Description>
+                <structure:Description xml:lang="la">Nototheniidae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="BLP">
+                <structure:Description xml:lang="en">Patagonian blennie</structure:Description>
+                <structure:Description xml:lang="fr">Guite de Patagonie</structure:Description>
+                <structure:Description xml:lang="es">Róbalo patagónico</structure:Description>
+                <structure:Description xml:lang="la">Eleginops maclovinus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Cuvier 1830)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="TOT">
+                <structure:Description xml:lang="en">Antarctic toothfishes nei</structure:Description>
+                <structure:Description xml:lang="fr">Légines antarctiques nca</structure:Description>
+                <structure:Description xml:lang="es">Austromerluzas nep</structure:Description>
+                <structure:Description xml:lang="la">Dissostichus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="TOA">
+                <structure:Description xml:lang="en">Antarctic toothfish</structure:Description>
+                <structure:Description xml:lang="fr">Légine antarctique</structure:Description>
+                <structure:Description xml:lang="es">Austromerluza antártica</structure:Description>
+                <structure:Description xml:lang="la">Dissostichus mawsoni</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Norman 1937</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="TOP">
+                <structure:Description xml:lang="en">Patagonian toothfish</structure:Description>
+                <structure:Description xml:lang="fr">Légine australe</structure:Description>
+                <structure:Description xml:lang="es">Austromerluza negra</structure:Description>
+                <structure:Description xml:lang="la">Dissostichus eleginoides</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Smitt 1898</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="DMH">
+                <structure:Description xml:lang="en">Corsican moss</structure:Description>
+                <structure:Description xml:lang="fr">Mousse de Corse</structure:Description>
+                <structure:Description xml:lang="es">Musgo de Corcega</structure:Description>
+                <structure:Description xml:lang="la">Alsidium helminthochorton</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(La Tourette) Kutzing 1843</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="KMI">
+                <structure:Description xml:lang="en">Velvet ceramium</structure:Description>
+                <structure:Description xml:lang="fr">Céramium cilie</structure:Description>
+                <structure:Description xml:lang="es">Trillo velludo</structure:Description>
+                <structure:Description xml:lang="la">Ceramium ciliatum</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Ellis) Ducluzeau 1809</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="YKP">
+                <structure:Description xml:lang="en">Marine bindweed</structure:Description>
+                <structure:Description xml:lang="fr">Cirre des Sirenes</structure:Description>
+                <structure:Description xml:lang="es">Esparraguilla</structure:Description>
+                <structure:Description xml:lang="la">Cystoclonium purpureum</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Hudson) Batters 1902</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="KDM">
+                <structure:Description xml:lang="es">Chicorea de mar</structure:Description>
+                <structure:Description xml:lang="la">Chondracanthus chamissoi</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(C. Agardh) Kützing 1843</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SBQ">
+                <structure:Description xml:lang="es">Luga negra o crespa</structure:Description>
+                <structure:Description xml:lang="la">Sarcothalia crispata</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Bory) Leister 1993</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="MZL">
+                <structure:Description xml:lang="es">Luga cuchara o corta</structure:Description>
+                <structure:Description xml:lang="la">Mazzaella laminarioides</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Bory) Fredericq 1993</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GCH">
+                <structure:Description xml:lang="es">Pelillo</structure:Description>
+                <structure:Description xml:lang="la">Gracilaria chilensis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>C.J. Bird, McLachlan &amp; E.C. Oliveira</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GDH">
+                <structure:Description xml:lang="la">Gelidium chilense</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Montagne) Santelices &amp; Montalva 1983</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GDX">
+                <structure:Description xml:lang="la">Gelidium rex</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Santelices &amp; I.A.Abbott 1985</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="NOR">
+                <structure:Description xml:lang="en">Marbled rockcod</structure:Description>
+                <structure:Description xml:lang="fr">Bocasse marbrée</structure:Description>
+                <structure:Description xml:lang="es">Trama jaspeada</structure:Description>
+                <structure:Description xml:lang="la">Notothenia rossii</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Richardson 1844</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="NOG">
+                <structure:Description xml:lang="en">Humped rockcod</structure:Description>
+                <structure:Description xml:lang="fr">Bocasse bossue</structure:Description>
+                <structure:Description xml:lang="es">Trama jorobada</structure:Description>
+                <structure:Description xml:lang="la">Notothenia gibberifrons</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lönnberg 1905)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="NOS">
+                <structure:Description xml:lang="en">Grey rockcod</structure:Description>
+                <structure:Description xml:lang="fr">Bocasse grise</structure:Description>
+                <structure:Description xml:lang="es">Trama gris</structure:Description>
+                <structure:Description xml:lang="la">Notothenia squamifrons</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Günther 1880)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="NOA">
+                <structure:Description xml:lang="en">Triangular rockcod</structure:Description>
+                <structure:Description xml:lang="fr">Bocasse triangulaire</structure:Description>
+                <structure:Description xml:lang="es">Trama triangular</structure:Description>
+                <structure:Description xml:lang="la">Notothenia acuta</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Günther 1880)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SVE">
+                <structure:Description xml:lang="en">Striped venus</structure:Description>
+                <structure:Description xml:lang="fr">Petite praire</structure:Description>
+                <structure:Description xml:lang="es">Chirla</structure:Description>
+                <structure:Description xml:lang="la">Chamelea gallina</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="HCX">
+                <structure:Description xml:lang="en">Hard clams nei</structure:Description>
+                <structure:Description xml:lang="la">Meretrix spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="HCA">
+                <structure:Description xml:lang="en">Asiatic hard clam</structure:Description>
+                <structure:Description xml:lang="fr">Cythérée commune</structure:Description>
+                <structure:Description xml:lang="la">Meretrix meretrix</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SXQ">
+                <structure:Description xml:lang="en">Fur seals nei</structure:Description>
+                <structure:Description xml:lang="fr">Otaries nca</structure:Description>
+                <structure:Description xml:lang="es">Lobos finos nep</structure:Description>
+                <structure:Description xml:lang="la">Arctocephalus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="DNA">
+                <structure:Description xml:lang="en">Deania dogfishes nei</structure:Description>
+                <structure:Description xml:lang="fr">Squales-savates nca</structure:Description>
+                <structure:Description xml:lang="es">Tollos Deania nep</structure:Description>
+                <structure:Description xml:lang="la">Deania spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="DCA">
+                <structure:Description xml:lang="en">Birdbeak dogfish</structure:Description>
+                <structure:Description xml:lang="fr">Squale savate</structure:Description>
+                <structure:Description xml:lang="es">Tollo pajarito</structure:Description>
+                <structure:Description xml:lang="la">Deania calcea</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lowe 1839)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="ASK">
+                <structure:Description xml:lang="en">Angelsharks, sand devils nei</structure:Description>
+                <structure:Description xml:lang="fr">Anges de mer nca</structure:Description>
+                <structure:Description xml:lang="es">Angelotes, peces ángel nep</structure:Description>
+                <structure:Description xml:lang="la">Squatinidae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OXY">
+                <structure:Description xml:lang="en">Angular roughshark</structure:Description>
+                <structure:Description xml:lang="fr">Centrine commune</structure:Description>
+                <structure:Description xml:lang="es">Cerdo marino</structure:Description>
+                <structure:Description xml:lang="la">Oxynotus centrina</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SHB">
+                <structure:Description xml:lang="en">Bramble shark</structure:Description>
+                <structure:Description xml:lang="fr">Squale bouclé</structure:Description>
+                <structure:Description xml:lang="es">Tiburón de clavos</structure:Description>
+                <structure:Description xml:lang="la">Echinorhinus brucus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Bonnaterre 1788)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SRX">
+                <structure:Description xml:lang="en">Rays, stingrays, mantas nei</structure:Description>
+                <structure:Description xml:lang="fr">Raies, pastenagues, mantes nca</structure:Description>
+                <structure:Description xml:lang="es">Rayas, pastinacas, mantas nep</structure:Description>
+                <structure:Description xml:lang="la">Rajiformes</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GUZ">
+                <structure:Description xml:lang="en">Guitarfishes nei</structure:Description>
+                <structure:Description xml:lang="fr">Guitares nca</structure:Description>
+                <structure:Description xml:lang="es">Guitarras nep</structure:Description>
+                <structure:Description xml:lang="la">Rhinobatos spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GUD">
+                <structure:Description xml:lang="en">Chola guitarfish</structure:Description>
+                <structure:Description xml:lang="fr">Poisson-guitare chola</structure:Description>
+                <structure:Description xml:lang="es">Guitarra chola</structure:Description>
+                <structure:Description xml:lang="la">Rhinobatos percellens</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Walbaum 1792)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="GHA">
+                <structure:Description xml:lang="en">Atlantic sawtail catshark</structure:Description>
+                <structure:Description xml:lang="es">Olayo atlántico</structure:Description>
+                <structure:Description xml:lang="la">Galeus atlanticus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Vaillant 1888)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="EXQ">
+                <structure:Description xml:lang="en">Flying halfbeak</structure:Description>
+                <structure:Description xml:lang="fr">Demi-bec volant</structure:Description>
+                <structure:Description xml:lang="es">Agujeta voladora</structure:Description>
+                <structure:Description xml:lang="la">Euleptorhamphus velox</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Poey 1868</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="PQO">
+                <structure:Description xml:lang="la">Physiculus spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="REZ">
+                <structure:Description xml:lang="en">Marlin sucker</structure:Description>
+                <structure:Description xml:lang="fr">Rémora des marlins</structure:Description>
+                <structure:Description xml:lang="es">Agarrador</structure:Description>
+                <structure:Description xml:lang="la">Remora osteochir</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Cuvier 1829)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="TWK">
+                <structure:Description xml:lang="en">Slender ribbonfish</structure:Description>
+                <structure:Description xml:lang="la">Trachipterus ishikawae</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Jordan &amp; Snyder 1901</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="WME">
+                <structure:Description xml:lang="en">Bass groper</structure:Description>
+                <structure:Description xml:lang="la">Polyprion moeone</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Phillipps 1927</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="HVU">
+                <structure:Description xml:lang="en">Cornish blackfish</structure:Description>
+                <structure:Description xml:lang="fr">Rouffe des méduses</structure:Description>
+                <structure:Description xml:lang="es">Rufo de aguas malas</structure:Description>
+                <structure:Description xml:lang="la">Schedophilus medusophagus</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Cocco 1839)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="OVN">
+                <structure:Description xml:lang="en">Amethyst olive</structure:Description>
+                <structure:Description xml:lang="fr">Olive mouchetée</structure:Description>
+                <structure:Description xml:lang="la">Oliva annulata</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Gmelin 1791)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SKA">
+                <structure:Description xml:lang="en">Raja rays nei</structure:Description>
+                <structure:Description xml:lang="fr">Pocheteaux et raies raja nca</structure:Description>
+                <structure:Description xml:lang="es">Rayas raja nep</structure:Description>
+                <structure:Description xml:lang="la">Raja spp</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText></common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="RJC">
+                <structure:Description xml:lang="en">Thornback ray</structure:Description>
+                <structure:Description xml:lang="fr">Raie bouclée</structure:Description>
+                <structure:Description xml:lang="es">Raya de clavos</structure:Description>
+                <structure:Description xml:lang="la">Raja clavata</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Linnaeus 1758</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="RJM">
+                <structure:Description xml:lang="en">Spotted ray</structure:Description>
+                <structure:Description xml:lang="fr">Raie douce</structure:Description>
+                <structure:Description xml:lang="es">Raya pintada</structure:Description>
+                <structure:Description xml:lang="la">Raja montagui</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Fowler 1910</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="RJH">
+                <structure:Description xml:lang="en">Blonde ray</structure:Description>
+                <structure:Description xml:lang="fr">Raie lisse</structure:Description>
+                <structure:Description xml:lang="es">Raya boca de rosa</structure:Description>
+                <structure:Description xml:lang="la">Raja brachyura</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Lafont 1873</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="RJF">
+                <structure:Description xml:lang="en">Shagreen ray</structure:Description>
+                <structure:Description xml:lang="fr">Raie chardon</structure:Description>
+                <structure:Description xml:lang="es">Raya cardadora</structure:Description>
+                <structure:Description xml:lang="la">Raja fullonica</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>Linnaeus 1758</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="YBP">
+                <structure:Description xml:lang="en">Neptune's volute</structure:Description>
+                <structure:Description xml:lang="fr">Volute Neptune</structure:Description>
+                <structure:Description xml:lang="es">Voluta de Nepruno</structure:Description>
+                <structure:Description xml:lang="la">Cymbium pepo</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Lightfoot 1786)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="MVR">
+                <structure:Description xml:lang="en">Australasian gannet</structure:Description>
+                <structure:Description xml:lang="fr">Fou austral</structure:Description>
+                <structure:Description xml:lang="es">Alcatraz australiano</structure:Description>
+                <structure:Description xml:lang="la">Morus serrator</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Gray 1843)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+        </structure:CodeList>
+    </message:CodeLists>
+</message:Structure>

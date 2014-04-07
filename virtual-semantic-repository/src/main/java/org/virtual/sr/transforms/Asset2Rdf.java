@@ -57,7 +57,7 @@ public class Asset2Rdf<A extends Asset, T> implements Transform<A, T, Model> {
     }
 
     private Model enrich(Model m, String id) {
-        m.add(m.createResource(Constants.pseudoNS+"/content"), m.createProperty(Constants.pseudoNS+"/content"), m.getResource(id));
+        m.add(m.createResource(Constants.pseudoNS+"content"), m.createProperty(Constants.pseudoNS+"content"), m.getResource(id));
         return m;
     }
 }

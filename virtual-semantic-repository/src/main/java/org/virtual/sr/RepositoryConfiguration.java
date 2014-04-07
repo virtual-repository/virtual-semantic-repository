@@ -13,13 +13,18 @@ public class RepositoryConfiguration {
 		this.properties=properties;
 		
 		notNull("configuration", properties);
-		notNull("publish URI", properties.getProperty("publishURI"));
+		notNull("publish in sr_staging URI", properties.getProperty("publish_in_sr_staging_uri"));
+		notNull("publish in sr_public URI", properties.getProperty("publish_in_sr_public_uri"));
 		notNull("discovery URI", properties.getProperty("discoveryURI"));
 		notNull("discovery query", properties.getProperty("sparqlQueryForCodelists"));
 	}
 	
-	public URI publishURI() {
-		return URI.create(properties.getProperty("publishURI"));
+	public URI publish_in_sr_staging_uri() {
+		return URI.create(properties.getProperty("publish_in_sr_staging_uri"));
+	}
+        
+        public URI publish_in_sr_public_uri() {
+		return URI.create(properties.getProperty("publish_in_sr_public_uri"));
 	}
 	
 	public URI discoveryURI() {
