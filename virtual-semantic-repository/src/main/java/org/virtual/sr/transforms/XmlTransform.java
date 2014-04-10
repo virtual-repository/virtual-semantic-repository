@@ -16,7 +16,7 @@ public interface XmlTransform<T> {
 	 * @param data the data to transform
 	 * @return the transformed data
 	 */
-	Source toXml(T data);
+	Source toXml(T data) throws Exception;
 	
 	/**
 	 * Returns the type of the data to transform.

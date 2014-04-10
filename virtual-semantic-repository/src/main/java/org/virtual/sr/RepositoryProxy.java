@@ -9,11 +9,13 @@ import java.util.Properties;
 
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.virtual.sr.transforms.Asset2Rdf;
+import org.virtual.sr.transforms.Fmf2Xml;
 import org.virtual.sr.transforms.Sdmx2Table;
 import org.virtual.sr.transforms.Sdmx2Xml;
 import org.virtual.sr.transforms.XmlTransform;
 import org.virtual.sr.transforms.codelist.Rdf2SdmxCodelist;
 import org.virtualrepository.Asset;
+import org.virtualrepository.fmf.FmfAsset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Browser;
@@ -65,6 +67,7 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 		
 		browser = new RepositoryBrowser(configuration);
 		publishers.add(publisherFor(SdmxCodelist.type,new Sdmx2Xml(),configuration));
+		publishers.add(publisherFor(FmfAsset.type, new Fmf2Xml(),configuration));
 		
 		//base rdf codelist importer
 		RdfImporter<SdmxCodelist> rdfCodelistImporter = new RdfImporter<SdmxCodelist>(SdmxCodelist.type,configuration);

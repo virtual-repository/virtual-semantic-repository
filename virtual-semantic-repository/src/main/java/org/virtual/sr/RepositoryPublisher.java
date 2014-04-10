@@ -19,6 +19,10 @@ import java.io.IOException;
 import java.util.logging.Level;
 import org.virtual.sr.transforms.Raw2CustomRdf;
 import org.virtual.sr.utils.Constants;
+import org.virtualrepository.fmf.FmfAsset;
+import org.virtualrepository.fmf.FmfGenericType;
+import org.virtualrepository.sdmx.SdmxAsset;
+import org.virtualrepository.sdmx.SdmxCodelist;
 
 /**
  * A {@link Publisher} for the Semantic Repository that works with RDF models of
@@ -52,10 +56,14 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
     @Override
     public void publish(A asset, Model rdf) throws Exception {
-
-        publishRawRdf(asset, rdf);
-        //super-temporary hack
-        publishCustomRdf(asset, rdf);
+        if(asset.type() instanceof FmfGenericType)
+            log.info("I received a mapping list "+ asset.name());
+        
+        if(asset.type() instanceof SdmxCodelist)
+            log.info("I received a code list " + asset.name());
+//        publishRawRdf(asset, rdf);
+//        //super-temporary hack
+//        publishCustomRdf(asset, rdf);
     }
 
     private void publishRawRdf(Asset asset, Model rdf) {
@@ -66,7 +74,7 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
     private void publishCustomRdf(Asset asset, Model rdf) {
         rdf = Raw2CustomRdf.FLODcustomize(rdf);
-        publish_on_file(rdf, "custom.rdf");
+        publish_on_file(rdf, asset.id()+".rdf");
         String publishEndpoint = configuration.publish_in_sr_public_uri().toString();
 //        publishRDF(asset, rdf, publishEndpoint);
     }
