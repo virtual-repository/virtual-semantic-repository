@@ -1,0 +1,1072 @@
+<rdf:RDF
+    xmlns:j.0="http://www.fao.org/figis/flod/onto/gear.owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+    xmlns:j.1="http://rdfs.org/ns/void#"
+    xmlns:j.2="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#"
+    xmlns:cls="http://www.fao.org/figis/flod/onto/codedentityclassification.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.3="http://www.fao.org/figis/flod/onto/codedentity.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:j.4="s:r/"
+    xmlns:sys="http://www.fao.org/figis/flod/onto/codedentitycollection.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/7dd0cfbf94670212e36bcc91bf1d33020859c933">
+    <skos:prefLabel xml:lang="en">UNK</skos:prefLabel>
+    <rdfs:label xml:lang="en">UNK</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Unknown</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Unknown</rdfs:label>
+    <skos:prefLabel xml:lang="es">Engins inconnus</skos:prefLabel>
+    <rdfs:label xml:lang="es">Engins inconnus</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1500"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1620">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/589c76b91aad7267eda1e130d60cc560afd49a5a"/>
+    <rdfs:label>1620</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1630">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/4a0d4883afbbb9de4936b43d95084973e4451c02"/>
+    <rdfs:label>1630</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1570">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/4f1459419a1829e16301ec0b0ac95a7c43d84827"/>
+    <rdfs:label>1570</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/08225d6688be46a1c6b0d0dc95bb81358b33d003">
+    <skos:prefLabel xml:lang="en">P</skos:prefLabel>
+    <rdfs:label xml:lang="en">P</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Pole and line</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Pole and line</rdfs:label>
+    <skos:prefLabel xml:lang="es">Lignes et cannes</skos:prefLabel>
+    <rdfs:label xml:lang="es">Lignes et cannes</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1050"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/881c45ff1fc04bebdba374d5eaa9fd0d6a6e59e1">
+    <skos:prefLabel xml:lang="en">BO</skos:prefLabel>
+    <rdfs:label xml:lang="en">BO</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Bolicheros</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Bolicheros</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1550"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1640">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/a8e76f6fb3df3f0abea89c05adf58d3348730281"/>
+    <rdfs:label>1640</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1610">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/1b141b2fe71bfcfef81220c92cde82f76b94b106"/>
+    <rdfs:label>1610</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1290">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/c79e729208491c1b926c681aac4ebc0df7c28202"/>
+    <rdfs:label>1290</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/f6c9223ac31a47a0757995daed9bace4822eb849">
+    <skos:prefLabel xml:lang="en">RR</skos:prefLabel>
+    <rdfs:label xml:lang="en">RR</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Rod and reel</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Rod and reel</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1160"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/3e5af4b674ec3915edd5f8f5fe53d3fd79db517d">
+    <skos:prefLabel xml:lang="en">RRD</skos:prefLabel>
+    <rdfs:label xml:lang="en">RRD</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Recreational fishing gear</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Recreational fishing gear</rdfs:label>
+    <skos:prefLabel xml:lang="es">Engins de pêche recreative</skos:prefLabel>
+    <rdfs:label xml:lang="es">Engins de pêche recreative</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1270"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1340">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/49cb4704968f38fef9567f784911afff4ef907da"/>
+    <rdfs:label>1340</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1330">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/b45962c3fa94a3cb144650f6d5c365e4c845ad1c"/>
+    <rdfs:label>1330</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1130">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/4cf84829fffe84f662b789173a859ca7a78a251d"/>
+    <rdfs:label>1130</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1230">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/25bb022822c58b5dbd987575cb7be30bda33c836"/>
+    <rdfs:label>1230</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/804">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/52240001c4edabbb90638a484be3a6415c59238e"/>
+    <rdfs:label>804</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/2a3ea1e3aedfff60abc39f1d3361ee83f4e25829">
+    <skos:prefLabel xml:lang="en">G</skos:prefLabel>
+    <rdfs:label xml:lang="en">G</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Drift gillnet</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Drift gillnet</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1040"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/2307657a7546bf10f9006a73d03cbee850085a0f">
+    <skos:prefLabel xml:lang="en">LL</skos:prefLabel>
+    <rdfs:label xml:lang="en">LL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Longliner</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Longliner</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1080"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/4b4a3b83f257fdd931d5793fd640c6ca9f6f3a04">
+    <skos:prefLabel xml:lang="en">TL</skos:prefLabel>
+    <rdfs:label xml:lang="en">TL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Tended line</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Tended line</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1300"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1590">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/f8d20b4b41fc4d01f40b478249bb72b14d813def"/>
+    <rdfs:label>1590</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1150">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/a080ec3dd922dcfb844b83351072e8228dae7329"/>
+    <rdfs:label>1150</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1250">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/8b5cd24dccf212234ad70576c375f033d2640097"/>
+    <rdfs:label>1250</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/4f1459419a1829e16301ec0b0ac95a7c43d84827">
+    <skos:prefLabel xml:lang="en">UNCL</skos:prefLabel>
+    <rdfs:label xml:lang="en">UNCL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Unclassified</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Unclassified</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1570"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/07db99b44c29ac589cf2d40124f4c23972c8efd7">
+    <skos:prefLabel xml:lang="en">UNCL</skos:prefLabel>
+    <rdfs:label xml:lang="en">UNCL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Unspecified methods</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Unspecified methods</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1170"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1270">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/3e5af4b674ec3915edd5f8f5fe53d3fd79db517d"/>
+    <rdfs:label>1270</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1110">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/6dc6986866571cf3d0d9788b1ab4bb9c5f68ce52"/>
+    <rdfs:label>1110</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/68c89896aad2d095fa2078429ab6e7ddc248048b">
+    <skos:prefLabel xml:lang="en">GILL</skos:prefLabel>
+    <rdfs:label xml:lang="en">GILL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Gillnet</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Gillnet</rdfs:label>
+    <skos:prefLabel xml:lang="es">Filets maillants</skos:prefLabel>
+    <rdfs:label xml:lang="es">Filets maillants</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1360"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/bd2d560fa0ef11ef94ac2e27d1c0f1e8ee985505">
+    <skos:prefLabel xml:lang="en">PS</skos:prefLabel>
+    <rdfs:label xml:lang="en">PS</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Purse seine</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Purse seine</rdfs:label>
+    <skos:prefLabel xml:lang="es">Filet tournants avec coulisse</skos:prefLabel>
+    <rdfs:label xml:lang="es">Filet tournants avec coulisse</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1540"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/7a72f47de6a338bad740cea7fafe49dc167aee73">
+    <skos:prefLabel xml:lang="en">TN</skos:prefLabel>
+    <rdfs:label xml:lang="en">TN</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Trammel nets</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Trammel nets</rdfs:label>
+    <skos:prefLabel xml:lang="es">Trémails</skos:prefLabel>
+    <rdfs:label xml:lang="es">Trémails</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1320"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/a080ec3dd922dcfb844b83351072e8228dae7329">
+    <skos:prefLabel xml:lang="en">TRAP</skos:prefLabel>
+    <rdfs:label xml:lang="en">TRAP</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Trap</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Trap</rdfs:label>
+    <skos:prefLabel xml:lang="es">Pieges</skos:prefLabel>
+    <rdfs:label xml:lang="es">Pieges</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1150"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/299854f4fd5761ce63263bc27a2b5e5fc3e3f573">
+    <skos:prefLabel xml:lang="en">TROL</skos:prefLabel>
+    <rdfs:label xml:lang="en">TROL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Troller</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Troller</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1480"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/sr_public/">
+    <j.1:Dataset rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/52240001c4edabbb90638a484be3a6415c59238e">
+    <skos:prefLabel xml:lang="en">TROLL</skos:prefLabel>
+    <rdfs:label xml:lang="en">TROLL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Troll line</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Troll line</rdfs:label>
+    <skos:prefLabel xml:lang="es">Lignes de traîne</skos:prefLabel>
+    <rdfs:label xml:lang="es">Lignes de traîne</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/804"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/e8f5bc39760862341a0a2504f0fc7cc4d0c197b7">
+    <skos:prefLabel xml:lang="en">LL</skos:prefLabel>
+    <rdfs:label xml:lang="en">LL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Longlines</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Longlines</rdfs:label>
+    <skos:prefLabel xml:lang="es">Palangres</skos:prefLabel>
+    <rdfs:label xml:lang="es">Palangres</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1560"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/805">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/81f21e9c0ec0ef6c0cd8f06a402fe247c3bd2e49"/>
+    <rdfs:label>805</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1600">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/20d3746105ee01a42f726f80f4d512796ec61a6f"/>
+    <rdfs:label>1600</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/b25f5dd381970a25ff6b3725e6d477d8ea32f85b">
+    <skos:prefLabel xml:lang="en">T</skos:prefLabel>
+    <rdfs:label xml:lang="en">T</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Troll</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Troll</rdfs:label>
+    <skos:prefLabel xml:lang="es">Lignes de traîne</skos:prefLabel>
+    <rdfs:label xml:lang="es">Lignes de traîne</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1070"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1000">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/aef9c0ff2e116d0de3d525ee81b887edc63a44e7"/>
+    <rdfs:label>1000</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1010">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/a6a4b790756ee5a67962b94bb4b506117adfe220"/>
+    <rdfs:label>1010</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/a6a4b790756ee5a67962b94bb4b506117adfe220">
+    <skos:prefLabel xml:lang="en">R</skos:prefLabel>
+    <rdfs:label xml:lang="en">R</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Ring net</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Ring net</rdfs:label>
+    <skos:prefLabel xml:lang="es">Filet tournants sans coulisse ("ring net")</skos:prefLabel>
+    <rdfs:label xml:lang="es">Filet tournants sans coulisse ("ring net")</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1010"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1020">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/f6652211bb78345c6b38415f76a735d5a65d5261"/>
+    <rdfs:label>1020</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1540">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/bd2d560fa0ef11ef94ac2e27d1c0f1e8ee985505"/>
+    <rdfs:label>1540</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/bd5dec9c1e54bed72b8513060fa1af03e9c9392c">
+    <skos:prefLabel xml:lang="en">TRAW</skos:prefLabel>
+    <rdfs:label xml:lang="en">TRAW</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Trawl</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Trawl</rdfs:label>
+    <skos:prefLabel xml:lang="es">Chaluts</skos:prefLabel>
+    <rdfs:label xml:lang="es">Chaluts</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1140"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1550">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/881c45ff1fc04bebdba374d5eaa9fd0d6a6e59e1"/>
+    <rdfs:label>1550</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1030">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/3052cab8ac642a78aa939d5eaac0ffe4ec29156a"/>
+    <rdfs:label>1030</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1530">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/43ebec03c5abc068e88a3a12feca9c7aa1eb8cf1"/>
+    <rdfs:label>1530</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1390">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/f727c0d0adc359bfa0e6bf99672460344a6bbfb8"/>
+    <rdfs:label>1390</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1430">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/1e4ff261f90807e525fad04a3f280dc36ffd0c1f"/>
+    <rdfs:label>1430</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/b8e4e3a645b22d89f6880f418ced118e42b11a2b">
+    <skos:prefLabel xml:lang="en">HAND</skos:prefLabel>
+    <rdfs:label xml:lang="en">HAND</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Hand line</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Hand line</rdfs:label>
+    <skos:prefLabel xml:lang="es">Lignes à main</skos:prefLabel>
+    <rdfs:label xml:lang="es">Lignes à main</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1200"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/f727c0d0adc359bfa0e6bf99672460344a6bbfb8">
+    <skos:prefLabel xml:lang="en">BBI</skos:prefLabel>
+    <rdfs:label xml:lang="en">BBI</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Baitboat ice well</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Baitboat ice well</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1390"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/a8e76f6fb3df3f0abea89c05adf58d3348730281">
+    <skos:prefLabel xml:lang="en">TROL</skos:prefLabel>
+    <rdfs:label xml:lang="en">TROL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Troll line</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Troll line</rdfs:label>
+    <skos:prefLabel xml:lang="es">Lignes de traîne</skos:prefLabel>
+    <rdfs:label xml:lang="es">Lignes de traîne</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1640"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1180">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/7e175e0ebc2f39b5f1302d1318fdedd131f52c3f"/>
+    <rdfs:label>1180</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/1e4ff261f90807e525fad04a3f280dc36ffd0c1f">
+    <skos:prefLabel xml:lang="en">PS</skos:prefLabel>
+    <rdfs:label xml:lang="en">PS</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Purse seiner</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Purse seiner</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1430"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1520">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/507a49a6a3e1efedc7e859939d521cc18cf20f1f"/>
+    <rdfs:label>1520</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/b1f3d8fd3344058c54335232af77f0a8156fea48">
+    <skos:prefLabel xml:lang="en">PSM</skos:prefLabel>
+    <rdfs:label xml:lang="en">PSM</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Medium size purse seiner</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Medium size purse seiner</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1400"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/b5c8157645b075fab93bfe527e9e3d9cba629c08">
+    <skos:prefLabel xml:lang="en">RRFB</skos:prefLabel>
+    <rdfs:label xml:lang="en">RRFB</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Rod and reel-fish big</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Rod and reel-fish big</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1280"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1210">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/211ab0ad2affd0a72792f0b75358df1e33f156cc"/>
+    <rdfs:label>1210</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1380">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/b58a7efc4bb84ce2a2ac9f591dc9f1d2275840fc"/>
+    <rdfs:label>1380</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/43ebec03c5abc068e88a3a12feca9c7aa1eb8cf1">
+    <skos:prefLabel xml:lang="en">BB</skos:prefLabel>
+    <rdfs:label xml:lang="en">BB</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Baitboat</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Baitboat</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1530"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/954879f9a5ec57d96fab70d4783eb3846eb866ca">
+    <skos:prefLabel xml:lang="en">UNCD</skos:prefLabel>
+    <rdfs:label xml:lang="en">UNCD</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Gear not known or not specified</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Gear not known or not specified</rdfs:label>
+    <skos:prefLabel xml:lang="es">Engins inconnus ou non specifiés</skos:prefLabel>
+    <rdfs:label xml:lang="es">Engins inconnus ou non specifiés</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1350"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1350">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/954879f9a5ec57d96fab70d4783eb3846eb866ca"/>
+    <rdfs:label>1350</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1410">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/543b3f2b752dd7f810a407a0078ee3396256f9b2"/>
+    <rdfs:label>1410</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1360">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/68c89896aad2d095fa2078429ab6e7ddc248048b"/>
+    <rdfs:label>1360</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1370">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/9b5d1621b804f8b4441b3e15dcc392fc16f0816c"/>
+    <rdfs:label>1370</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/b45962c3fa94a3cb144650f6d5c365e4c845ad1c">
+    <skos:prefLabel xml:lang="en">SPHL</skos:prefLabel>
+    <rdfs:label xml:lang="en">SPHL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Sport handline</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Sport handline</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1330"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/d2fe7c6ac9fb9b7b0863d836f93904d3a7e293fe">
+    <skos:prefLabel xml:lang="en">HARP</skos:prefLabel>
+    <rdfs:label xml:lang="en">HARP</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Harpoon</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Harpoon</rdfs:label>
+    <skos:prefLabel xml:lang="es">Harpons</skos:prefLabel>
+    <rdfs:label xml:lang="es">Harpons</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1190"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1310">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/58a6d70da18a59540f7afff76f796addd8c9a9a9"/>
+    <rdfs:label>1310</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/5e39601df51621e1593459ba584dbad34acffad0">
+    <skos:prefLabel xml:lang="en">PSLB</skos:prefLabel>
+    <rdfs:label xml:lang="en">PSLB</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Purse seiner with live bait</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Purse seiner with live bait</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1470"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/81f21e9c0ec0ef6c0cd8f06a402fe247c3bd2e49">
+    <skos:prefLabel xml:lang="en">OTHER</skos:prefLabel>
+    <rdfs:label xml:lang="en">OTHER</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Other gears</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Other gears</rdfs:label>
+    <skos:prefLabel xml:lang="es">Other gears</skos:prefLabel>
+    <rdfs:label xml:lang="es">Other gears</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/805"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/4a0d4883afbbb9de4936b43d95084973e4451c02">
+    <skos:prefLabel xml:lang="en">PS</skos:prefLabel>
+    <rdfs:label xml:lang="en">PS</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Purse seine</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Purse seine</rdfs:label>
+    <skos:prefLabel xml:lang="es">Filet tournants avec coulisse</skos:prefLabel>
+    <rdfs:label xml:lang="es">Filet tournants avec coulisse</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1630"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1040">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/2a3ea1e3aedfff60abc39f1d3361ee83f4e25829"/>
+    <rdfs:label>1040</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/f6652211bb78345c6b38415f76a735d5a65d5261">
+    <skos:prefLabel xml:lang="en">O</skos:prefLabel>
+    <rdfs:label xml:lang="en">O</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Unclassified</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Unclassified</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1020"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/49cb4704968f38fef9567f784911afff4ef907da">
+    <skos:prefLabel xml:lang="en">RRSD</skos:prefLabel>
+    <rdfs:label xml:lang="en">RRSD</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Recreational fishing gear</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Recreational fishing gear</rdfs:label>
+    <skos:prefLabel xml:lang="es">Engins de pêche recreative</skos:prefLabel>
+    <rdfs:label xml:lang="es">Engins de pêche recreative</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1340"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1580">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/a6dc9ac199a347a84085ed3f73bef6203c3199f4"/>
+    <rdfs:label>1580</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/25bb022822c58b5dbd987575cb7be30bda33c836">
+    <skos:prefLabel xml:lang="en">GILD</skos:prefLabel>
+    <rdfs:label xml:lang="en">GILD</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Driftnets</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Driftnets</rdfs:label>
+    <skos:prefLabel xml:lang="es">Filets maillants dérivants (filets dérivants)</skos:prefLabel>
+    <rdfs:label xml:lang="es">Filets maillants dérivants (filets dérivants)</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1230"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1140">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/bd5dec9c1e54bed72b8513060fa1af03e9c9392c"/>
+    <rdfs:label>1140</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1050">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/08225d6688be46a1c6b0d0dc95bb81358b33d003"/>
+    <rdfs:label>1050</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1240">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/ed344390479b18e02ebe2ae168180ce030cb061a"/>
+    <rdfs:label>1240</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/85653ea2f721bc959ed2add2f0b1f075bffa4461">
+    <skos:prefLabel xml:lang="en">LL</skos:prefLabel>
+    <rdfs:label xml:lang="en">LL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Longlines</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Longlines</rdfs:label>
+    <skos:prefLabel xml:lang="es">Palangres</skos:prefLabel>
+    <rdfs:label xml:lang="es">Palangres</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1490"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1080">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/2307657a7546bf10f9006a73d03cbee850085a0f"/>
+    <rdfs:label>1080</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/3052cab8ac642a78aa939d5eaac0ffe4ec29156a">
+    <skos:prefLabel xml:lang="en">H</skos:prefLabel>
+    <rdfs:label xml:lang="en">H</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Handline</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Handline</rdfs:label>
+    <skos:prefLabel xml:lang="es">Lignes à main</skos:prefLabel>
+    <rdfs:label xml:lang="es">Lignes à main</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1030"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1200">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/b8e4e3a645b22d89f6880f418ced118e42b11a2b"/>
+    <rdfs:label>1200</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/20d3746105ee01a42f726f80f4d512796ec61a6f">
+    <skos:prefLabel xml:lang="en">HAND</skos:prefLabel>
+    <rdfs:label xml:lang="en">HAND</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Hand line</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Hand line</rdfs:label>
+    <skos:prefLabel xml:lang="es">Lignes à main</skos:prefLabel>
+    <rdfs:label xml:lang="es">Lignes à main</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1600"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/507a49a6a3e1efedc7e859939d521cc18cf20f1f">
+    <skos:prefLabel xml:lang="en">JIG BOAT</skos:prefLabel>
+    <rdfs:label xml:lang="en">JIG BOAT</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Jig boats</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Jig boats</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1520"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1160">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/f6c9223ac31a47a0757995daed9bace4822eb849"/>
+    <rdfs:label>1160</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/a6dc9ac199a347a84085ed3f73bef6203c3199f4">
+    <skos:prefLabel xml:lang="en">OTH</skos:prefLabel>
+    <rdfs:label xml:lang="en">OTH</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Other</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Other</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1580"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1220">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/a8ca5fd1ce098873c63fbcf14f703656be96da61"/>
+    <rdfs:label>1220</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/801">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/8acbf3f0e2559f32044cdef346a644d1b4bca8d8"/>
+    <rdfs:label>801</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/9b5d1621b804f8b4441b3e15dcc392fc16f0816c">
+    <skos:prefLabel xml:lang="en">BBF</skos:prefLabel>
+    <rdfs:label xml:lang="en">BBF</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Baitboat freezer</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Baitboat freezer</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1370"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1260">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/a12ae14c2cbb1de5b0a4eed9ae519798eea0d7c3"/>
+    <rdfs:label>1260</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/7e175e0ebc2f39b5f1302d1318fdedd131f52c3f">
+    <skos:prefLabel xml:lang="en">OTHD</skos:prefLabel>
+    <rdfs:label xml:lang="en">OTHD</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Gear not known or not specified</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Gear not known or not specified</rdfs:label>
+    <skos:prefLabel xml:lang="es">Engins inconnus ou non specifiés</skos:prefLabel>
+    <rdfs:label xml:lang="es">Engins inconnus ou non specifiés</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1180"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/c79e729208491c1b926c681aac4ebc0df7c28202">
+    <skos:prefLabel xml:lang="en">RRFS</skos:prefLabel>
+    <rdfs:label xml:lang="en">RRFS</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Rod and reel-fish small</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Rod and reel-fish small</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1290"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1070">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/b25f5dd381970a25ff6b3725e6d477d8ea32f85b"/>
+    <rdfs:label>1070</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1440">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/0770a6665f161fedc9ad334163d9403836347671"/>
+    <rdfs:label>1440</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1060">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/d6c65f0198d61b56a707331e8f291d401079cca9"/>
+    <rdfs:label>1060</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1450">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/0ca7c29fda2ac25a1598b98ddf57f61a81ecc730"/>
+    <rdfs:label>1450</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/1f03605cab6436409d9ec6e393095cd5c9c472f5">
+    <skos:prefLabel xml:lang="en">PSD</skos:prefLabel>
+    <rdfs:label xml:lang="en">PSD</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Double boat purse seiners</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Double boat purse seiners</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1460"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/0ca7c29fda2ac25a1598b98ddf57f61a81ecc730">
+    <skos:prefLabel xml:lang="en">PSS</skos:prefLabel>
+    <rdfs:label xml:lang="en">PSS</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Small purse seiner</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Small purse seiner</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1450"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1120">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/622d9a90f4944b9723d02a5a860d71c8dbdecba7"/>
+    <rdfs:label>1120</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/8b5cd24dccf212234ad70576c375f033d2640097">
+    <skos:prefLabel xml:lang="en">MWT</skos:prefLabel>
+    <rdfs:label xml:lang="en">MWT</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Midwater trawl</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Midwater trawl</rdfs:label>
+    <skos:prefLabel xml:lang="es">Chaluts pélagiques</skos:prefLabel>
+    <rdfs:label xml:lang="es">Chaluts pélagiques</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1250"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/0770a6665f161fedc9ad334163d9403836347671">
+    <skos:prefLabel xml:lang="en">PSG</skos:prefLabel>
+    <rdfs:label xml:lang="en">PSG</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Large size purse seiner</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Large size purse seiner</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1440"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/8acbf3f0e2559f32044cdef346a644d1b4bca8d8">
+    <skos:prefLabel xml:lang="en">LL</skos:prefLabel>
+    <rdfs:label xml:lang="en">LL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Longline</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Longline</rdfs:label>
+    <skos:prefLabel xml:lang="es">Palangres</skos:prefLabel>
+    <rdfs:label xml:lang="es">Palangres</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/801"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1470">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/5e39601df51621e1593459ba584dbad34acffad0"/>
+    <rdfs:label>1470</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1500">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/7dd0cfbf94670212e36bcc91bf1d33020859c933"/>
+    <rdfs:label>1500</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1100">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/b8df4b08b7f94c6127e2d1657700db4b5887140e"/>
+    <rdfs:label>1100</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1510">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/4768fe7e9a67d1f0bf78c1bd1073e0852d17f71b"/>
+    <rdfs:label>1510</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1280">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/b5c8157645b075fab93bfe527e9e3d9cba629c08"/>
+    <rdfs:label>1280</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1460">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/1f03605cab6436409d9ec6e393095cd5c9c472f5"/>
+    <rdfs:label>1460</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1560">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/e8f5bc39760862341a0a2504f0fc7cc4d0c197b7"/>
+    <rdfs:label>1560</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1190">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/d2fe7c6ac9fb9b7b0863d836f93904d3a7e293fe"/>
+    <rdfs:label>1190</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/d6c65f0198d61b56a707331e8f291d401079cca9">
+    <skos:prefLabel xml:lang="en">S</skos:prefLabel>
+    <rdfs:label xml:lang="en">S</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Purse seine</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Purse seine</rdfs:label>
+    <skos:prefLabel xml:lang="es">Filet tournants avec coulisse</skos:prefLabel>
+    <rdfs:label xml:lang="es">Filet tournants avec coulisse</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1060"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/802">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/c3a73c5bb4447898a533400e07bd20a493a58053"/>
+    <rdfs:label>802</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/a12ae14c2cbb1de5b0a4eed9ae519798eea0d7c3">
+    <skos:prefLabel xml:lang="en">MWTD</skos:prefLabel>
+    <rdfs:label xml:lang="en">MWTD</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Double boat midwater trawl</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Double boat midwater trawl</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1260"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/32ddbbe164ac18e57874961d0d246c060f874e41">
+    <skos:prefLabel xml:lang="en">LLMB</skos:prefLabel>
+    <rdfs:label xml:lang="en">LLMB</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Deckloaded type motherboat longliner</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Deckloaded type motherboat longliner</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1090"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/ed344390479b18e02ebe2ae168180ce030cb061a">
+    <skos:prefLabel xml:lang="en">HS</skos:prefLabel>
+    <rdfs:label xml:lang="en">HS</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Haul seine</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Haul seine</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1240"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/622d9a90f4944b9723d02a5a860d71c8dbdecba7">
+    <skos:prefLabel xml:lang="en">BLL</skos:prefLabel>
+    <rdfs:label xml:lang="en">BLL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Bottom longline</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Bottom longline</rdfs:label>
+    <skos:prefLabel xml:lang="es">Palangres de fond</skos:prefLabel>
+    <rdfs:label xml:lang="es">Palangres de fond</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1120"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/1b141b2fe71bfcfef81220c92cde82f76b94b106">
+    <skos:prefLabel xml:lang="en">GILL</skos:prefLabel>
+    <rdfs:label xml:lang="en">GILL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Gillnet</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Gillnet</rdfs:label>
+    <skos:prefLabel xml:lang="es">Filets maillants</skos:prefLabel>
+    <rdfs:label xml:lang="es">Filets maillants</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1610"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/589c76b91aad7267eda1e130d60cc560afd49a5a">
+    <skos:prefLabel xml:lang="en">BB</skos:prefLabel>
+    <rdfs:label xml:lang="en">BB</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Baitboat</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Baitboat</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1620"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/c3a73c5bb4447898a533400e07bd20a493a58053">
+    <skos:prefLabel xml:lang="en">PL</skos:prefLabel>
+    <rdfs:label xml:lang="en">PL</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Pole and line</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Pole and line</rdfs:label>
+    <skos:prefLabel xml:lang="es">Lignes à main et lignes à cannes</skos:prefLabel>
+    <rdfs:label xml:lang="es">Lignes à main et lignes à cannes</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/802"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/543b3f2b752dd7f810a407a0078ee3396256f9b2">
+    <skos:prefLabel xml:lang="en">PSFS</skos:prefLabel>
+    <rdfs:label xml:lang="en">PSFS</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Purse seiner-fish small</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Purse seiner-fish small</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1410"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/a8ca5fd1ce098873c63fbcf14f703656be96da61">
+    <skos:prefLabel xml:lang="en">LLD</skos:prefLabel>
+    <rdfs:label xml:lang="en">LLD</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Longline discards</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Longline discards</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1220"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/db90894483cc26e16cfdc7866299f0dc62bcbc60">
+    <skos:prefLabel xml:lang="en">PSFB</skos:prefLabel>
+    <rdfs:label xml:lang="en">PSFB</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Purse seiner-fish big</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Purse seiner-fish big</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1420"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1480">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/299854f4fd5761ce63263bc27a2b5e5fc3e3f573"/>
+    <rdfs:label>1480</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/b8df4b08b7f94c6127e2d1657700db4b5887140e">
+    <skos:prefLabel xml:lang="en">LLHB</skos:prefLabel>
+    <rdfs:label xml:lang="en">LLHB</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Individual home based longliner</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Individual home based longliner</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1100"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/6dc6986866571cf3d0d9788b1ab4bb9c5f68ce52">
+    <skos:prefLabel xml:lang="en">LLFB</skos:prefLabel>
+    <rdfs:label xml:lang="en">LLFB</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Individual foreign based longliner</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Individual foreign based longliner</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1110"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/4c96fa0c649dde22b6166d099917edb36620379d">
+    <skos:prefLabel xml:lang="en">PS</skos:prefLabel>
+    <rdfs:label xml:lang="en">PS</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Purse seine</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Purse seine</rdfs:label>
+    <skos:prefLabel xml:lang="es">Filet tournants avec coulisse</skos:prefLabel>
+    <rdfs:label xml:lang="es">Filet tournants avec coulisse</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/803"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1490">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/85653ea2f721bc959ed2add2f0b1f075bffa4461"/>
+    <rdfs:label>1490</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/aef9c0ff2e116d0de3d525ee81b887edc63a44e7">
+    <skos:prefLabel xml:lang="en">L</skos:prefLabel>
+    <rdfs:label xml:lang="en">L</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Longline</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Longline</rdfs:label>
+    <skos:prefLabel xml:lang="es">Palangres</skos:prefLabel>
+    <rdfs:label xml:lang="es">Palangres</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1000"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1090">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/32ddbbe164ac18e57874961d0d246c060f874e41"/>
+    <rdfs:label>1090</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1320">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/7a72f47de6a338bad740cea7fafe49dc167aee73"/>
+    <rdfs:label>1320</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/4768fe7e9a67d1f0bf78c1bd1073e0852d17f71b">
+    <skos:prefLabel xml:lang="en">JB</skos:prefLabel>
+    <rdfs:label xml:lang="en">JB</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Jig boats</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Jig boats</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1510"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/b58a7efc4bb84ce2a2ac9f591dc9f1d2275840fc">
+    <skos:prefLabel xml:lang="en">BB</skos:prefLabel>
+    <rdfs:label xml:lang="en">BB</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Baitboat/live bait</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Baitboat/live bait</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1380"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1170">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/07db99b44c29ac589cf2d40124f4c23972c8efd7"/>
+    <rdfs:label>1170</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/f8d20b4b41fc4d01f40b478249bb72b14d813def">
+    <skos:prefLabel xml:lang="en">HOOK</skos:prefLabel>
+    <rdfs:label xml:lang="en">HOOK</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Hook and line</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Hook and line</rdfs:label>
+    <skos:prefLabel xml:lang="es">Lignes et hamecons</skos:prefLabel>
+    <rdfs:label xml:lang="es">Lignes et hamecons</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1590"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1420">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/db90894483cc26e16cfdc7866299f0dc62bcbc60"/>
+    <rdfs:label>1420</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/4cf84829fffe84f662b789173a859ca7a78a251d">
+    <skos:prefLabel xml:lang="en">SURF</skos:prefLabel>
+    <rdfs:label xml:lang="en">SURF</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Surface fisheries unclassified</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Surface fisheries unclassified</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1130"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1300">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/4b4a3b83f257fdd931d5793fd640c6ca9f6f3a04"/>
+    <rdfs:label>1300</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/1400">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/b1f3d8fd3344058c54335232af77f0a8156fea48"/>
+    <rdfs:label>1400</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11">
+    <skos:changeNote>2014-04-11T17:04:32.036+02:00</skos:changeNote>
+    <skos:editorialNote>Generated by the Semantic Repository LOD maintenance framework</skos:editorialNote>
+    <dct:hasVersion>1.0</dct:hasVersion>
+    <dct:creator>FAO</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/gearcode/803">
+    <j.2:classifies rdf:resource="http://www.fao.org/figis/flod/entities/codedentity/4c96fa0c649dde22b6166d099917edb36620379d"/>
+    <rdfs:label>803</rdfs:label>
+    <sys:system rdf:resource="http://www.fao.org/figis/flod/entities/codificationsystem/rtms-54002-11"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/gear.owl#GearCode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/58a6d70da18a59540f7afff76f796addd8c9a9a9">
+    <skos:prefLabel xml:lang="en">TLD</skos:prefLabel>
+    <rdfs:label xml:lang="en">TLD</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Tended line discards</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Tended line discards</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1310"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.fao.org/figis/flod/entities/codedentity/211ab0ad2affd0a72792f0b75358df1e33f156cc">
+    <skos:prefLabel xml:lang="en">SPOR</skos:prefLabel>
+    <rdfs:label xml:lang="en">SPOR</rdfs:label>
+    <skos:prefLabel xml:lang="fr">Sport fisheries unclassified</skos:prefLabel>
+    <rdfs:label xml:lang="fr">Sport fisheries unclassified</rdfs:label>
+    <cls:isClassfiedByCode rdf:resource="http://www.fao.org/figis/flod/entities/gearcode/1210"/>
+    <rdf:type rdf:resource="http://www.fao.org/figis/flod/onto/codedentity.owl#CodedEntity"/>
+  </rdf:Description>
+</rdf:RDF>

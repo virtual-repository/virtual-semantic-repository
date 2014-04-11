@@ -24,8 +24,6 @@ import java.util.logging.Level;
 import org.virtual.sr.transforms.Raw2CustomRdf;
 import org.virtual.sr.utils.Constants;
 import org.virtualrepository.fmf.FmfAsset;
-import org.virtualrepository.fmf.FmfGenericType;
-import org.virtualrepository.sdmx.SdmxAsset;
 import org.virtualrepository.sdmx.SdmxCodelist;
 
 /**
@@ -42,10 +40,12 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
     private final RepositoryConfiguration configuration;
     private final Type<A> assetType;
     private static Logger log = LoggerFactory.getLogger(RepositoryPublisher.class);
+    private final String publishEndpoint;
 
     public RepositoryPublisher(Type<A> assetType, RepositoryConfiguration configuration) {
         this.assetType = assetType;
         this.configuration = configuration;
+        this.publishEndpoint = configuration.publish_in_sr_staging_uri().toString();
     }
 
     @Override
@@ -60,31 +60,34 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
     @Override
     public void publish(A asset, Model rdf) throws Exception {
-    	
-    	if(asset.type()==FmfAsset.type)
-            log.info("I received a mapping list "+ asset.name());
-        
-        if(asset.type()==SdmxCodelist.type)
-            log.info("I received a code list " + asset.name()+", ingestionId="+asset.properties().lookup(ingestionId).value());
-//        publishRawRdf(asset, rdf);
+
+        if (asset.type() == FmfAsset.type) {
+            log.info("I received a mapping list " + asset.name());
+        }
+
+        if (asset.type() == SdmxCodelist.type) {
+            log.info("I received a code list " + asset.name() + ", ingestionId=" + asset.properties().lookup(ingestionId).value());
+//            publishRawRdf(asset, rdf);
 //        //super-temporary hack
-//        publishCustomRdf(asset, rdf);
+            publishCustomRdf(asset, rdf);
+        }
     }
 
     private void publishRawRdf(Asset asset, Model rdf) {
-        String publishEndpoint = configuration.publish_in_sr_staging_uri().toString();
-//        publish_on_file(rdf, "raw.rdf");
-//        publishRDF(asset, rdf, publishEndpoint);
+        publish_on_file(rdf, "raw_" + asset.properties().lookup(ingestionId).value() + ".rdf");
+//        publishRDF(asset, rdf);
     }
 
     private void publishCustomRdf(Asset asset, Model rdf) {
-        rdf = Raw2CustomRdf.FLODcustomize(rdf);
-        publish_on_file(rdf, asset.id()+".rdf");
-        String publishEndpoint = configuration.publish_in_sr_public_uri().toString();
-//        publishRDF(asset, rdf, publishEndpoint);
+        String codelistId = asset.properties().lookup(ingestionId).value().toString();
+        if (configuration.isKnownCodelist(codelistId+"-sdmx")) {
+            rdf = Raw2CustomRdf.FLODcustomize(rdf, configuration.sparqlFLODdataset(codelistId+"-sdmx"));
+            publish_on_file(rdf, asset.properties().lookup(ingestionId).value() + ".rdf");
+        }
+//        publishRDF(asset, rdf);
     }
 
-    private void publishRDF(Asset asset, Model rdf, String publishEndpoint) {
+    private void publishRDF(Asset asset, Model rdf) {
         StmtIterator stmts = rdf.listStatements();
         long time = System.currentTimeMillis();
 

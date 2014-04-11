@@ -4,7 +4,7 @@ import org.virtualrepository.Property;
 
 public class Constants {
 
-	public static final String ingestionId = "ingestionid";
+    public static final String ingestionId = "ingestionid";
     public static final String ownerName = "owner";
     public static final String pseudoNS = "s:r/";
     

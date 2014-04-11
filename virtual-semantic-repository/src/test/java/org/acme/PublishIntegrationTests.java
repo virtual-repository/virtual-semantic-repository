@@ -46,7 +46,7 @@ public class PublishIntegrationTests {
     }
 
     @Test
-    public void another() {
+    public void publishFromRTMS() {
 
         SdmxServiceFactory.init();
 
@@ -58,35 +58,39 @@ public class PublishIntegrationTests {
 
         //get first discovered codelist
         Iterator<Asset> it = repo.iterator();
+        int idx = 0;
+        while (it.hasNext()) {
+            Asset discoveredAsset = it.next();
 
-        it.next();
+            try {
+                //retrieve its content
+                CodelistBean sdmx = repo.retrieve(discoveredAsset, CodelistBean.class);
 
-        Asset discoveredAsset = it.next();
+                //get virtual semantic repo 
+                RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
 
-        //retrieve its content
-        CodelistBean sdmx = repo.retrieve(discoveredAsset, CodelistBean.class);
+                //create empty asset for publication
+                SdmxCodelist publishAsset = new SdmxCodelist(discoveredAsset.name(), service);
 
-        //get virtual semantic repo 
-        RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
-
-        //create asset for publication
-        SdmxCodelist publishAsset = new SdmxCodelist("test", service);
-
-        //public sdmx with virtual repo
-        repo.publish(publishAsset, sdmx);
+                //public sdmx with virtual repo
+                repo.publish(publishAsset, sdmx);
+                idx++;
+            } catch (Exception e) {
+                continue;
+            }
+        }
 
     }
 
-    @Test
+//    @Test
     public void publishMapping() {
 
-       
         VirtualRepository repo = new Repository();
-        
+
         RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
-                
+
         FmfAsset asset = new FmfAsset(FmfAsset.type, "test", service);
-        
+
         repo.publish(asset, new MappingBean());
 
     }
