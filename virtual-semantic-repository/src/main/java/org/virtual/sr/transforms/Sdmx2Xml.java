@@ -1,5 +1,7 @@
 package org.virtual.sr.transforms;
 
+import static org.virtual.sr.utils.Constants.*;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
@@ -13,13 +15,16 @@ import org.sdmxsource.sdmx.api.model.beans.SdmxBeans;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.sdmx.sdmxbeans.model.SdmxStructureFormat;
 import org.sdmxsource.sdmx.util.beans.container.SdmxBeansImpl;
+import org.virtualrepository.Asset;
 
 public class Sdmx2Xml implements XmlTransform<CodelistBean> {
 
 	
 	
 	@Override
-	public Source toXml(CodelistBean bean) {
+	public Source toXml(CodelistBean bean, Asset asset) {
+		
+		asset.properties().add(ingestionId(bean.getId()));
 		
 		SdmxBeans beans = new SdmxBeansImpl();
 		beans.addCodelist(bean);

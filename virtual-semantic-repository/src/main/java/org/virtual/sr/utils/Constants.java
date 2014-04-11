@@ -4,6 +4,7 @@ import org.virtualrepository.Property;
 
 public class Constants {
 
+	public static final String ingestionId = "ingestionid";
     public static final String ownerName = "owner";
     public static final String pseudoNS = "s:r/";
     
@@ -20,6 +21,11 @@ public class Constants {
             + " PREFIX j.0:      <s:r/> \n"
             + " PREFIX fn:      <http://www.w3.org/2005/xpath-functions#> \n";
 
+    
+    public static Property ingestionId(String value) {
+    	return new Property(ingestionId, value, false);
+    }
+    
     public static Property ownerProperty(String value) {
         return new Property(ownerName, value);
     }

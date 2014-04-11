@@ -2,11 +2,13 @@ package org.virtual.sr.transforms;
 
 import java.io.StringReader;
 import java.io.StringWriter;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
+
+import org.virtualrepository.Asset;
 
 
 public class Fmf2Xml implements XmlTransform<MappingBean> {
@@ -23,7 +25,7 @@ public class Fmf2Xml implements XmlTransform<MappingBean> {
         }
         
 	@Override
-	public Source toXml(MappingBean bean) throws JAXBException {
+	public Source toXml(MappingBean bean, Asset asset) throws JAXBException {
 		StringWriter sw = new StringWriter();
 		cxt.createMarshaller().marshal(bean, sw);
 		StringReader sr = new StringReader(sw.toString());

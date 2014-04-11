@@ -1,5 +1,7 @@
 package org.virtual.sr;
 
+import static org.virtual.sr.utils.Constants.*;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.virtualrepository.Asset;
@@ -12,11 +14,13 @@ import com.hp.hpl.jena.rdf.model.StmtIterator;
 import com.hp.hpl.jena.sparql.util.FmtUtils;
 import com.hp.hpl.jena.update.UpdateExecutionFactory;
 import com.hp.hpl.jena.update.UpdateFactory;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.logging.Level;
+
 import org.virtual.sr.transforms.Raw2CustomRdf;
 import org.virtual.sr.utils.Constants;
 import org.virtualrepository.fmf.FmfAsset;
@@ -56,11 +60,12 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
     @Override
     public void publish(A asset, Model rdf) throws Exception {
-        if(asset.type() instanceof FmfGenericType)
+    	
+    	if(asset.type()==FmfAsset.type)
             log.info("I received a mapping list "+ asset.name());
         
-        if(asset.type() instanceof SdmxCodelist)
-            log.info("I received a code list " + asset.name());
+        if(asset.type()==SdmxCodelist.type)
+            log.info("I received a code list " + asset.name()+", ingestionId="+asset.properties().lookup(ingestionId).value());
 //        publishRawRdf(asset, rdf);
 //        //super-temporary hack
 //        publishCustomRdf(asset, rdf);

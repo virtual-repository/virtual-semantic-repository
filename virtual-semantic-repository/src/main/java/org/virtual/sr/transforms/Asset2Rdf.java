@@ -38,7 +38,7 @@ public class Asset2Rdf<A extends Asset, T> implements Transform<A, T, Model> {
         Source source = null;
 
         try {
-            source = transform.toXml(content);
+            source = transform.toXml(content, asset);
         } catch (Exception e) {
             throw new Exception("cannot transform " + asset.type() + " to XML (see cause)", e);
         }
