@@ -5,6 +5,7 @@ import org.virtualrepository.Property;
 public class Constants {
 
     public static final String ingestionId = "ingestionid";
+    public static final String codedentity_ns = "http://www.fao.org/figis/flod/entities/";
     public static final String ownerName = "owner";
     public static final String pseudoNS = "s:r/";
     

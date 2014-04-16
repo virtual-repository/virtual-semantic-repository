@@ -16,8 +16,8 @@ public class BrowserIntegrationTests {
         repo.discover(SdmxCodelist.type);
         for (Asset asset : repo) {
             System.out.println("asset id: " + asset.id());
-            System.out.println("asset name: " + asset.name());
-            System.out.println("asset name: " + asset.properties().lookup("name").value().toString());
+            System.out.println("asset short: " + asset.name());
+            System.out.println("asset long name: " + asset.properties().lookup("name").value().toString());
             System.out.println("#");
         }
 

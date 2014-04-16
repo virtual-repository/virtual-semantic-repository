@@ -59,7 +59,7 @@ public class PublishIntegrationTests {
         //get first discovered codelist
         Iterator<Asset> it = repo.iterator();
         int idx = 0;
-        while (it.hasNext()) {
+        while (it.hasNext() & idx<=5) {
             Asset discoveredAsset = it.next();
 
             try {

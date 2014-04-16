@@ -1,9 +1,10 @@
 package org.virtual.sr;
 
 import static org.virtualrepository.Utils.*;
-
+import static org.virtual.sr.utils.Constants.*;
 import java.net.URI;
 import java.util.Properties;
+
 
 public class RepositoryConfiguration {
 
@@ -41,12 +42,13 @@ public class RepositoryConfiguration {
                 return  p.replace("cl_uri", codelistUri);
 	}
         
-	public String sparqlFLODdataset(String codelistId) {
+	public String sparqlFLODdataset(String codelistId, String graphId) {
 		String p = properties.getProperty("sparqlFLODdataset");
                 String codeClassUri = properties.getProperty(codelistId);
                 String localname = codeClassUri.split("#")[1].toLowerCase();
                 p = p.replace("code_class_uri", codeClassUri);
-                p = p.replace("code_entities_ns", "http://www.fao.org/figis/flod/entities/"+localname+"/");
+                p = p.replace("code_entities_ns", codedentity_ns+localname+"/");
+                p = p.replace("graph_id", graphId);
                 return p;
 	}
         
