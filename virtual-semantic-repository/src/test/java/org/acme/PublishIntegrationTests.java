@@ -35,7 +35,7 @@ public class PublishIntegrationTests {
         System.setProperty("org.slf4j.simpleLogger.log.org.virtual.sr ", "trace");
     }
 
-//    @Test
+    @Test
     public void publishSdmxCodelist() {
 
         InputStream stream = getClass().getClassLoader().getResourceAsStream("mini-asfis.xml");

@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlType(name="Term")
 @XmlAccessorType(XmlAccessType.FIELD)
+@Deprecated
 public class Term implements Serializable {
 	/** Field serialVersionUID */
 	private static final long serialVersionUID = 2994599313026400869L;
