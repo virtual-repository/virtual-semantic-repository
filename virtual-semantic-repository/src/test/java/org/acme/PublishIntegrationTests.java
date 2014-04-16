@@ -15,7 +15,7 @@ import org.virtual.sr.transforms.MappingBean;
 import org.virtualrepository.Asset;
 import org.virtualrepository.RepositoryService;
 import org.virtualrepository.VirtualRepository;
-import org.virtualrepository.fmf.FmfAsset;
+import org.virtualrepository.fmf.CometAsset;
 import org.virtualrepository.impl.Repository;
 import org.virtualrepository.sdmx.SdmxCodelist;
 
@@ -89,7 +89,7 @@ public class PublishIntegrationTests {
 
         RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
 
-        FmfAsset asset = new FmfAsset(FmfAsset.type, "test", service);
+        CometAsset asset = new CometAsset(CometAsset.type, "test", service);
 
         repo.publish(asset, new MappingBean());
 

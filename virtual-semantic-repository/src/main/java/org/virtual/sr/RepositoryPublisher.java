@@ -25,7 +25,7 @@ import org.apache.jena.riot.RiotWriter;
 
 import org.virtual.sr.transforms.Raw2CustomRdf;
 import org.virtual.sr.utils.Constants;
-import org.virtualrepository.fmf.FmfAsset;
+import org.virtualrepository.fmf.CometAsset;
 import org.virtualrepository.sdmx.SdmxCodelist;
 
 /**
@@ -64,7 +64,7 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
     @Override
     public void publish(A asset, Model rdf) throws Exception {
 
-        if (asset.type() == FmfAsset.type) {
+        if (asset.type() == CometAsset.type) {
             log.info("I received a mapping list " + asset.name());
         }
 

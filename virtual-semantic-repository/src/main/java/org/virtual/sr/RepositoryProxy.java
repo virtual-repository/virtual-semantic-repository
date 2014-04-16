@@ -15,7 +15,7 @@ import org.virtual.sr.transforms.Sdmx2Xml;
 import org.virtual.sr.transforms.XmlTransform;
 import org.virtual.sr.transforms.codelist.Rdf2SdmxCodelist;
 import org.virtualrepository.Asset;
-import org.virtualrepository.fmf.FmfAsset;
+import org.virtualrepository.fmf.CometAsset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Browser;
@@ -67,7 +67,7 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 		
 		browser = new RepositoryBrowser(configuration);
 		publishers.add(publisherFor(SdmxCodelist.type,new Sdmx2Xml(),configuration));
-		publishers.add(publisherFor(FmfAsset.type, new Fmf2Xml(),configuration));
+		publishers.add(publisherFor(CometAsset.type, new Fmf2Xml(),configuration));
 		
 		//base rdf codelist importer
 		RdfImporter<SdmxCodelist> rdfCodelistImporter = new RdfImporter<SdmxCodelist>(SdmxCodelist.type,configuration);
