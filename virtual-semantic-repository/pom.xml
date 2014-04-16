@@ -107,6 +107,11 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.fao.fi.comet.mapping</groupId>
+			<artifactId>comet-mapping-format</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 

@@ -7,9 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import org.acme.comet.Term;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.virtual.sr.transforms.Asset2Rdf;
-import org.virtual.sr.transforms.Fmf2Xml;
+import org.virtual.sr.transforms.Comet2Xml;
 import org.virtual.sr.transforms.Sdmx2Table;
 import org.virtual.sr.transforms.Sdmx2Xml;
 import org.virtual.sr.transforms.XmlTransform;
@@ -61,13 +62,13 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 			configuration = new RepositoryConfiguration(properties);
 		}
 		catch(Exception e) {
-			throw new IllegalStateException("invalid configuration (see cause) ",e);	
+			throw new IllegalStateException("invalid configuration (see cause) ",e);
 		}
 		
 		
 		browser = new RepositoryBrowser(configuration);
 		publishers.add(publisherFor(SdmxCodelist.type,new Sdmx2Xml(),configuration));
-		publishers.add(publisherFor(CometAsset.type, new Fmf2Xml(),configuration));
+		publishers.add(publisherFor(CometAsset.type, new Comet2Xml(Term.class),configuration));
 		
 		//base rdf codelist importer
 		RdfImporter<SdmxCodelist> rdfCodelistImporter = new RdfImporter<SdmxCodelist>(SdmxCodelist.type,configuration);

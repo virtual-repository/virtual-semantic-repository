@@ -66,6 +66,8 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
         if (asset.type() == CometAsset.type) {
             log.info("I received a mapping list " + asset.name());
+            
+            rdf.write(System.out, "N-TRIPLE");
         }
 
         if (asset.type() == SdmxCodelist.type) {
