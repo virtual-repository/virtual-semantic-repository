@@ -5,14 +5,12 @@
  */
 package org.virtual.sr.transforms;
 
-import com.hp.hpl.jena.graph.Node;
+import org.virtual.sr.utils.Constants;
+
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.sparql.core.DatasetGraph;
-import com.hp.hpl.jena.sparql.core.DatasetGraphFactory;
-import org.virtual.sr.utils.Constants;
 
 /**
  *

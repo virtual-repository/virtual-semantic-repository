@@ -1,6 +1,6 @@
 package org.acme;
 
-import static org.sdmx.SdmxServiceFactory.parser;
+import static org.sdmx.SdmxServiceFactory.*;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -27,6 +27,8 @@ import org.virtualrepository.fmf.CometAsset;
 import org.virtualrepository.impl.Repository;
 import org.virtualrepository.sdmx.SdmxCodelist;
 
+
+@SuppressWarnings("deprecation")
 public class PublishIntegrationTests {
 
     @BeforeClass
@@ -97,7 +99,7 @@ public class PublishIntegrationTests {
 
         RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
 
-        CometAsset asset = new CometAsset(CometAsset.type, "test", service);
+        CometAsset asset = new CometAsset("test", service);
         
         MappingData<Term, Term> mappingData = this.getFakeMappingData();
         
@@ -110,6 +112,7 @@ public class PublishIntegrationTests {
         repo.publish(asset, mappingData);
     }
     
+
     private MappingData<Term, Term> getFakeMappingData() {
     	Term left1 = new Term("over-exploited");
         Term right11 = new Term("overexploited");

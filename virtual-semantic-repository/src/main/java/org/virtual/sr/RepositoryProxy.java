@@ -68,6 +68,7 @@ public class RepositoryProxy implements ServiceProxy, Lifecycle {
 		
 		browser = new RepositoryBrowser(configuration);
 		publishers.add(publisherFor(SdmxCodelist.type,new Sdmx2Xml(),configuration));
+		
 		publishers.add(publisherFor(CometAsset.type, new Comet2Xml(Term.class),configuration));
 		
 		//base rdf codelist importer
