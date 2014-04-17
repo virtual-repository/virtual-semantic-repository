@@ -1,18 +1,16 @@
 package org.acme;
 
-import static org.sdmx.SdmxServiceFactory.*;
+import static org.sdmx.SdmxServiceFactory.parser;
 
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collection;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Date;
 import java.util.Iterator;
 
 import org.acme.comet.Term;
-import org.fao.fi.comet.vr.model.Element;
-import org.fao.fi.comet.vr.model.ElementIdentifier;
-import org.fao.fi.comet.vr.model.Mapping;
-import org.fao.fi.comet.vr.model.MappingData;
-import org.fao.fi.comet.vr.model.MappingDetail;
+import org.fao.fi.comet.mapping.model.DataProvider;
+import org.fao.fi.comet.mapping.model.MappingData;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.sdmx.SdmxServiceFactory;
@@ -27,6 +25,16 @@ import org.virtualrepository.fmf.CometAsset;
 import org.virtualrepository.impl.Repository;
 import org.virtualrepository.sdmx.SdmxCodelist;
 
+import static org.fao.fi.comet.mapping.dsl.ElementDSL.wrap;
+import static org.fao.fi.comet.mapping.dsl.ElementIdentifierDSL.identifierFor;
+import static org.fao.fi.comet.mapping.dsl.MappingContributionDSL.matcher;
+import static org.fao.fi.comet.mapping.dsl.MappingDSL.map;
+import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.maximumCandidates;
+import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.minimumWeightedScore;
+import static org.fao.fi.comet.mapping.dsl.MappingDetailDSL.target;
+import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.configuredMatcher;
+import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.optional;
+import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationPropertyDSL.configurationProperty;
 
 @SuppressWarnings("deprecation")
 public class PublishIntegrationTests {
@@ -113,62 +121,82 @@ public class PublishIntegrationTests {
     }
     
 
-    private MappingData<Term, Term> getFakeMappingData() {
-    	Term left1 = new Term("over-exploited");
-        Term right11 = new Term("overexploited");
-        Term right12 = new Term("ov-erexploited");
-
-        Term left2 = new Term("under-exploited");
-        Term right21 = new Term("underexploited");
-        Term right22 = new Term("und-erexploited");
-        Term right23 = new Term("un-derexploited");
-
-        Element<Term> eLeft1 = new Element<Term>();
-        eLeft1.setId(new ElementIdentifier("fooResourceStatus", "1"));
-        eLeft1.setData(left1);
-        
-        Element<Term> eRight11 = new Element<Term>();
-        eRight11.setId(new ElementIdentifier("barResourceStatus", "69"));
-        eRight11.setData(right11);
-
-        Element<Term> eRight12 = new Element<Term>();
-        eRight12.setId(new ElementIdentifier("barResourceStatus", "96"));
-        eRight12.setData(right12);
-        
-        Element<Term> eLeft2 = new Element<Term>();
-        eLeft2.setId(new ElementIdentifier("fooResourceStatus", "2"));
-        eLeft2.setData(left2);
-        
-        Element<Term> eRight21 = new Element<Term>();
-        eRight21.setId(new ElementIdentifier("barResourceStatus", "70"));
-        eRight21.setData(right21);
-
-        Element<Term> eRight22 = new Element<Term>();
-        eRight22.setId(new ElementIdentifier("barResourceStatus", "97"));
-        eRight22.setData(right22);
-        
-        Element<Term> eRight23 = new Element<Term>();
-        eRight23.setId(new ElementIdentifier("barResourceStatus", "98"));
-        eRight23.setData(right23);
-
-        Collection<MappingDetail<Term>> leftMappings1 = new ArrayList<MappingDetail<Term>>();
-        leftMappings1.add(new MappingDetail<Term>(0.99, eRight11));
-        leftMappings1.add(new MappingDetail<Term>(0.69, eRight12));
-
-        Collection<MappingDetail<Term>> leftMappings2 = new ArrayList<MappingDetail<Term>>();
-        leftMappings2.add(new MappingDetail<Term>(0.99, eRight21));
-        leftMappings2.add(new MappingDetail<Term>(0.69, eRight22));
-        leftMappings2.add(new MappingDetail<Term>(0.39, eRight23));
-
-        Mapping<Term, Term> mapping1 = new Mapping<Term, Term>(eLeft1, leftMappings1);
-        Mapping<Term, Term> mapping2 = new Mapping<Term, Term>(eLeft2, leftMappings2);
-        
-        Collection<Mapping<Term, Term>> mappings = new ArrayList<Mapping<Term, Term>>();
-        mappings.add(mapping1);
-        mappings.add(mapping2);
-        
-        MappingData<Term, Term> mappingData = new MappingData<Term, Term>();
-        mappingData.setMappings(mappings);
+    private MappingData<Term, Term> getFakeMappingData() throws URISyntaxException {
+    	DataProvider sourceDataProvider = new DataProvider(new URI("urn:fooResourceStatus"), Term.class.getName());
+		DataProvider targetDataProvider = new DataProvider(new URI("urn:barResourceStatus"), Term.class.getName());
+		
+		MappingData<Term, Term> mappingData = new MappingData<Term, Term>().
+			id(new URI("urn:foo:bar")).
+			version("0.01").
+			producedBy("Foo Bazzi").
+			on(new Date()).
+			linking(sourceDataProvider).to(targetDataProvider).
+			through(
+				configuredMatcher(new URI("urn:matcher:foo")).
+					ofType("org.fao.fi.comet.common.matchers.LexicalMatcher").
+					weighting(10).
+					withMinimumScore(0.1).
+					having(
+						configurationProperty("stripSymbols", Boolean.FALSE)
+					),
+				optional(
+					configuredMatcher(new URI("urn:matcher:bar")).
+						ofType("org.fao.fi.comet.common.matchers.AnotherLexicalMatcher").
+						weighting(30).
+						withMinimumScore(0.0).
+						having(
+							configurationProperty("useSoundex", Boolean.TRUE),
+							configurationProperty("stripSymbols", Boolean.TRUE)
+						)
+					),
+				optional(
+					configuredMatcher(new URI("urn:matcher:baz")).
+						ofType("org.fao.fi.comet.common.matchers.YetAnotherLexicalMatcher").
+						weighting(20).
+						withMinimumScore(0.2).
+						having(
+							configurationProperty("useSoundex", Boolean.TRUE)
+						)
+					)
+			).
+			with(minimumWeightedScore(0.3), maximumCandidates(5)).
+			including(
+				map(wrap(Term.describing("over-exploited")).with(identifierFor(sourceDataProvider, new URI("urn:1"))), Term.class).
+					to(
+						target(wrap(Term.describing("overexploited")).with(identifierFor(targetDataProvider, new URI("urn:69")))).
+							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.39), 
+											matcher(new URI("urn:matcher:bar")).scoring(0.69),
+											matcher(new URI("urn:matcher:baz")).nonPerformed()
+							).withWeightedScore(0.59)
+					).andTo(
+						target(wrap(Term.describing("ov-erexploited")).with(identifierFor(targetDataProvider, new URI("urn:96")))).
+							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.79), 
+											matcher(new URI("urn:matcher:bar")).nonPerformed(),
+											matcher(new URI("urn:matcher:baz")).nonPerformed()
+							).withWeightedScore(0.59)
+					)
+			).including(
+				map(wrap(Term.describing("under-exploited")).with(identifierFor(sourceDataProvider, new URI("urn:2"))), Term.class).
+					to(
+						target(wrap(Term.describing("underexploited")).with(identifierFor(targetDataProvider, new URI("urn:70")))).
+							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.49), 
+											matcher(new URI("urn:matcher:bar")).scoring(0.59),
+											matcher(new URI("urn:matcher:baz")).nonPerformed()
+							).withWeightedScore(0.39)
+					).andTo(
+						target(wrap(Term.describing("und-erexploited")).with(identifierFor(targetDataProvider, new URI("urn:97")))).
+							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.79), 
+											matcher(new URI("urn:matcher:bar")).nonPerformed(),
+											matcher(new URI("urn:matcher:baz")).nonPerformed()
+							).withWeightedScore(0.79)
+					).andTo(
+						target(wrap(Term.describing("un-derexploited")).with(identifierFor(targetDataProvider, new URI("urn:98")))).
+							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.29), 
+											matcher(new URI("urn:matcher:bar")).nonPerformed(),
+											matcher(new URI("urn:matcher:baz")).scoring(0.39)
+							).withWeightedScore(0.35)
+					)
+		);
         
         return mappingData;
     }

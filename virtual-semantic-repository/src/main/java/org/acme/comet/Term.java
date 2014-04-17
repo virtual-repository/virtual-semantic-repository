@@ -23,16 +23,16 @@ import javax.xml.bind.annotation.XmlType;
  * @version 1.0
  * @since 16 Apr 2014
  */
-@XmlType(name="Term")
+@XmlType(name = "Term")
 @XmlAccessorType(XmlAccessType.FIELD)
 @Deprecated
 public class Term implements Serializable {
 	/** Field serialVersionUID */
 	private static final long serialVersionUID = 2994599313026400869L;
-	
-	@XmlElement(name="Description")
+
+	@XmlElement(name = "Description")
 	private String _description;
-	
+
 	/**
 	 * Class constructor
 	 *
@@ -63,22 +63,27 @@ public class Term implements Serializable {
 	public void setDescription(String description) {
 		this._description = description;
 	}
+	
+	final static public Term describing(String data) {
+		return new Term(data);
+	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime
-				* result
-				+ ((this._description == null) ? 0 : this._description
-						.hashCode());
+		result = prime * result + ((this._description == null) ? 0 : this._description.hashCode());
 		return result;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
 	@Override
