@@ -11,7 +11,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 
-import org.fao.fi.comet.vr.model.MappingData;
+import org.fao.fi.comet.mapping.model.MappingData;
 import org.virtualrepository.Asset;
 
 @SuppressWarnings("rawtypes")

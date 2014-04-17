@@ -1,5 +1,15 @@
 package org.acme;
 
+import static org.fao.fi.comet.mapping.dsl.ElementDSL.wrap;
+import static org.fao.fi.comet.mapping.dsl.ElementIdentifierDSL.identifierFor;
+import static org.fao.fi.comet.mapping.dsl.MappingContributionDSL.matcher;
+import static org.fao.fi.comet.mapping.dsl.MappingDSL.map;
+import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.maximumCandidates;
+import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.minimumWeightedScore;
+import static org.fao.fi.comet.mapping.dsl.MappingDetailDSL.target;
+import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.configuredMatcher;
+import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.optional;
+import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationPropertyDSL.configurationProperty;
 import static org.sdmx.SdmxServiceFactory.parser;
 
 import java.io.InputStream;
@@ -24,17 +34,6 @@ import org.virtualrepository.VirtualRepository;
 import org.virtualrepository.fmf.CometAsset;
 import org.virtualrepository.impl.Repository;
 import org.virtualrepository.sdmx.SdmxCodelist;
-
-import static org.fao.fi.comet.mapping.dsl.ElementDSL.wrap;
-import static org.fao.fi.comet.mapping.dsl.ElementIdentifierDSL.identifierFor;
-import static org.fao.fi.comet.mapping.dsl.MappingContributionDSL.matcher;
-import static org.fao.fi.comet.mapping.dsl.MappingDSL.map;
-import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.maximumCandidates;
-import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.minimumWeightedScore;
-import static org.fao.fi.comet.mapping.dsl.MappingDetailDSL.target;
-import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.configuredMatcher;
-import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.optional;
-import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationPropertyDSL.configurationProperty;
 
 @SuppressWarnings("deprecation")
 public class PublishIntegrationTests {
@@ -101,7 +100,7 @@ public class PublishIntegrationTests {
     }
 
     @Test
-    public void publishMapping() {
+    public void publishMapping() throws URISyntaxException {
 
         VirtualRepository repo = new Repository();
 
