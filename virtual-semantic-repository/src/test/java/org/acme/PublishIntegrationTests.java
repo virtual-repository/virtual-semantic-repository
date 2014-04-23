@@ -1,13 +1,10 @@
 package org.acme;
 
 import static org.fao.fi.comet.mapping.dsl.ElementDSL.wrap;
-import static org.fao.fi.comet.mapping.dsl.ElementIdentifierDSL.identifierFor;
-import static org.fao.fi.comet.mapping.dsl.MappingContributionDSL.matcher;
 import static org.fao.fi.comet.mapping.dsl.MappingDSL.map;
 import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.maximumCandidates;
 import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.minimumWeightedScore;
 import static org.fao.fi.comet.mapping.dsl.MappingDetailDSL.target;
-import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.configuredMatcher;
 import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.optional;
 import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationPropertyDSL.configurationProperty;
 import static org.sdmx.SdmxServiceFactory.parser;
@@ -19,6 +16,9 @@ import java.util.Date;
 import java.util.Iterator;
 
 import org.acme.comet.Term;
+import static org.fao.fi.comet.mapping.dsl.ElementIdentifierDSL.identifierFor;
+import static org.fao.fi.comet.mapping.dsl.MappingContributionDSL.matcher;
+import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.configuredMatcher;
 import org.fao.fi.comet.mapping.model.DataProvider;
 import org.fao.fi.comet.mapping.model.MappingData;
 import org.junit.BeforeClass;
@@ -62,7 +62,7 @@ public class PublishIntegrationTests {
 
     }
 
-    @Test
+//    @Test
     public void publishFromRTMS() {
 
         SdmxServiceFactory.init();

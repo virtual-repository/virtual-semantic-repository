@@ -44,7 +44,7 @@ public class RepositoryBrowser implements Browser {
 	public Collection<SdmxCodelist> discoverSdmxCodelists() throws Exception {
 
 		List<SdmxCodelist> assets = new ArrayList<SdmxCodelist>();
-		String endpoint = configuration.discoveryURI().toString();
+		String endpoint = configuration.public_endpoint_query().toString();
 
 		Query q = QueryFactory.create(configuration.sparqlQueryForCodelists());
 		ResultSet codelists = QueryExecutionFactory.sparqlService(endpoint, q).execSelect();

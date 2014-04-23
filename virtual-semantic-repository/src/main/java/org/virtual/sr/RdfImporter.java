@@ -33,7 +33,7 @@ public class RdfImporter<A extends Asset> implements Importer<A, Model> {
     public Model retrieve(A asset) throws Exception {
 
         Query q = QueryFactory.create(configuration.sparqlQueryForCodelist(asset.id()));
-        String endpoint = configuration.discoveryURI().toString();
+        String endpoint = configuration.public_endpoint_query().toString();
         return QueryExecutionFactory.sparqlService(endpoint, q).execConstruct();
     }
 }
