@@ -14,8 +14,10 @@ public class RepositoryConfiguration {
 		this.properties=properties;
 		
 		notNull("configuration", properties);
-		notNull("publish in sr_staging URI", properties.getProperty("publish_in_sr_staging_uri"));
-		notNull("discovery URI", properties.getProperty("discoveryURI"));
+		notNull("staging_endpoint_update", properties.getProperty("staging_endpoint_update"));
+		notNull("staging_endpoint_data", properties.getProperty("staging_endpoint_data"));
+		notNull("staging_endpoint_query", properties.getProperty("staging_endpoint_query"));
+		notNull("public_endpoint_query", properties.getProperty("public_endpoint_query"));
 		notNull("discovery query", properties.getProperty("sparqlQueryForCodelists"));
 		notNull("construct query for FLOD dataset", properties.getProperty("sparqlFLODdataset"));
 	}

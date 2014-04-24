@@ -42,8 +42,7 @@ public class Asset2Rdf<A extends Asset, T> implements Transform<A, T, Model> {
         } catch (Exception e) {
             throw new Exception("cannot transform " + asset.type() + " to XML (see cause)", e);
         }
-        Model triplifiedModel = converter.triplify(source);
-        return enrich(triplifiedModel, asset.id());
+        return converter.triplify(source); 
     }
 
     @Override
@@ -54,10 +53,5 @@ public class Asset2Rdf<A extends Asset, T> implements Transform<A, T, Model> {
     @Override
     public Class<Model> outputAPI() {
         return Model.class;
-    }
-
-    private Model enrich(Model m, String id) {
-        m.add(m.createResource(Constants.pseudoNS+"content"), m.createProperty(Constants.pseudoNS+"content"), m.getResource(id));
-        return m;
     }
 }
