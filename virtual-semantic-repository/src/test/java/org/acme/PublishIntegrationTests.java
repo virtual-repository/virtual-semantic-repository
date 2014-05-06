@@ -32,7 +32,6 @@ import org.virtualrepository.fmf.CometAsset;
 import org.virtualrepository.impl.Repository;
 import org.virtualrepository.sdmx.SdmxCodelist;
 
-@SuppressWarnings("deprecation")
 public class PublishIntegrationTests {
 
     @BeforeClass
