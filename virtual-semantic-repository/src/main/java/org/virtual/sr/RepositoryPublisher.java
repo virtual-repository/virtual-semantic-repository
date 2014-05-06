@@ -1,14 +1,23 @@
 package org.virtual.sr;
 
-import com.hp.hpl.jena.graph.Node;
 import static org.virtual.sr.utils.Constants.*;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.apache.jena.riot.RiotWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.virtual.sr.transforms.Raw2CustomRdf;
+import org.virtual.sr.utils.Constants;
 import org.virtualrepository.Asset;
+import org.virtualrepository.fmf.CometAsset;
 import org.virtualrepository.impl.Type;
+import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Publisher;
 
+import com.hp.hpl.jena.graph.Node;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.rdf.model.StmtIterator;
@@ -17,16 +26,6 @@ import com.hp.hpl.jena.sparql.core.DatasetGraphFactory;
 import com.hp.hpl.jena.sparql.util.FmtUtils;
 import com.hp.hpl.jena.update.UpdateExecutionFactory;
 import com.hp.hpl.jena.update.UpdateFactory;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import org.apache.jena.riot.RiotWriter;
-
-import org.virtual.sr.transforms.Raw2CustomRdf;
-import org.virtual.sr.utils.Constants;
-import org.virtualrepository.fmf.CometAsset;
-import org.virtualrepository.sdmx.SdmxCodelist;
 
 /**
  * A {@link Publisher} for the Semantic Repository that works with RDF models of

@@ -1,16 +1,14 @@
 package org.acme;
 
-import static org.fao.fi.comet.mapping.dsl.ElementDSL.wrap;
-import static org.fao.fi.comet.mapping.dsl.ElementIdentifierDSL.identifierFor;
-import static org.fao.fi.comet.mapping.dsl.MappingContributionDSL.matcher;
-import static org.fao.fi.comet.mapping.dsl.MappingDSL.map;
-import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.maximumCandidates;
-import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.minimumWeightedScore;
-import static org.fao.fi.comet.mapping.dsl.MappingDetailDSL.target;
-import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.configuredMatcher;
-import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.optional;
-import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationPropertyDSL.configurationProperty;
-import static org.sdmx.SdmxServiceFactory.parser;
+import static org.fao.fi.comet.mapping.dsl.MappingContributionDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingDetailDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingElementDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingElementIdentifierDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationPropertyDSL.*;
+import static org.sdmx.SdmxServiceFactory.*;
 
 import java.io.InputStream;
 import java.net.URI;
@@ -18,7 +16,6 @@ import java.net.URISyntaxException;
 import java.util.Date;
 import java.util.Iterator;
 
-import org.acme.comet.Term;
 import org.fao.fi.comet.mapping.model.DataProvider;
 import org.fao.fi.comet.mapping.model.MappingData;
 import org.junit.BeforeClass;
@@ -108,10 +105,10 @@ public class PublishIntegrationTests {
 
         CometAsset asset = new CometAsset("test", service);
         
-        MappingData<Term, Term> mappingData = this.getFakeMappingData();
+        MappingData mappingData = this.getFakeMappingData();
         
         try {
-        	System.out.println(new Comet2Xml(Term.class).emitXml(mappingData, asset));
+        	System.out.println(new Comet2Xml().emitXml(mappingData, asset));
         } catch(Throwable t) {
         	t.printStackTrace();
         }
@@ -120,11 +117,11 @@ public class PublishIntegrationTests {
     }
     
 
-    private MappingData<Term, Term> getFakeMappingData() throws URISyntaxException {
+    private MappingData getFakeMappingData() throws URISyntaxException {
     	DataProvider sourceDataProvider = new DataProvider(new URI("urn:fooResourceStatus"), Term.class.getName());
 		DataProvider targetDataProvider = new DataProvider(new URI("urn:barResourceStatus"), Term.class.getName());
 		
-		MappingData<Term, Term> mappingData = new MappingData<Term, Term>().
+		MappingData mappingData = new MappingData().
 			id(new URI("urn:foo:bar")).
 			version("0.01").
 			producedBy("Foo Bazzi").
@@ -160,7 +157,7 @@ public class PublishIntegrationTests {
 			).
 			with(minimumWeightedScore(0.3), maximumCandidates(5)).
 			including(
-				map(wrap(Term.describing("over-exploited")).with(identifierFor(sourceDataProvider, new URI("urn:1"))), Term.class).
+				map(wrap(Term.describing("over-exploited")).with(identifierFor(sourceDataProvider, new URI("urn:1")))).
 					to(
 						target(wrap(Term.describing("overexploited")).with(identifierFor(targetDataProvider, new URI("urn:69")))).
 							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.39), 
@@ -175,7 +172,7 @@ public class PublishIntegrationTests {
 							).withWeightedScore(0.59)
 					)
 			).including(
-				map(wrap(Term.describing("under-exploited")).with(identifierFor(sourceDataProvider, new URI("urn:2"))), Term.class).
+				map(wrap(Term.describing("under-exploited")).with(identifierFor(sourceDataProvider, new URI("urn:2")))).
 					to(
 						target(wrap(Term.describing("underexploited")).with(identifierFor(targetDataProvider, new URI("urn:70")))).
 							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.49), 

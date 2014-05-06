@@ -2,9 +2,6 @@ package org.virtual.sr.transforms;
 
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -14,27 +11,14 @@ import javax.xml.transform.stream.StreamSource;
 import org.fao.fi.comet.mapping.model.MappingData;
 import org.virtualrepository.Asset;
 
-@SuppressWarnings("rawtypes")
 public class Comet2Xml implements XmlTransform<MappingData> {
-	@SuppressWarnings("unused")
-	private Class<?>[] _classes;
-
+	
 	private JAXBContext _ctx;
 
 	public Comet2Xml() {
-		this((Class<?>[])null);
-	}
-	
-	@Deprecated
-	public Comet2Xml(Class<?>... classes) {
-		this._classes = classes;
-
-		List<Class<?>> allClasses = new ArrayList<Class<?>>(Arrays.asList(classes == null ? new Class<?>[0] : classes));
-		allClasses.add(MappingData.class);
-
+		
 		try {
-			this._ctx = JAXBContext.newInstance(allClasses
-					.toArray(new Class<?>[allClasses.size()]));
+			this._ctx = JAXBContext.newInstance(MappingData.class);
 		} catch (JAXBException ex) {
 			throw new RuntimeException("Failed JAXB initialization", ex);
 		}

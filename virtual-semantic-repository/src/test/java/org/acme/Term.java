@@ -1,7 +1,7 @@
 /**
  * (c) 2014 FAO / UN (project: virtual-semantic-repository)
  */
-package org.acme.comet;
+package org.acme;
 
 import java.io.Serializable;
 
@@ -9,7 +9,6 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 /**
  * Place your class / interface description here.
@@ -26,7 +25,6 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@Deprecated
 public class Term implements Serializable {
 	/** Field serialVersionUID */
 	private static final long serialVersionUID = 2994599313026400869L;
