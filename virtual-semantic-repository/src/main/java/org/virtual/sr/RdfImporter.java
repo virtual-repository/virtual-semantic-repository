@@ -31,8 +31,8 @@ public class RdfImporter<A extends Asset> implements Importer<A, Model> {
 
     @Override
     public Model retrieve(A asset) throws Exception {
-
-        Query q = QueryFactory.create(configuration.sparqlQueryForCodelist(asset.id()));
+        
+        Query q = QueryFactory.create(configuration.query_get_codelist(asset.id()));
         String endpoint = configuration.public_endpoint_query().toString();
         return QueryExecutionFactory.sparqlService(endpoint, q).execConstruct();
     }

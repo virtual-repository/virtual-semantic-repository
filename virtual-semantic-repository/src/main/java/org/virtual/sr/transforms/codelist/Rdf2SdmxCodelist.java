@@ -55,7 +55,7 @@ public class Rdf2SdmxCodelist implements Transform<SdmxCodelist, Model, Codelist
         codelist.setUri(asset.id());
         codelist.addName("en", asset.name());
 
-        ResIterator codes = m.listSubjectsWithProperty(SKOS_CORE.inScheme);
+        ResIterator codes = m.listSubjectsWithProperty(SKOS_CORE.notation);
 
         while (codes.hasNext()) {
 

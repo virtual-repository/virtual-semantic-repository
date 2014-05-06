@@ -32,19 +32,18 @@ import org.virtualrepository.sdmx.SdmxCodelist;
  */
 public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model> {
 
-    private static final int TRIPLE_BUFFER_SIZE = 20000;
     private final RepositoryConfiguration configuration;
     private final Type<A> assetType;
     private static Logger log = LoggerFactory.getLogger(RepositoryPublisher.class);
     private final String publishEndpoint;
-    private final String graph_ns = "http://www.fao.org/figis/flod/graph/";
+    private final String graph_ns = "http://semanticrepository/staging/graph/";
     private final DatasetGraphAccessorHTTP accessor;
 
     public RepositoryPublisher(Type<A> assetType, RepositoryConfiguration configuration) {
         this.assetType = assetType;
         this.configuration = configuration;
-        this.publishEndpoint = configuration.stagingEndpointUpdate().toString();
-        this.accessor = new DatasetGraphAccessorHTTP(configuration.stagingEndpointData().toString());
+        this.publishEndpoint = configuration.staging_endpoint_update().toString();
+        this.accessor = new DatasetGraphAccessorHTTP(configuration.staging_endpoint_data().toString());
     }
 
     @Override
@@ -72,9 +71,9 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
     }
 
     private void publishRawRdf(Asset asset, Model rdf) {
-        String codelistId = asset.properties().lookup(ingestionId).value().toString();
+//        String codelistId = asset.properties().lookup(ingestionId).value().toString();
         String assetVersion = rdf.getProperty(null, rdf.getProperty(pseudoNS + "version")).getString();
-        String graphId = graph_ns + assetVersion + "/" + codelistId;
+        String graphId = graph_ns + assetVersion + "/" + asset.name();
         Node gNode = NodeFactory.createURI(graphId);
         publishRDF(asset, rdf, gNode);
     }
@@ -100,17 +99,5 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
         }
         return qda;
     }
-
-//    private void publish_on_file(Model rdf, String graphId, String filename) {
-//        DatasetGraph dsg = DatasetGraphFactory.createMem();
-//        dsg.addGraph(Node.createURI(graphId), rdf.getGraph());
-//        FileOutputStream fos = null;
-//        try {
-//            fos = new FileOutputStream(new File(filename));
-//            RiotWriter.writeNQuads(fos, dsg);
-//            fos.close();
-//        } catch (IOException ex) {
-//            log.error(ex.getMessage());
-//        }
-//    }
 }
+    

@@ -46,7 +46,7 @@ public class RepositoryBrowser implements Browser {
 		List<SdmxCodelist> assets = new ArrayList<SdmxCodelist>();
 		String endpoint = configuration.public_endpoint_query().toString();
 
-		Query q = QueryFactory.create(configuration.sparqlQueryForCodelists());
+		Query q = QueryFactory.create(configuration.query_all_sdmx_codelist());
 		ResultSet codelists = QueryExecutionFactory.sparqlService(endpoint, q).execSelect();
 		System.out.println("");
 

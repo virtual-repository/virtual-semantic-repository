@@ -1,0 +1,6 @@
+<registries>
+	<gcube scope="/gcube/devsec">
+		<name ns="http://gcube-system.org">D4Science Development Registry</name>
+		<property name="scope" value="/gcube/devsec"/>
+	</gcube>
+</registries>
