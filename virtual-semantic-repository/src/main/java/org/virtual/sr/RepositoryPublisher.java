@@ -1,9 +1,6 @@
 package org.virtual.sr;
 
 import com.hp.hpl.jena.graph.Graph;
-import com.hp.hpl.jena.graph.Node;
-import com.hp.hpl.jena.graph.NodeFactory;
-import com.hp.hpl.jena.graph.Triple;
 import static org.virtual.sr.utils.Constants.*;
 
 import org.slf4j.Logger;
@@ -12,15 +9,15 @@ import org.virtualrepository.Asset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.spi.Publisher;
 
+import com.hp.hpl.jena.graph.Node;
+import com.hp.hpl.jena.graph.NodeFactory;
+import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.sparql.modify.request.QuadDataAcc;
 import com.hp.hpl.jena.sparql.modify.request.UpdateDataInsert;
 import com.hp.hpl.jena.update.UpdateExecutionFactory;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import org.apache.jena.web.DatasetGraphAccessorHTTP;
-
-import org.virtualrepository.fmf.CometAsset;
-import org.virtualrepository.sdmx.SdmxCodelist;
 
 /**
  * A {@link Publisher} for the Semantic Repository that works with RDF models of
@@ -58,27 +55,12 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
     @Override
     public void publish(A asset, Model rdf) throws Exception {
-
-        if (asset.type() == CometAsset.type) {
-            log.info("I received a mapping list " + asset.name());
-            publishRawRdf(asset, rdf);
-        }
-
-        if (asset.type() == SdmxCodelist.type) {
-            log.info("I received a code list " + asset.name() + ", ingestionId=" + asset.properties().lookup(ingestionId).value());
-            publishRawRdf(asset, rdf);
-        }
-    }
-
-    private void publishRawRdf(Asset asset, Model rdf) {
-//        String codelistId = asset.properties().lookup(ingestionId).value().toString();
+        //        String codelistId = asset.properties().lookup(ingestionId).value().toString();
+        log.info("I received a asset type {} with name {} ", asset.type(),  asset.name());
         String assetVersion = rdf.getProperty(null, rdf.getProperty(pseudoNS + "version")).getString();
         String graphId = graph_ns + assetVersion + "/" + asset.name();
         Node gNode = NodeFactory.createURI(graphId);
-        publishRDF(asset, rdf, gNode);
-    }
-    
-    private void publishRDF(Asset asset, Model rdf, Node gNode) {
+        
         Graph existinG = accessor.httpGet(gNode);
         if (existinG != null) {
             accessor.httpDelete(gNode);
