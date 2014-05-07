@@ -28,17 +28,6 @@
 				<enabled>true</enabled>
 			</releases>
 		</repository>
-		<repository>
-			<id>gcube-releases</id>
-			<name>gCube Releases</name>
-			<url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-releases</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
 	</repositories>
 
 	<dependencies>
