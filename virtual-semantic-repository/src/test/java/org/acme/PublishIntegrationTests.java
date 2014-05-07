@@ -14,18 +14,15 @@ import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Date;
-import java.util.Iterator;
 
 import org.fao.fi.comet.mapping.model.DataProvider;
 import org.fao.fi.comet.mapping.model.MappingData;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.sdmx.SdmxServiceFactory;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.util.io.ReadableDataLocationTmp;
 import org.virtual.sr.RepositoryPlugin;
 import org.virtual.sr.transforms.Comet2Xml;
-import org.virtualrepository.Asset;
 import org.virtualrepository.RepositoryService;
 import org.virtualrepository.VirtualRepository;
 import org.virtualrepository.fmf.CometAsset;

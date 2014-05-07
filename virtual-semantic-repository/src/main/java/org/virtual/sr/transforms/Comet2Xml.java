@@ -9,7 +9,6 @@ import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 
 import org.fao.fi.comet.mapping.model.MappingData;
-import static org.virtual.sr.utils.Constants.ingestionId;
 import org.virtualrepository.Asset;
 
 public class Comet2Xml implements XmlTransform<MappingData> {

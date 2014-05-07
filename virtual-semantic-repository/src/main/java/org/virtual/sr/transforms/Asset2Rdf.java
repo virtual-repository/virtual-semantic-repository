@@ -5,8 +5,8 @@ import javax.xml.transform.Source;
 import org.virtualrepository.Asset;
 import org.virtualrepository.RepositoryService;
 import org.virtualrepository.spi.Transform;
+
 import com.hp.hpl.jena.rdf.model.Model;
-import org.virtual.sr.utils.Constants;
 
 /**
  * A {@link Transform}s from arbitrary {@link Asset}s in given APIs to RDF.

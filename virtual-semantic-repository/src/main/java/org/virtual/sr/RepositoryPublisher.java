@@ -1,14 +1,15 @@
 package org.virtual.sr;
 
-import com.hp.hpl.jena.graph.Graph;
 import static org.virtual.sr.utils.Constants.*;
 
+import org.apache.jena.web.DatasetGraphAccessorHTTP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.virtualrepository.Asset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.spi.Publisher;
 
+import com.hp.hpl.jena.graph.Graph;
 import com.hp.hpl.jena.graph.Node;
 import com.hp.hpl.jena.graph.NodeFactory;
 import com.hp.hpl.jena.graph.Triple;
@@ -17,7 +18,6 @@ import com.hp.hpl.jena.sparql.modify.request.QuadDataAcc;
 import com.hp.hpl.jena.sparql.modify.request.UpdateDataInsert;
 import com.hp.hpl.jena.update.UpdateExecutionFactory;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
-import org.apache.jena.web.DatasetGraphAccessorHTTP;
 
 /**
  * A {@link Publisher} for the Semantic Repository that works with RDF models of
@@ -40,7 +40,7 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
         this.assetType = assetType;
         this.configuration = configuration;
         this.publishEndpoint = configuration.staging_endpoint_update().toString();
-        this.accessor = new DatasetGraphAccessorHTTP(configuration.staging_endpoint_data().toString());
+        this.accessor = new DatasetGraphAccessorHTTP(this.configuration.staging_endpoint_data().toString());
     }
 
     @Override
