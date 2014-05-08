@@ -39,6 +39,42 @@
                     </common:Annotation>
                 </structure:Annotations>
             </structure:Code>
+            <structure:Code value="SES">
+                <structure:Description xml:lang="en">Southern elephant seal</structure:Description>
+                <structure:Description xml:lang="fr">Éléphant de mer austral</structure:Description>
+                <structure:Description xml:lang="es">Foca elephante del sur</structure:Description>
+                <structure:Description xml:lang="la">Mirounga leonina</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Linnaeus 1758)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SMH">
+                <structure:Description xml:lang="en">Hawaiian monk seal</structure:Description>
+                <structure:Description xml:lang="fr">Phoque moine de Hawai</structure:Description>
+                <structure:Description xml:lang="es">Foca monje del Hawaii</structure:Description>
+                <structure:Description xml:lang="la">Monachus schauinslandi</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Matschie 1905)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SKC">
+                <structure:Description xml:lang="en">Caribbean monk seal</structure:Description>
+                <structure:Description xml:lang="fr">Phoque moine des Caraïbes</structure:Description>
+                <structure:Description xml:lang="es">Foca monja del Caribe</structure:Description>
+                <structure:Description xml:lang="la">Monachus tropicalis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Gray 1850)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
         </structure:CodeList>
     </message:CodeLists>
 </message:Structure>

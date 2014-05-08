@@ -53,13 +53,15 @@ public class RepositoryBrowser implements Browser {
 		while (codelists.hasNext()) {
 
 			QuerySolution next = codelists.next();
+                        String gUri = next.getResource("?g").getURI();
+			String name = next.getResource("?g").getLocalName();
+//			String name = next.getLiteral("name").getLexicalForm();
+//			String version = next.getLiteral("version").getLexicalForm();
+			String version = "sr_1.0";
+//			String creator = next.getLiteral("creator").getLexicalForm();
+			String creator = "claudio.baldassarre";
 
-			String uri = next.getResource("uri").getURI();
-			String name = next.getLiteral("name").getLexicalForm();
-			String version = next.getLiteral("version").getLexicalForm();
-			String creator = next.getLiteral("creator").getLexicalForm();
-
-			SdmxCodelist asset = new SdmxCodelist(uri, uri, version, name);
+			SdmxCodelist asset = new SdmxCodelist(gUri, gUri, version, name);
 
 			asset.properties().add(Constants.ownerProperty(creator));
 

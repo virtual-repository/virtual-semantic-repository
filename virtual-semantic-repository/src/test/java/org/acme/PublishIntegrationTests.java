@@ -41,21 +41,33 @@ public class PublishIntegrationTests {
     public void publishSdmxCodelist() {
 
         InputStream micro_asfis = getClass().getClassLoader().getResourceAsStream("micro-asfis.xml");
+        InputStream micro_asfis_add = getClass().getClassLoader().getResourceAsStream("micro-asfis_add.xml");
+        InputStream micro_asfis_remove = getClass().getClassLoader().getResourceAsStream("micro-asfis_remove.xml");
 
-        CodelistBean list = parser().parseStructures(new ReadableDataLocationTmp(micro_asfis)).
+        CodelistBean micro_asfis_list = parser().parseStructures(new ReadableDataLocationTmp(micro_asfis)).
+                getStructureBeans(false).getCodelists().iterator().next();
+
+        CodelistBean micro_asfis_add_list = parser().parseStructures(new ReadableDataLocationTmp(micro_asfis_add)).
+                getStructureBeans(false).getCodelists().iterator().next();
+        
+        CodelistBean micro_asfis_remove_list = parser().parseStructures(new ReadableDataLocationTmp(micro_asfis_remove)).
                 getStructureBeans(false).getCodelists().iterator().next();
 
         VirtualRepository repo = new Repository();
 
         RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
 
-        SdmxCodelist asset = new SdmxCodelist("micro_asfis", service);
+        SdmxCodelist micro_asfis_asset = new SdmxCodelist("micro_asfis", service);
+        SdmxCodelist micro_asfis_add_asset = new SdmxCodelist("micro_asfis_add", service);
+        SdmxCodelist micro_asfis_remove_asset = new SdmxCodelist("micro_asfis_remove", service);
 
-        repo.publish(asset, list);
+        repo.publish(micro_asfis_asset, micro_asfis_list);
+        repo.publish(micro_asfis_add_asset, micro_asfis_add_list);
+        repo.publish(micro_asfis_remove_asset, micro_asfis_remove_list);
 
     }
     
-    @Test
+//    @Test
     public void publishDiff() {
 
         InputStream micro_asfis_diff = getClass().getClassLoader().getResourceAsStream("micro-asfis_diff.xml");
@@ -74,25 +86,25 @@ public class PublishIntegrationTests {
     }
 
 
-    @Test
-    public void publishMapping() throws URISyntaxException {
-
-        VirtualRepository repo = new Repository();
-
-        RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
-
-        CometAsset asset = new CometAsset("test", service);
-        
-        MappingData mappingData = this.getFakeMappingData();
-        
-        try {
-        	System.out.println(new Comet2Xml().emitXml(mappingData, asset));
-        } catch(Throwable t) {
-        	t.printStackTrace();
-        }
-
-        repo.publish(asset, mappingData);
-    }
+//    @Test
+//    public void publishMapping() throws URISyntaxException {
+//
+//        VirtualRepository repo = new Repository();
+//
+//        RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
+//
+//        CometAsset asset = new CometAsset("test", service);
+//        
+//        MappingData mappingData = this.getFakeMappingData();
+//        
+//        try {
+//        	System.out.println(new Comet2Xml().emitXml(mappingData, asset));
+//        } catch(Throwable t) {
+//        	t.printStackTrace();
+//        }
+//
+//        repo.publish(asset, mappingData);
+//    }
 
     private MappingData getFakeMappingData() throws URISyntaxException {
     	DataProvider sourceDataProvider = new DataProvider(new URI("urn:fooResourceStatus"), Term.class.getName());

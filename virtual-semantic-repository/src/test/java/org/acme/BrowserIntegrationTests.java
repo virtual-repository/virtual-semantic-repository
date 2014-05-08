@@ -19,7 +19,6 @@ public class BrowserIntegrationTests {
         for (Asset asset : repo) {
             System.out.println("asset id: " + asset.id());
             System.out.println("asset short: " + asset.name());
-            System.out.println("asset long name: " + asset.properties().lookup("name").value().toString());
             System.out.println("#");
         }
 
