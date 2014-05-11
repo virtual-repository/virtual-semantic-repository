@@ -33,7 +33,6 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
     private final Type<A> assetType;
     private static Logger log = LoggerFactory.getLogger(RepositoryPublisher.class);
     private final String publishEndpoint;
-    private final String graph_ns = "http://semanticrepository/staging/graph/";
     private final DatasetGraphAccessorHTTP accessor;
 
     public RepositoryPublisher(Type<A> assetType, RepositoryConfiguration configuration) {
@@ -55,10 +54,9 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
     @Override
     public void publish(A asset, Model rdf) throws Exception {
-        //        String codelistId = asset.properties().lookup(ingestionId).value().toString();
         log.info("I received a asset type {} with name {} ", asset.type(),  asset.name());
         String assetVersion = rdf.getProperty(null, rdf.getProperty(pseudoNS + "version")).getString();
-        String graphId = graph_ns + assetVersion + "/" + asset.name();
+        String graphId = staging_graph_ns + assetVersion + "/" + asset.name();
         Node gNode = NodeFactory.createURI(graphId);
         
         Graph existinG = accessor.httpGet(gNode);

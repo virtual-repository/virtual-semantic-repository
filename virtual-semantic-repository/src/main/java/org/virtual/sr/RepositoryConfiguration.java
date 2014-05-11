@@ -16,8 +16,8 @@ public class RepositoryConfiguration {
         notNull("staging_endpoint_data", properties.getProperty("staging_endpoint_data"));
         notNull("staging_endpoint_query", properties.getProperty("staging_endpoint_query"));
         notNull("public_endpoint_query", properties.getProperty("public_endpoint_query"));
+        notNull("public_endpoint_data", properties.getProperty("public_endpoint_data"));
         notNull("query discovery query", properties.getProperty("query_all_sdmx_codelist"));
-        notNull("query retrieve codelist", properties.getProperty("query_get_codelist"));
     }
 
     public URI staging_endpoint_update() {
@@ -34,6 +34,10 @@ public class RepositoryConfiguration {
 
     public URI public_endpoint_query() {
         return URI.create(properties.getProperty("public_endpoint_query"));
+    }
+    
+    public URI public_endpoint_data() {
+        return URI.create(properties.getProperty("public_endpoint_data"));
     }
 
     public String query_all_sdmx_codelist() {
