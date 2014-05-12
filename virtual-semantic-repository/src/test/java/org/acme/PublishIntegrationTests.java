@@ -22,10 +22,8 @@ import org.junit.Test;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.util.io.ReadableDataLocationTmp;
 import org.virtual.sr.RepositoryPlugin;
-import org.virtual.sr.transforms.Comet2Xml;
 import org.virtualrepository.RepositoryService;
 import org.virtualrepository.VirtualRepository;
-import org.virtualrepository.fmf.CometAsset;
 import org.virtualrepository.impl.Repository;
 import org.virtualrepository.sdmx.SdmxCodelist;
 
