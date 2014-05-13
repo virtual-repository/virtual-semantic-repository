@@ -1,5 +1,6 @@
 package org.acme;
 
+import static org.fao.fi.comet.mapping.dsl.DataProviderDSL.*;
 import static org.fao.fi.comet.mapping.dsl.MappingContributionDSL.*;
 import static org.fao.fi.comet.mapping.dsl.MappingDSL.*;
 import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.*;
@@ -117,8 +118,8 @@ public class PublishIntegrationTests {
     
 
     private MappingData getFakeMappingData() throws URISyntaxException {
-    	DataProvider sourceDataProvider = new DataProvider(new URI("urn:fooResourceStatus"), Term.class.getName());
-		DataProvider targetDataProvider = new DataProvider(new URI("urn:barResourceStatus"), Term.class.getName());
+    	DataProvider sourceDataProvider = provider("http://cotrix.org").of("http://cotrix.org/codelist").named("urn:fooResourceStatus").withVersion("1.0");
+		DataProvider targetDataProvider = provider("http://cotrix.org").of("http://cotrix.org/codelist").named("urn:barResourceStatus").withVersion("1.1");
 		
 		MappingData mappingData = new MappingData().
 			id(new URI("urn:foo:bar")).
@@ -156,36 +157,36 @@ public class PublishIntegrationTests {
 			).
 			with(minimumWeightedScore(0.3), maximumCandidates(5)).
 			including(
-				map(wrap(Term.describing("over-exploited")).with(identifierFor(sourceDataProvider, new URI("urn:1")))).
+				map(wrap(Term.describing("over-exploited")).with(identifierFor("urn:1"))).
 					to(
-						target(wrap(Term.describing("overexploited")).with(identifierFor(targetDataProvider, new URI("urn:69")))).
+						target(wrap(Term.describing("overexploited")).with(identifierFor("urn:69"))).
 							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.39), 
 											matcher(new URI("urn:matcher:bar")).scoring(0.69),
 											matcher(new URI("urn:matcher:baz")).nonPerformed()
 							).withWeightedScore(0.59)
 					).andTo(
-						target(wrap(Term.describing("ov-erexploited")).with(identifierFor(targetDataProvider, new URI("urn:96")))).
+						target(wrap(Term.describing("ov-erexploited")).with(identifierFor("urn:96"))).
 							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.79), 
 											matcher(new URI("urn:matcher:bar")).nonPerformed(),
 											matcher(new URI("urn:matcher:baz")).nonPerformed()
 							).withWeightedScore(0.59)
 					)
 			).including(
-				map(wrap(Term.describing("under-exploited")).with(identifierFor(sourceDataProvider, new URI("urn:2")))).
+				map(wrap(Term.describing("under-exploited")).with(identifierFor("urn:2"))).
 					to(
-						target(wrap(Term.describing("underexploited")).with(identifierFor(targetDataProvider, new URI("urn:70")))).
+						target(wrap(Term.describing("underexploited")).with(identifierFor("urn:70"))).
 							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.49), 
 											matcher(new URI("urn:matcher:bar")).scoring(0.59),
 											matcher(new URI("urn:matcher:baz")).nonPerformed()
 							).withWeightedScore(0.39)
 					).andTo(
-						target(wrap(Term.describing("und-erexploited")).with(identifierFor(targetDataProvider, new URI("urn:97")))).
+						target(wrap(Term.describing("und-erexploited")).with(identifierFor("urn:97"))).
 							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.79), 
 											matcher(new URI("urn:matcher:bar")).nonPerformed(),
 											matcher(new URI("urn:matcher:baz")).nonPerformed()
 							).withWeightedScore(0.79)
 					).andTo(
-						target(wrap(Term.describing("un-derexploited")).with(identifierFor(targetDataProvider, new URI("urn:98")))).
+						target(wrap(Term.describing("un-derexploited")).with(identifierFor("urn:98"))).
 							asContributedBy(matcher(new URI("urn:matcher:foo")).scoring(0.29), 
 											matcher(new URI("urn:matcher:bar")).nonPerformed(),
 											matcher(new URI("urn:matcher:baz")).scoring(0.39)
