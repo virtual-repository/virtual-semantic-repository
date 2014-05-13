@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<message:Structure xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common" xmlns:generic="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/generic" xmlns:genericmetadata="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/genericmetadata" xmlns:message="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:cross="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/cross" xmlns:query="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:metadatareport="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/metadatareport" xmlns:utility="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/utility" xmlns:registry="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/registry" xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:compact="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/compact" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://sdmx.org/docs/2_0/SDMXMessage.xsd">
+    <message:Header>
+        <message:ID>REGISTRY_RESPONSE</message:ID>
+        <message:Test>false</message:Test>
+        <message:Prepared>2013-06-07T18:34:57</message:Prepared>
+        <message:Sender id="FAO"/>
+    </message:Header>
+    <message:CodeLists>
+        <structure:CodeList id="CL_SPECIES" agencyID="FAO" version="1.1" isFinal="true">
+            <structure:Name xml:lang="en">CL_SPECIES</structure:Name>
+            <structure:Code value="MCP">
+                <structure:Description xml:lang="en">Murray cod</structure:Description>
+                <structure:Description xml:lang="la">Maccullochella peelii</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Mitchell 1839)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="MCA">
+                <structure:Description xml:lang="en">Golden perch</structure:Description>
+                <structure:Description xml:lang="la">Macquaria ambigua</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Richardson 1845)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SMH">
+                <structure:Description xml:lang="en">Hawaiian monk seal</structure:Description>
+                <structure:Description xml:lang="fr">Phoque moine de Hawai</structure:Description>
+                <structure:Description xml:lang="es">Foca monje del Hawaii</structure:Description>
+                <structure:Description xml:lang="la">Monachus schauinslandi</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Matschie 1905)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+            <structure:Code value="SKC">
+                <structure:Description xml:lang="en">Caribbean monk seal</structure:Description>
+                <structure:Description xml:lang="fr">Phoque moine des Caraïbes</structure:Description>
+                <structure:Description xml:lang="es">Foca monja del Caribe</structure:Description>
+                <structure:Description xml:lang="la">Monachus tropicalis</structure:Description>
+                <structure:Annotations>
+                    <common:Annotation>
+                        <common:AnnotationTitle>AUTHOR</common:AnnotationTitle>
+                        <common:AnnotationText>(Gray 1850)</common:AnnotationText>
+                    </common:Annotation>
+                </structure:Annotations>
+            </structure:Code>
+        </structure:CodeList>
+    </message:CodeLists>
+</message:Structure>

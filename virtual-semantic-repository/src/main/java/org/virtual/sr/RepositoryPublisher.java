@@ -2,30 +2,22 @@ package org.virtual.sr;
 
 import static org.virtual.sr.utils.Constants.*;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
-import org.apache.jena.riot.RiotWriter;
+import org.apache.jena.web.DatasetGraphAccessorHTTP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.virtual.sr.transforms.Raw2CustomRdf;
-import org.virtual.sr.utils.Constants;
 import org.virtualrepository.Asset;
-import org.virtualrepository.fmf.CometAsset;
 import org.virtualrepository.impl.Type;
-import org.virtualrepository.sdmx.SdmxCodelist;
 import org.virtualrepository.spi.Publisher;
 
+import com.hp.hpl.jena.graph.Graph;
 import com.hp.hpl.jena.graph.Node;
+import com.hp.hpl.jena.graph.NodeFactory;
+import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.hp.hpl.jena.sparql.core.DatasetGraph;
-import com.hp.hpl.jena.sparql.core.DatasetGraphFactory;
-import com.hp.hpl.jena.sparql.util.FmtUtils;
+import com.hp.hpl.jena.sparql.modify.request.QuadDataAcc;
+import com.hp.hpl.jena.sparql.modify.request.UpdateDataInsert;
 import com.hp.hpl.jena.update.UpdateExecutionFactory;
-import com.hp.hpl.jena.update.UpdateFactory;
+import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 
 /**
  * A {@link Publisher} for the Semantic Repository that works with RDF models of
@@ -37,17 +29,17 @@ import com.hp.hpl.jena.update.UpdateFactory;
  */
 public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model> {
 
-    private static final int TRIPLE_BUFFER_SIZE = 20000;
     private final RepositoryConfiguration configuration;
     private final Type<A> assetType;
     private static Logger log = LoggerFactory.getLogger(RepositoryPublisher.class);
     private final String publishEndpoint;
-    private final String graph_ns = "http://www.fao.org/figis/flod/graph/";
+    private final DatasetGraphAccessorHTTP accessor;
 
     public RepositoryPublisher(Type<A> assetType, RepositoryConfiguration configuration) {
         this.assetType = assetType;
         this.configuration = configuration;
-        this.publishEndpoint = configuration.publish_in_sr_staging_uri().toString();
+        this.publishEndpoint = configuration.staging_endpoint_update().toString();
+        this.accessor = new DatasetGraphAccessorHTTP(this.configuration.staging_endpoint_data().toString());
     }
 
     @Override
@@ -62,87 +54,30 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
     @Override
     public void publish(A asset, Model rdf) throws Exception {
-
-        if (asset.type() == CometAsset.type) {
-            log.info("I received a mapping list " + asset.name());
-            
-            rdf.write(System.out, "N-TRIPLE");
+        log.info("I received a asset type {} with name {} ", asset.type(),  asset.name());
+        String assetVersion = rdf.getProperty(null, rdf.getProperty(pseudoNS + "version")).getString();
+        String graphId = staging_graph_ns + assetVersion + "/" + asset.name();
+        Node gNode = NodeFactory.createURI(graphId);
+        
+        Graph existinG = accessor.httpGet(gNode);
+        if (existinG != null) {
+            accessor.httpDelete(gNode);
         }
-
-        if (asset.type() == SdmxCodelist.type) {
-            log.info("I received a code list " + asset.name() + ", ingestionId=" + asset.properties().lookup(ingestionId).value());
-//            publishRawRdf(asset, rdf);
-//        //super-temporary hack
-            publishCustomRdf(asset, rdf);
-        }
-    }
-
-    private void publishRawRdf(Asset asset, Model rdf) {
-        String codelistId = asset.properties().lookup(ingestionId).value().toString();
-        String assetVersion = rdf.getProperty(null, rdf.getProperty(pseudoNS+"version")).getString();
-        String graphId = graph_ns + assetVersion + "/" + codelistId;
-        publish_on_file(rdf,graphId, "raw_" + codelistId + ".rdf");
-//        publishRDF(asset, rdf);
-    }
-
-    private void publishCustomRdf(Asset asset, Model rdf) {
-        String codelistId = asset.properties().lookup(ingestionId).value().toString();
-        String assetVersion = rdf.getProperty(null, rdf.getProperty(pseudoNS+"version")).getString();
-        String graphId = graph_ns + assetVersion + "/" + codelistId;
-        if (configuration.isKnownCodelist(codelistId + "-sdmx")) {
-            rdf = Raw2CustomRdf.FLODcustomize(rdf, configuration.sparqlFLODdataset(codelistId + "-sdmx", graphId));
-//            rdf = Raw2CustomRdf.pruneExistingCodes(rdf);
-
-            publish_on_file(rdf, graphId, codelistId + ".rdf");
-        }
-//        publishRDF(asset, rdf);
-    }
-
-    private void publishRDF(Asset asset, Model rdf) {
-        StmtIterator stmts = rdf.listStatements();
+        UpdateDataInsert insert = new UpdateDataInsert(makeQuadAcc(gNode,rdf.getGraph()));
         long time = System.currentTimeMillis();
-
-        StringBuilder triples = new StringBuilder();
-        int published = 0;
-        int queries = 0;
-        while (stmts.hasNext()) {
-            int genTime = 0;
-            Statement s = stmts.next();
-            triples.append(FmtUtils.stringForTriple(s.asTriple()) + " . ");
-            published++;
-            if (published == TRIPLE_BUFFER_SIZE) {
-                log.trace("prepared {} triples for {} in {} ms.", TRIPLE_BUFFER_SIZE, asset.name(), System.currentTimeMillis() - genTime);
-                flush(asset, published, triples.toString(), publishEndpoint);
-                triples = new StringBuilder();
-                published = 0;
-                queries++;
-            }
-        }
-
-        if (published > 0) {
-            flush(asset, published, triples.toString(), publishEndpoint);
-            queries++;
-        }
-        log.info("published {} triples for {} with {} queries in {} ms.", rdf.size(), asset.name(), queries, System.currentTimeMillis() - time);
+        UpdateExecutionFactory.createRemote(insert, publishEndpoint).execute();
+        log.info("published {} triples for {} in {} ms.", rdf.size(), asset.name(), System.currentTimeMillis() - time);
     }
 
-    private void flush(Asset asset, int accumulated, String triples, String flushEndpoint) {
-        log.trace("publishing {} custom triples for {} ", accumulated, asset.name());
-        UpdateExecutionFactory.createRemote(UpdateFactory.create(Constants.prefixes + " insert data {" + triples + "}"), flushEndpoint).execute();
-
-    }
-
-    private void publish_on_file(Model rdf, String graphId, String filename) {
-        DatasetGraph dsg = DatasetGraphFactory.createMem();
-        dsg.addGraph(Node.createURI(graphId), rdf.getGraph());
-        FileOutputStream fos = null;
-        try {
-            fos = new FileOutputStream(new File(filename));
-            RiotWriter.writeNQuads(fos, dsg);
-            fos.close();
-        } catch (IOException ex) {
-            log.error(ex.getMessage());
+    private QuadDataAcc makeQuadAcc(Node gNode, Graph graph) {
+        ExtendedIterator<Triple> allTriples = graph.find(Node.ANY, Node.ANY, Node.ANY);
+        QuadDataAcc qda = new QuadDataAcc();
+        qda.setGraph(gNode);
+        while (allTriples.hasNext()) {
+            Triple triple = allTriples.next();
+            qda.addTriple(triple);
         }
+        return qda;
     }
-
 }
+    

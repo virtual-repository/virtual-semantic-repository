@@ -44,22 +44,24 @@ public class RepositoryBrowser implements Browser {
 	public Collection<SdmxCodelist> discoverSdmxCodelists() throws Exception {
 
 		List<SdmxCodelist> assets = new ArrayList<SdmxCodelist>();
-		String endpoint = configuration.discoveryURI().toString();
+		String endpoint = configuration.public_endpoint_query().toString();
 
-		Query q = QueryFactory.create(configuration.sparqlQueryForCodelists());
+		Query q = QueryFactory.create(configuration.query_all_sdmx_codelist());
 		ResultSet codelists = QueryExecutionFactory.sparqlService(endpoint, q).execSelect();
 		System.out.println("");
 
 		while (codelists.hasNext()) {
 
 			QuerySolution next = codelists.next();
+                        String gUri = next.getResource("?g").getURI();
+			String name = next.getResource("?g").getLocalName();
+//			String name = next.getLiteral("name").getLexicalForm();
+//			String version = next.getLiteral("version").getLexicalForm();
+			String version = "sr_1.0";
+//			String creator = next.getLiteral("creator").getLexicalForm();
+			String creator = "claudio.baldassarre";
 
-			String uri = next.getResource("uri").getURI();
-			String name = next.getLiteral("name").getLexicalForm();
-			String version = next.getLiteral("version").getLexicalForm();
-			String creator = next.getLiteral("creator").getLexicalForm();
-
-			SdmxCodelist asset = new SdmxCodelist(uri, uri, version, name);
+			SdmxCodelist asset = new SdmxCodelist(gUri, gUri, version, name);
 
 			asset.properties().add(Constants.ownerProperty(creator));
 

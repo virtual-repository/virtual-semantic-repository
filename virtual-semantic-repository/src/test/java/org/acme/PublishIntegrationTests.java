@@ -15,21 +15,18 @@ import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Date;
-import java.util.Iterator;
 
 import org.fao.fi.comet.mapping.model.DataProvider;
 import org.fao.fi.comet.mapping.model.MappingData;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.sdmx.SdmxServiceFactory;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.util.io.ReadableDataLocationTmp;
 import org.virtual.sr.RepositoryPlugin;
 import org.virtual.sr.transforms.Comet2Xml;
-import org.virtualrepository.Asset;
 import org.virtualrepository.RepositoryService;
 import org.virtualrepository.VirtualRepository;
-import org.virtualrepository.fmf.CometAsset;
+import org.virtualrepository.comet.CometAsset;
 import org.virtualrepository.impl.Repository;
 import org.virtualrepository.sdmx.SdmxCodelist;
 
@@ -42,59 +39,61 @@ public class PublishIntegrationTests {
     }
 
     @Test
-    public void publishSdmxCodelist() {
+    public void publishBaseSdmxCodelist() {
 
-        InputStream stream = getClass().getClassLoader().getResourceAsStream("mini-asfis.xml");
+        InputStream micro_asfis = getClass().getClassLoader().getResourceAsStream("micro-asfis.xml");
+        
+        CodelistBean micro_asfis_list = parser().parseStructures(new ReadableDataLocationTmp(micro_asfis)).
+                getStructureBeans(false).getCodelists().iterator().next();
 
-        CodelistBean list = parser().parseStructures(new ReadableDataLocationTmp(stream)).
+        
+        VirtualRepository repo = new Repository();
+
+        RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
+
+        SdmxCodelist micro_asfis_asset = new SdmxCodelist("micro_asfis", service);
+        
+
+        repo.publish(micro_asfis_asset, micro_asfis_list);
+        
+    }
+    public void publishAddSdmxCodelist() {
+
+        InputStream micro_asfis_add = getClass().getClassLoader().getResourceAsStream("micro-asfis_add.xml");
+
+
+        CodelistBean micro_asfis_add_list = parser().parseStructures(new ReadableDataLocationTmp(micro_asfis_add)).
+                getStructureBeans(false).getCodelists().iterator().next();
+        
+
+        VirtualRepository repo = new Repository();
+
+        RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
+
+        SdmxCodelist micro_asfis_add_asset = new SdmxCodelist("micro_asfis_add", service);
+
+        repo.publish(micro_asfis_add_asset, micro_asfis_add_list);
+
+    }
+    
+    public void publishRemoveSdmxCodelist() {
+
+        InputStream micro_asfis_remove = getClass().getClassLoader().getResourceAsStream("micro-asfis_remove.xml");
+
+        
+        CodelistBean micro_asfis_remove_list = parser().parseStructures(new ReadableDataLocationTmp(micro_asfis_remove)).
                 getStructureBeans(false).getCodelists().iterator().next();
 
         VirtualRepository repo = new Repository();
 
         RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
 
-        SdmxCodelist asset = new SdmxCodelist("test", service);
+        SdmxCodelist micro_asfis_remove_asset = new SdmxCodelist("micro_asfis_remove", service);
 
-        repo.publish(asset, list);
-
-    }
-
-    @Test
-    public void publishFromRTMS() {
-
-        SdmxServiceFactory.init();
-
-        //start vr
-        VirtualRepository repo = new Repository();
-
-        //discover codelists in sdmx
-        repo.discover(SdmxCodelist.type);
-
-        //get first discovered codelist
-        Iterator<Asset> it = repo.iterator();
-        int idx = 0;
-        while (it.hasNext() & idx<=5) {
-            Asset discoveredAsset = it.next();
-
-            try {
-                //retrieve its content
-                CodelistBean sdmx = repo.retrieve(discoveredAsset, CodelistBean.class);
-
-                //get virtual semantic repo 
-                RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
-
-                //create empty asset for publication
-                SdmxCodelist publishAsset = new SdmxCodelist(discoveredAsset.name(), service);
-
-                //public sdmx with virtual repo
-                repo.publish(publishAsset, sdmx);
-                idx++;
-            } catch (Exception e) {
-                continue;
-            }
-        }
+        repo.publish(micro_asfis_remove_asset, micro_asfis_remove_list);
 
     }
+    
 
     @Test
     public void publishMapping() throws URISyntaxException {
@@ -103,7 +102,7 @@ public class PublishIntegrationTests {
 
         RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
 
-        CometAsset asset = new CometAsset("test", service);
+        CometAsset asset = new CometAsset("comet_mapping", service);
         
         MappingData mappingData = this.getFakeMappingData();
         
@@ -112,10 +111,9 @@ public class PublishIntegrationTests {
         } catch(Throwable t) {
         	t.printStackTrace();
         }
-        
+
         repo.publish(asset, mappingData);
     }
-    
 
     private MappingData getFakeMappingData() throws URISyntaxException {
     	DataProvider sourceDataProvider = provider("http://cotrix.org").of("http://cotrix.org/codelist").named("urn:fooResourceStatus").withVersion("1.0");
