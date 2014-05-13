@@ -21,7 +21,7 @@ public class RdfImporter<A extends Asset> implements Importer<A, Model> {
     public RdfImporter(Type<A> type, RepositoryConfiguration configuration) {
         this.configuration = configuration;
         this.type = type;
-        this.datasetAccessor = new DatasetGraphAccessorHTTP(configuration.public_endpoint_data().toString());
+        this.datasetAccessor = new DatasetGraphAccessorHTTP(this.configuration.public_endpoint_data().toString());
     }
 
     @Override
