@@ -54,7 +54,7 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
     @Override
     public void publish(A asset, Model rdf) throws Exception {
-        log.info("I received a asset type {} with name {} ", asset.type(),  asset.name());
+        log.info("Received a asset type {} with name {} ", asset.type(),  asset.name());
         String assetVersion = rdf.getProperty(null, rdf.getProperty(pseudoNS + "version")).getString();
         String graphId = staging_graph_ns + assetVersion + "/" + asset.name();
         Node gNode = NodeFactory.createURI(graphId);
@@ -66,7 +66,7 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
         UpdateDataInsert insert = new UpdateDataInsert(makeQuadAcc(gNode,rdf.getGraph()));
         long time = System.currentTimeMillis();
         UpdateExecutionFactory.createRemote(insert, publishEndpoint).execute();
-        log.info("published {} triples for {} in {} ms.", rdf.size(), asset.name(), System.currentTimeMillis() - time);
+        log.info("Staged {} triples for {} in {} ms.", rdf.size(), graphId, System.currentTimeMillis() - time);
     }
 
     private QuadDataAcc makeQuadAcc(Node gNode, Graph graph) {

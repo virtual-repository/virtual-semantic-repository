@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MappingData id="urn:foo:bar" version="0.01" producedBy="Foo Bazzi" on="2014-05-14T15:49:46.922+02:00">
+	<Description xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+	<ProcessConfiguration maximumNumberOfCandidates="5" minimumScore="0.3">
+		<SourceDataProvider providerId="http://cotrix.org" dataSourceId="urn:fooResourceStatus" version="1.0" providedType="http://cotrix.org/codelist"/>
+		<TargetDataProvider providerId="http://cotrix.org" dataSourceId="urn:barResourceStatus" version="1.1" providedType="http://cotrix.org/codelist"/>
+	</ProcessConfiguration>
+	<Matchers>
+		<MatcherConfiguration id="urn:matcher:foo" type="org.fao.fi.comet.common.matchers.LexicalMatcher" weight="10.0" minimumScore="0.1" isOptional="false">
+			<ConfigurationProperty type="Boolean" name="stripSymbols">
+				<Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:boolean">false</Value>
+			</ConfigurationProperty>
+		</MatcherConfiguration>
+		<MatcherConfiguration id="urn:matcher:bar" type="org.fao.fi.comet.common.matchers.AnotherLexicalMatcher" weight="30.0" minimumScore="0.0" isOptional="true">
+			<ConfigurationProperty type="Boolean" name="useSoundex">
+				<Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:boolean">true</Value>
+			</ConfigurationProperty>
+			<ConfigurationProperty type="Boolean" name="stripSymbols">
+				<Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:boolean">true</Value>
+			</ConfigurationProperty>
+		</MatcherConfiguration>
+		<MatcherConfiguration id="urn:matcher:baz" type="org.fao.fi.comet.common.matchers.YetAnotherLexicalMatcher" weight="20.0" minimumScore="0.2" isOptional="true">
+			<ConfigurationProperty type="Boolean" name="useSoundex">
+				<Value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:boolean">true</Value>
+			</ConfigurationProperty>
+		</MatcherConfiguration>
+	</Matchers>
+	<Mapping>
+		<SourceElement>
+			<ElementIdentifier elementId="http://www.fao.org/figis/flod/entities/codedentity/e45935d5-d0e8-425d-972b-59e7b0026246"/>
+			<GenericTerm>
+				<Description>Atlantic, Northwest</Description>
+			</GenericTerm>
+		</SourceElement>
+		<TargetElementMappings>
+			<MappingDetail scoreType="NON_AUTHORITATIVE" score="0.59">
+				<MappingContribution matcherId="urn:matcher:foo" matcherScore="0.39" matcherScoreType="NON_AUTHORITATIVE"/>
+				<MappingContribution matcherId="urn:matcher:bar" matcherScore="0.69" matcherScoreType="NON_AUTHORITATIVE"/>
+				<MappingContribution matcherId="urn:matcher:baz" matcherScore="0.0" matcherScoreType="NON_PERFORMED"/>
+				<TargetElement>
+					<ElementIdentifier elementId="http://www.fao.org/figis/flod/entities/codedentity/7a986d0b-ad23-4571-b579-d17b587cb385"/>
+					<GenericTerm>
+						<Description>Atlantic, Northwest / 21.2</Description>
+					</GenericTerm>
+				</TargetElement>
+			</MappingDetail>
+			<MappingDetail scoreType="NON_AUTHORITATIVE" score="0.59">
+				<MappingContribution matcherId="urn:matcher:foo" matcherScore="0.39" matcherScoreType="NON_AUTHORITATIVE"/>
+				<MappingContribution matcherId="urn:matcher:bar" matcherScore="0.69" matcherScoreType="NON_AUTHORITATIVE"/>
+				<MappingContribution matcherId="urn:matcher:baz" matcherScore="0.0" matcherScoreType="NON_PERFORMED"/>
+				<TargetElement>
+					<ElementIdentifier elementId="http://www.fao.org/figis/flod/entities/codedentity/e3590b95-29c5-4cb1-8d88-3a758bf1c7b3"/>
+					<GenericTerm>
+						<Description>Atlantic, Northwest / 21.0</Description>
+					</GenericTerm>
+				</TargetElement>
+			</MappingDetail>
+			<MappingDetail scoreType="NON_AUTHORITATIVE" score="0.59">
+				<MappingContribution matcherId="urn:matcher:foo" matcherScore="0.39" matcherScoreType="NON_AUTHORITATIVE"/>
+				<MappingContribution matcherId="urn:matcher:bar" matcherScore="0.69" matcherScoreType="NON_AUTHORITATIVE"/>
+				<MappingContribution matcherId="urn:matcher:baz" matcherScore="0.0" matcherScoreType="NON_PERFORMED"/>
+				<TargetElement>
+					<ElementIdentifier elementId="http://www.fao.org/figis/flod/entities/codedentity/0488c28f-c800-4c08-b3a6-5dea9d718ab3"/>
+					<GenericTerm>
+						<Description>Atlantic, Northwest / 21.1</Description>
+					</GenericTerm>
+				</TargetElement>
+			</MappingDetail>
+			<MappingDetail scoreType="NON_AUTHORITATIVE" score="0.59">
+				<MappingContribution matcherId="urn:matcher:foo" matcherScore="0.39" matcherScoreType="NON_AUTHORITATIVE"/>
+				<MappingContribution matcherId="urn:matcher:bar" matcherScore="0.69" matcherScoreType="NON_AUTHORITATIVE"/>
+				<MappingContribution matcherId="urn:matcher:baz" matcherScore="0.0" matcherScoreType="NON_PERFORMED"/>
+				<TargetElement>
+					<ElementIdentifier elementId="http://www.fao.org/figis/flod/entities/codedentity/b6c3878f-d2f0-425b-965c-eb0c3bf27124"/>
+					<GenericTerm>
+						<Description>Atlantic, Northwest / 21.3</Description>
+					</GenericTerm>
+				</TargetElement>
+			</MappingDetail>
+			<MappingDetail scoreType="NON_AUTHORITATIVE" score="0.59">
+				<MappingContribution matcherId="urn:matcher:foo" matcherScore="0.79" matcherScoreType="NON_AUTHORITATIVE"/>
+				<MappingContribution matcherId="urn:matcher:bar" matcherScore="0.0" matcherScoreType="NON_PERFORMED"/>
+				<MappingContribution matcherId="urn:matcher:baz" matcherScore="0.0" matcherScoreType="NON_PERFORMED"/>
+				<TargetElement>
+					<ElementIdentifier elementId="http://www.fao.org/figis/flod/entities/codedentity/ec2202bf-0a6f-4ab2-977a-6af3f5fb8e23"/>
+					<GenericTerm>
+						<Description>Atlantic, Northwest / 21.4</Description>
+					</GenericTerm>
+				</TargetElement>
+			</MappingDetail>
+		</TargetElementMappings>
+	</Mapping>
+</MappingData>

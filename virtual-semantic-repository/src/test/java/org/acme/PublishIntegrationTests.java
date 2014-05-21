@@ -1,5 +1,6 @@
 package org.acme;
 
+import java.io.FileNotFoundException;
 import static org.fao.fi.comet.mapping.dsl.DataProviderDSL.*;
 import static org.fao.fi.comet.mapping.dsl.MappingContributionDSL.*;
 import static org.fao.fi.comet.mapping.dsl.MappingDSL.*;
@@ -15,9 +16,12 @@ import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Date;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
 
 import org.fao.fi.comet.mapping.model.DataProvider;
 import org.fao.fi.comet.mapping.model.MappingData;
+import org.fao.fi.comet.mapping.model.utils.jaxb.JAXBDeSerializationUtils;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
@@ -111,6 +115,28 @@ public class PublishIntegrationTests {
         } catch(Throwable t) {
         	t.printStackTrace();
         }
+
+        repo.publish(asset, mappingData);
+    }
+    
+    @Test
+    public void publishHasPart() throws URISyntaxException, FileNotFoundException {
+
+        VirtualRepository repo = new Repository();
+
+        RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
+
+        CometAsset asset = new CometAsset("area_haspart_subarea", service);
+        InputStream is = getClass().getClassLoader().getResourceAsStream("mapping_area_sub_area.xml");
+        StreamSource iS = new StreamSource(is);
+        
+        MappingData mappingData = JAXBDeSerializationUtils.fromSource(iS);
+        
+//        try {
+//        	System.out.println(new Comet2Xml().emitXml(mappingData, asset));
+//        } catch(Throwable t) {
+//        	t.printStackTrace();
+//        }
 
         repo.publish(asset, mappingData);
     }
