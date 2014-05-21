@@ -39,7 +39,7 @@ public class mapping_haspart {
 
     public static void main(String[] args) {
         MappingData md = makeMapping();
-        pubblish(md);
+        stageMapping(md);
     }
 
     private static MappingData makeMapping() {
@@ -59,7 +59,7 @@ public class mapping_haspart {
 
         Mapping mappingEntry;
 
-        MappingElement target, source = wrap(asElement(GenericTerm.describing("srcFoo1"))).with(identifierFor("urn:src:foo:1"));
+        MappingElement target, source = wrap(asElement(GenericTerm.describing(area21.getLocalName()))).with(identifierFor(area21.toString()));
 
         mappingEntry = map(source);
         
@@ -70,12 +70,12 @@ public class mapping_haspart {
 
         }
         mappingData.include(mappingEntry);
-        System.out.println(JAXBDeSerializationUtils.toXML(mappingData));
+//        System.out.println(JAXBDeSerializationUtils.toXML(mappingData));
 
         return mappingData;
     }
 
-    private static void pubblish(MappingData md) {
+    private static void stageMapping(MappingData md) {
         VirtualRepository repo = new Repository();
 
         RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
