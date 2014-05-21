@@ -83,6 +83,8 @@ public class mapping_haspart {
         CometAsset asset = new CometAsset("area_haspart_subarea", service);
         
         repo.publish(asset, md);
+        
+        repo.shutdown();
     }
 
 }
