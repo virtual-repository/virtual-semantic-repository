@@ -23,7 +23,6 @@ import org.fao.fi.comet.mapping.model.Mapping;
 import org.fao.fi.comet.mapping.model.MappingData;
 import org.fao.fi.comet.mapping.model.MappingElement;
 import static org.fao.fi.comet.mapping.model.utils.jaxb.JAXB2DOMUtils.asElement;
-import org.fao.fi.comet.mapping.model.utils.jaxb.JAXBDeSerializationUtils;
 import org.virtual.sr.RepositoryPlugin;
 import org.virtual.sr.vocabularies.SKOS_CORE;
 import org.virtualrepository.RepositoryService;
@@ -45,7 +44,7 @@ public class mapping_haspart {
     private static MappingData makeMapping() {
         DatasetGraphAccessorHTTP accessor = new DatasetGraphAccessorHTTP("http://168.202.3.223:3030/sr_public/data");
         Graph fao_major_areas = accessor.httpGet(NodeFactory.createURI("http://semanticrepository/public/graph/CL_FAO_MAJOR_AREA"));
-        Node area21 = fao_major_areas.find(Node.ANY, SKOS_CORE.notation.asNode(), NodeFactory.createLiteral("21")).next().getSubject();
+        Node area21 = fao_major_areas.find(Node.ANY, Node.ANY, NodeFactory.createURI("http://www.fao.org/figis/flod/entities/statarea/21")).next().getSubject();
         Graph sub_areas_graph = accessor.httpGet(NodeFactory.createURI("http://semanticrepository/public/graph/CL_SUB_AREA"));
         ExtendedIterator<Triple> sub_areas = sub_areas_graph.find(Node.ANY, DCTerms.subject.asNode(), Node.ANY);
 
