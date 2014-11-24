@@ -1,5 +1,6 @@
 package org.virtual.sr;
 
+import com.hp.hpl.jena.datatypes.xsd.XSDDateTime;
 import static org.virtual.sr.utils.Constants.*;
 
 import org.apache.jena.web.DatasetGraphAccessorHTTP;
@@ -18,6 +19,8 @@ import com.hp.hpl.jena.sparql.modify.request.QuadDataAcc;
 import com.hp.hpl.jena.sparql.modify.request.UpdateDataInsert;
 import com.hp.hpl.jena.update.UpdateExecutionFactory;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
+import com.hp.hpl.jena.vocabulary.DCTerms;
+import java.util.Calendar;
 
 /**
  * A {@link Publisher} for the Semantic Repository that works with RDF models of
@@ -54,16 +57,17 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
 
     @Override
     public void publish(A asset, Model rdf) throws Exception {
-        log.info("Received a asset type {} with name {} ", asset.type(),  asset.name());
+        log.info("Received a asset type {} with name {} ", asset.type(), asset.name());
         String assetVersion = rdf.getProperty(null, rdf.getProperty(pseudoNS + "version")).getString();
         String graphId = staging_graph_ns + assetVersion + "/" + asset.name();
         Node gNode = NodeFactory.createURI(graphId);
-        
+
         Graph existinG = accessor.httpGet(gNode);
         if (existinG != null) {
             accessor.httpDelete(gNode);
         }
-        UpdateDataInsert insert = new UpdateDataInsert(makeQuadAcc(gNode,rdf.getGraph()));
+        addModelMetadata(rdf, gNode);
+        UpdateDataInsert insert = new UpdateDataInsert(makeQuadAcc(gNode, rdf.getGraph()));
         long time = System.currentTimeMillis();
         UpdateExecutionFactory.createRemote(insert, publishEndpoint).execute();
         log.info("Staged {} triples for {} in {} ms.", rdf.size(), graphId, System.currentTimeMillis() - time);
@@ -79,5 +83,10 @@ public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model>
         }
         return qda;
     }
+
+    private void addModelMetadata(Model model, Node gNode) {
+        XSDDateTime now = new XSDDateTime(Calendar.getInstance());
+        model.createResource(gNode.getURI()).addLiteral(DCTerms.created, model.createTypedLiteral(now));
+        model.createResource(gNode.getURI()).addProperty(DCTerms.creator, model.createResource("http://virtualrepository/plugin/sr"));
+    }
 }
-    
