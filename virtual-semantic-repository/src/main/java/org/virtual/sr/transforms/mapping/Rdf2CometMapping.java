@@ -1,5 +1,14 @@
 package org.virtual.sr.transforms.mapping;
 
+import static org.fao.fi.comet.mapping.dsl.DataProviderDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingDetailDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingElementDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingElementIdentifierDSL.*;
+
+import java.net.URI;
+
+import org.fao.fi.comet.mapping.model.MappingData;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,6 +17,7 @@ import org.virtual.sr.transforms.XmlTransform;
 import org.virtual.sr.vocabularies.SKOS_CORE;
 import org.virtualrepository.Asset;
 import org.virtualrepository.RepositoryService;
+import org.virtualrepository.comet.CometAsset;
 import org.virtualrepository.spi.Transform;
 
 import com.hp.hpl.jena.rdf.model.Literal;
@@ -16,19 +26,6 @@ import com.hp.hpl.jena.rdf.model.NodeIterator;
 import com.hp.hpl.jena.rdf.model.ResIterator;
 import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.vocabulary.DCTerms;
-import java.net.URI;
-import org.fao.fi.comet.mapping.model.MappingData;
-import org.virtualrepository.comet.CometAsset;
-import static org.fao.fi.comet.mapping.dsl.DataProviderDSL.*;
-import static org.fao.fi.comet.mapping.dsl.MappingContributionDSL.*;
-import static org.fao.fi.comet.mapping.dsl.MappingDSL.*;
-import static org.fao.fi.comet.mapping.dsl.MappingDataDSL.*;
-import static org.fao.fi.comet.mapping.dsl.MappingDetailDSL.*;
-import static org.fao.fi.comet.mapping.dsl.MappingElementDSL.*;
-import static org.fao.fi.comet.mapping.dsl.MappingElementIdentifierDSL.*;
-import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.*;
-import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationPropertyDSL.*;
-import static org.sdmx.CodelistBuilder.code;
 /**
  * A {@link Transform}s from arbitrary {@link Asset}s in given APIs to RDF. <p>
  * Bridges {@link XmlTransform}s with the {@link Xml2Rdf} transform to adapt the {@link RepositoryService}
