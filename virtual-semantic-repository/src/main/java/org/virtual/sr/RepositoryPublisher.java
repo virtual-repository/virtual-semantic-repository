@@ -1,7 +1,9 @@
 package org.virtual.sr;
 
-import com.hp.hpl.jena.datatypes.xsd.XSDDateTime;
+import static com.hp.hpl.jena.rdf.model.ModelFactory.*;
 import static org.virtual.sr.utils.Constants.*;
+
+import java.util.Calendar;
 
 import org.apache.jena.web.DatasetGraphAccessorHTTP;
 import org.slf4j.Logger;
@@ -10,6 +12,7 @@ import org.virtualrepository.Asset;
 import org.virtualrepository.impl.Type;
 import org.virtualrepository.spi.Publisher;
 
+import com.hp.hpl.jena.datatypes.xsd.XSDDateTime;
 import com.hp.hpl.jena.graph.Graph;
 import com.hp.hpl.jena.graph.Node;
 import com.hp.hpl.jena.graph.NodeFactory;
@@ -20,7 +23,8 @@ import com.hp.hpl.jena.sparql.modify.request.UpdateDataInsert;
 import com.hp.hpl.jena.update.UpdateExecutionFactory;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.vocabulary.DCTerms;
-import java.util.Calendar;
+import com.hp.hpl.jena.vocabulary.RDF;
+import com.hp.hpl.jena.vocabulary.RDFS;
 
 /**
  * A {@link Publisher} for the Semantic Repository that works with RDF models of
@@ -28,65 +32,106 @@ import java.util.Calendar;
  *
  * @author Fabio Simeoni
  *
- * @param <A> the type of Assets published by this publisher
+ * @param <A>
+ *            the type of Assets published by this publisher
  */
-public class RepositoryPublisher<A extends Asset> implements Publisher<A, Model> {
+public class RepositoryPublisher<A extends Asset> implements
+		Publisher<A, Model> {
 
-    private final RepositoryConfiguration configuration;
-    private final Type<A> assetType;
-    private static Logger log = LoggerFactory.getLogger(RepositoryPublisher.class);
-    private final String publishEndpoint;
-    private final DatasetGraphAccessorHTTP accessor;
+	private final RepositoryConfiguration configuration;
+	private final Type<A> assetType;
+	private static Logger log = LoggerFactory
+			.getLogger(RepositoryPublisher.class);
+	private final String publishEndpoint;
+	private final DatasetGraphAccessorHTTP accessor;
 
-    public RepositoryPublisher(Type<A> assetType, RepositoryConfiguration configuration) {
-        this.assetType = assetType;
-        this.configuration = configuration;
-        this.publishEndpoint = configuration.staging_endpoint_update().toString();
-        this.accessor = new DatasetGraphAccessorHTTP(this.configuration.staging_endpoint_data().toString());
-    }
+	public RepositoryPublisher(Type<A> assetType,
+			RepositoryConfiguration configuration) {
+		this.assetType = assetType;
+		this.configuration = configuration;
+		this.publishEndpoint = configuration.staging_endpoint_update()
+				.toString();
+		this.accessor = new DatasetGraphAccessorHTTP(this.configuration
+				.staging_endpoint_data().toString());
+	}
 
-    @Override
-    public Type<A> type() {
-        return assetType;
-    }
+	@Override
+	public Type<A> type() {
+		return assetType;
+	}
 
-    @Override
-    public Class<Model> api() {
-        return Model.class;
-    }
+	@Override
+	public Class<Model> api() {
+		return Model.class;
+	}
 
-    @Override
-    public void publish(A asset, Model rdf) throws Exception {
-        log.info("Received a asset type {} with name {} ", asset.type(), asset.name());
-        String assetVersion = rdf.getProperty(null, rdf.getProperty(pseudoNS + "version")).getString();
-        String graphId = staging_graph_ns + assetVersion + "/" + asset.name();
-        Node gNode = NodeFactory.createURI(graphId);
+	@Override
+	public void publish(A asset, Model rdf) throws Exception {
+		log.info("Received a asset type {} with name {} ", asset.type(),
+				asset.name());
+		String assetVersion = rdf.getProperty(null,
+				rdf.getProperty(pseudoNS + "version")).getString();
 
-        Graph existinG = accessor.httpGet(gNode);
-        if (existinG != null) {
-            accessor.httpDelete(gNode);
-        }
-        addModelMetadata(rdf, gNode);
-        UpdateDataInsert insert = new UpdateDataInsert(makeQuadAcc(gNode, rdf.getGraph()));
-        long time = System.currentTimeMillis();
-        UpdateExecutionFactory.createRemote(insert, publishEndpoint).execute();
-        log.info("Staged {} triples for {} in {} ms.", rdf.size(), graphId, System.currentTimeMillis() - time);
-    }
+		String graphId = staging_graph_ns + assetVersion + "/" + asset.name();
+		Node gNode = NodeFactory.createURI(graphId);
 
-    private QuadDataAcc makeQuadAcc(Node gNode, Graph graph) {
-        ExtendedIterator<Triple> allTriples = graph.find(Node.ANY, Node.ANY, Node.ANY);
-        QuadDataAcc qda = new QuadDataAcc();
-        qda.setGraph(gNode);
-        while (allTriples.hasNext()) {
-            Triple triple = allTriples.next();
-            qda.addTriple(triple);
-        }
-        return qda;
-    }
+		String datasetId = staging_dataset_ns + "/" + asset.name(); // no
+																	// version
+		Node dsNode = NodeFactory.createURI(datasetId);
 
-    private void addModelMetadata(Model model, Node gNode) {
-        XSDDateTime now = new XSDDateTime(Calendar.getInstance());
-        model.createResource(gNode.getURI()).addLiteral(DCTerms.created, model.createTypedLiteral(now));
-        model.createResource(gNode.getURI()).addProperty(DCTerms.creator, model.createResource("http://virtualrepository/plugin/sr"));
-    }
+		addGraphMetadata(asset, rdf, gNode, dsNode);
+
+		String dsMetadataId = datasetId + "/metadata";
+		Model dsMetadataModel = createDefaultModel();
+		Node gMetadata = NodeFactory.createURI(dsMetadataId);
+
+		addDatasetMetadata(asset, dsMetadataModel, gNode, dsNode);
+		
+		Graph existinG = accessor.httpGet(gNode);
+		if (existinG != null) {
+			accessor.httpDelete(gNode);
+		}
+
+		UpdateDataInsert insert = new UpdateDataInsert(makeQuadAcc(gNode,
+				rdf.getGraph()));
+		long time = System.currentTimeMillis();
+		UpdateExecutionFactory.createRemote(insert, publishEndpoint).execute();
+		log.info("Staged {} triples for {} in {} ms.", rdf.size(), graphId,
+				System.currentTimeMillis() - time);
+	}
+
+	private QuadDataAcc makeQuadAcc(Node gNode, Graph graph) {
+		ExtendedIterator<Triple> allTriples = graph.find(Node.ANY, Node.ANY,
+				Node.ANY);
+		QuadDataAcc qda = new QuadDataAcc();
+		qda.setGraph(gNode);
+		while (allTriples.hasNext()) {
+			Triple triple = allTriples.next();
+			qda.addTriple(triple);
+		}
+		return qda;
+	}
+
+	private void addGraphMetadata(Asset asset, Model model, Node gNode,
+			Node dsNode) {
+		XSDDateTime now = new XSDDateTime(Calendar.getInstance());
+		model.createResource(gNode.getURI()).addLiteral(DCTerms.created,
+				model.createTypedLiteral(now));// serve a verificare se ci sono
+												// stati cambi dall'ultima
+												// passata
+		model.createResource(gNode.getURI()).addProperty(DCTerms.isPartOf,
+				dsNode.getURI());// links graphs and dataset
+		model.createResource(gNode.getURI()).addProperty(RDFS.label,
+				asset.name());
+	}
+
+	private void addDatasetMetadata(Asset asset, Model model, Node gNode, Node dsNode) {
+    	XSDDateTime now = new XSDDateTime(Calendar.getInstance()); 
+        model.createResource(dsNode.getURI()).addLiteral(DCTerms.modified, model.createTypedLiteral(now));//note MODIFIED property
+        model.createResource(dsNode.getURI()).addProperty(DCTerms.hasPart, gNode.getURI()); // links graphs and dataset
+        model.createResource(dsNode.getURI()).addProperty(DCTerms.creator, model.createResource("http://virtualrepository/plugin/sr"));
+        model.createResource(dsNode.getURI()).addProperty(RDF.type, model.createResource("http://rdfs.org/ns/void#Dataset"));
+        model.createResource(dsNode.getURI()).addProperty(RDFS.label, asset.name());
+	}
+
 }

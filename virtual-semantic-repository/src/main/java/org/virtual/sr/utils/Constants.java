@@ -8,7 +8,8 @@ public class Constants {
     public static final String codedentity_ns = "http://www.fao.org/figis/flod/entities/";
     public static final String ownerName = "owner";
     public static final String pseudoNS = "s:r/";
-    public static final String staging_graph_ns = "http://semanticrepository/staging/graph/";
+    public static final String staging_graph_ns = "http://gradesystem.io/staging/graph/";
+    public static final String staging_dataset_ns = "http://gradesystem.io/entity/dataset/";
     
     public static final String prefixes =  
             " PREFIX rdfs:     <http://www.w3.org/2000/01/rdf-schema#> \n"
