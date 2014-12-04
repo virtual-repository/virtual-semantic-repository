@@ -18,6 +18,8 @@ import com.hp.hpl.jena.graph.Node;
 import com.hp.hpl.jena.graph.NodeFactory;
 import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.rdf.model.Model;
+import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.ResourceFactory;
 import com.hp.hpl.jena.sparql.modify.request.QuadDataAcc;
 import com.hp.hpl.jena.sparql.modify.request.UpdateDataInsert;
 import com.hp.hpl.jena.update.UpdateExecutionFactory;
@@ -43,6 +45,9 @@ public class RepositoryPublisher<A extends Asset> implements
 	private static Logger log = LoggerFactory
 			.getLogger(RepositoryPublisher.class);
 	private final String publishEndpoint;
+	private final String queryEndpoint;
+	private static final Property void_sparqlEndpoint = ResourceFactory.createProperty("http://rdfs.org/ns/void#sparqlEndpoint");
+	private static final Property void_sparqlEndpoint_write = ResourceFactory.createProperty("http://gradesystem.io/onto/void_ext.owl#sparqlEndpoint_write");
 	private final DatasetGraphAccessorHTTP accessor;
 
 	public RepositoryPublisher(Type<A> assetType,
@@ -50,6 +55,8 @@ public class RepositoryPublisher<A extends Asset> implements
 		this.assetType = assetType;
 		this.configuration = configuration;
 		this.publishEndpoint = configuration.staging_endpoint_update()
+				.toString();
+		this.queryEndpoint = configuration.staging_endpoint_query()
 				.toString();
 		this.accessor = new DatasetGraphAccessorHTTP(this.configuration
 				.staging_endpoint_data().toString());
@@ -92,12 +99,16 @@ public class RepositoryPublisher<A extends Asset> implements
 			accessor.httpDelete(gNode);
 		}
 
-		UpdateDataInsert insert = new UpdateDataInsert(makeQuadAcc(gNode,
+		UpdateDataInsert insertGraph = new UpdateDataInsert(makeQuadAcc(gNode,
 				rdf.getGraph()));
 		long time = System.currentTimeMillis();
-		UpdateExecutionFactory.createRemote(insert, publishEndpoint).execute();
+		UpdateExecutionFactory.createRemote(insertGraph, publishEndpoint).execute();
 		log.info("Staged {} triples for {} in {} ms.", rdf.size(), graphId,
 				System.currentTimeMillis() - time);
+                
+                UpdateDataInsert insertDataset = new UpdateDataInsert(makeQuadAcc(gMetadata,
+				dsMetadataModel.getGraph()));
+                UpdateExecutionFactory.createRemote(insertDataset, publishEndpoint).execute();
 	}
 
 	private QuadDataAcc makeQuadAcc(Node gNode, Graph graph) {
@@ -123,14 +134,16 @@ public class RepositoryPublisher<A extends Asset> implements
 				dsNode.getURI());// links graphs and dataset
 		model.createResource(gNode.getURI()).addProperty(RDFS.label,
 				asset.name());
+                model.createResource(gNode.getURI()).addProperty(DCTerms.creator, model.createResource("http://virtualrepository/plugin/sr"));
 	}
 
 	private void addDatasetMetadata(Asset asset, Model model, Node gNode, Node dsNode) {
     	XSDDateTime now = new XSDDateTime(Calendar.getInstance()); 
         model.createResource(dsNode.getURI()).addLiteral(DCTerms.modified, model.createTypedLiteral(now));//note MODIFIED property
         model.createResource(dsNode.getURI()).addProperty(DCTerms.hasPart, gNode.getURI()); // links graphs and dataset
-        model.createResource(dsNode.getURI()).addProperty(DCTerms.creator, model.createResource("http://virtualrepository/plugin/sr"));
         model.createResource(dsNode.getURI()).addProperty(RDF.type, model.createResource("http://rdfs.org/ns/void#Dataset"));
+        model.createResource(dsNode.getURI()).addProperty(void_sparqlEndpoint, model.createResource(queryEndpoint));
+        model.createResource(dsNode.getURI()).addProperty(void_sparqlEndpoint_write, model.createResource(publishEndpoint));
         model.createResource(dsNode.getURI()).addProperty(RDFS.label, asset.name());
 	}
 
