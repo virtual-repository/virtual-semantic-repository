@@ -82,7 +82,7 @@ public class RepositoryPublisher<A extends Asset> implements
 		String graphId = staging_graph_ns + assetVersion + "/" + asset.name();
 		Node gNode = NodeFactory.createURI(graphId);
 
-		String datasetId = staging_dataset_ns + "/" + asset.name(); // no
+		String datasetId = staging_dataset_ns + asset.name(); // no
 																	// version
 		Node dsNode = NodeFactory.createURI(datasetId);
 
