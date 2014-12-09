@@ -20,6 +20,7 @@ import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.Property;
 import com.hp.hpl.jena.rdf.model.ResourceFactory;
+import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.sparql.modify.request.QuadDataAcc;
 import com.hp.hpl.jena.sparql.modify.request.UpdateDataInsert;
 import com.hp.hpl.jena.update.UpdateExecutionFactory;
@@ -76,8 +77,10 @@ public class RepositoryPublisher<A extends Asset> implements
 	public void publish(A asset, Model rdf) throws Exception {
 		log.info("Received a asset type {} with name {} ", asset.type(),
 				asset.name());
-		String assetVersion = rdf.getProperty(null,
-				rdf.getProperty(pseudoNS + "version")).getString();
+		
+		Statement stmt = rdf.getProperty(null,rdf.getProperty(pseudoNS + "version"));
+	
+		String assetVersion = stmt ==null ? "1.0" : stmt.toString() ;
 
 		String graphId = staging_graph_ns + assetVersion + "/" + asset.name();
 		Node gNode = NodeFactory.createURI(graphId);
