@@ -10,7 +10,6 @@ import static org.fao.fi.comet.mapping.dsl.MappingElementIdentifierDSL.*;
 import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationDSL.*;
 import static org.fao.fi.comet.mapping.dsl.MatcherConfigurationPropertyDSL.*;
 import static org.sdmx.SdmxServiceFactory.*;
-import static org.virtualrepository.spi.PublishAdapter.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -18,16 +17,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;
-import java.io.StringWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Date;
 
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 import org.fao.fi.comet.mapping.model.DataProvider;
@@ -37,14 +30,8 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.sdmxsource.sdmx.api.model.beans.codelist.CodelistBean;
 import org.sdmxsource.util.io.ReadableDataLocationTmp;
-import org.virtual.sr.RepositoryConfiguration;
 import org.virtual.sr.RepositoryPlugin;
-import org.virtual.sr.RepositoryPublisher;
-import org.virtual.sr.transforms.Asset2Rdf;
 import org.virtual.sr.transforms.Comet2Xml;
-import org.virtual.sr.transforms.Csv2Xml;
-import org.virtual.sr.transforms.XmlTransform;
-import org.virtualrepository.Asset;
 import org.virtualrepository.RepositoryService;
 import org.virtualrepository.VirtualRepository;
 import org.virtualrepository.comet.CometAsset;
@@ -52,9 +39,7 @@ import org.virtualrepository.csv.CsvAsset;
 import org.virtualrepository.csv.CsvCodelist;
 import org.virtualrepository.csv.CsvTable;
 import org.virtualrepository.impl.Repository;
-import org.virtualrepository.impl.Type;
 import org.virtualrepository.sdmx.SdmxCodelist;
-import org.virtualrepository.spi.Publisher;
 import org.virtualrepository.tabular.Table;
 
 import au.com.bytecode.opencsv.CSVWriter;
@@ -107,6 +92,7 @@ public class PublishIntegrationTests {
 
     }
     
+    @Test
     public void publishAddSdmxCodelist() {
 
         InputStream micro_asfis_add = getClass().getClassLoader().getResourceAsStream("micro-asfis_add.xml");
@@ -283,10 +269,4 @@ public class PublishIntegrationTests {
 			throw new RuntimeException(e);
 		}
 	}
-	
-	//helper
-		private <A extends Asset,API> Publisher<A,API> publisherFor(Type<A> type, XmlTransform<API> transform, RepositoryConfiguration configuration) {
-			RepositoryPublisher<A> p = new RepositoryPublisher<A>(type, configuration);
-			return adapt(p,new Asset2Rdf<A,API>(transform));
-		}
 }

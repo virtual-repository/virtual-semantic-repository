@@ -80,21 +80,18 @@ public class RepositoryPublisher<A extends Asset> implements
 		
 		Statement stmt = rdf.getProperty(null,rdf.getProperty(pseudoNS + "version"));
 	
-		String assetVersion = stmt ==null ? "1.0" : stmt.toString() ;
+		String assetVersion = stmt ==null ? "1.0" : stmt.getString() ;
 
 		String graphId = staging_graph_ns + assetVersion + "/" + asset.name();
 		Node gNode = NodeFactory.createURI(graphId);
 
-		String datasetId = staging_dataset_ns + asset.name(); // no
-																	// version
+		String datasetId = staging_dataset_ns + asset.name(); // no version
 		Node dsNode = NodeFactory.createURI(datasetId);
 
 		addGraphMetadata(asset, rdf, gNode, dsNode);
 
-		String dsMetadataId = datasetId + "/metadata";
 		Model dsMetadataModel = createDefaultModel();
-		Node gMetadata = NodeFactory.createURI(dsMetadataId);
-
+		
 		addDatasetMetadata(asset, dsMetadataModel, gNode, dsNode);
 		
 		Graph existinG = accessor.httpGet(gNode);
@@ -109,7 +106,7 @@ public class RepositoryPublisher<A extends Asset> implements
 		log.info("Staged {} triples for {} in {} ms.", rdf.size(), graphId,
 				System.currentTimeMillis() - time);
                 
-                UpdateDataInsert insertDataset = new UpdateDataInsert(makeQuadAcc(gMetadata,
+                UpdateDataInsert insertDataset = new UpdateDataInsert(makeQuadAcc(gNode,
 				dsMetadataModel.getGraph()));
                 UpdateExecutionFactory.createRemote(insertDataset, publishEndpoint).execute();
 	}
