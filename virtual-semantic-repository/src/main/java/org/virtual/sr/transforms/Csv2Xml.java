@@ -1,11 +1,11 @@
 package org.virtual.sr.transforms;
 
-import static java.lang.String.*;
-
 import java.io.StringReader;
+import java.io.StringWriter;
 import java.util.List;
 
-import javax.xml.bind.JAXBException;
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamWriter;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 
@@ -16,31 +16,42 @@ import org.virtualrepository.tabular.Table;
 
 public class Csv2Xml implements XmlTransform<Table> {
 	
+	XMLOutputFactory factory = XMLOutputFactory.newInstance();
+	
 	@Override
-	public Source toXml(Table table, Asset asset) throws JAXBException {
+	public Source toXml(Table table, Asset asset) throws Exception {
 		
+		StringWriter writer = new StringWriter();
 		
-		String xtable = "";
+		XMLStreamWriter xml = factory.createXMLStreamWriter(writer);
+		
+		xml.writeStartDocument();
+		xml.writeStartElement("table");
+		
 		//write
 		List<Column> cols = table.columns();
 		
 		for (Row row : table) {
 			
-			String cells = "";
+			xml.writeStartElement("row");
 			
 			for  (Column col : cols) {
 				String val =  row.get(col);
-				if (val!=null)
-					cells = cells+ format("<%1$s>%2$s</%1$s>",col.name().toString(),val);
+				if (val!=null) {
+					xml.writeStartElement(col.name().toString());
+					xml.writeCharacters(val);
+					xml.writeEndElement();
+				}
 			}
 			
-			xtable = xtable + format("<row>%s</row>",cells);
+			xml.writeEndElement();
+			
 		}
 		
+		xml.writeEndElement();
+		xml.writeEndDocument();;
 		
-		String xml = format("<?xml version='1.0'?><table>%s</table>",xtable);
-		
-		return new StreamSource(new StringReader(xml));
+		return new StreamSource(new StringReader(writer.toString()));
 	}
 
 	@Override

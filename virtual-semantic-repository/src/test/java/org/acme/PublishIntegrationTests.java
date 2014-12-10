@@ -79,13 +79,10 @@ public class PublishIntegrationTests {
 		
 		RepositoryService service = repo.services().lookup(RepositoryPlugin.name);
 		
-		
-		String[][] data = {{"col1","col2"},{"val1","val2"}, {"val3","val4"},{"val5","val6"}};
-		
-		CsvAsset asset = new CsvCodelist("1","mycodelist",1,service);
+		CsvAsset asset = new CsvCodelist("1","intersection2",1,service);
 		asset.hasHeader(true);
 		
-		Table table = new CsvTable(asset,asStream(asset,data));
+		Table table = new CsvTable(asset,getClass().getResourceAsStream("/fsa-eez-intersection.txt"));
 		
 		
 		repo.publish(asset, table);

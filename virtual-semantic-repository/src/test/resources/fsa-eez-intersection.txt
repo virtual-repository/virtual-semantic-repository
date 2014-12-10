@@ -1,0 +1,969 @@
+fsa_name,eez,eez_label
+27.II.b,5686,Norwegian Exclusive Economic Zone
+27.2.b,5686,Norwegian Exclusive Economic Zone
+27.IV.a,5686,Norwegian Exclusive Economic Zone
+27.4.a,5686,Norwegian Exclusive Economic Zone
+27.I.a,5686,Norwegian Exclusive Economic Zone
+27.1.a,5686,Norwegian Exclusive Economic Zone
+27.I.b,5686,Norwegian Exclusive Economic Zone
+27.1.b,5686,Norwegian Exclusive Economic Zone
+27.IV.b,5686,Norwegian Exclusive Economic Zone
+27.4.b,5686,Norwegian Exclusive Economic Zone
+27.III.a,5686,Norwegian Exclusive Economic Zone
+27.3.a,5686,Norwegian Exclusive Economic Zone
+27.II.a,5686,Norwegian Exclusive Economic Zone
+27.2.a,5686,Norwegian Exclusive Economic Zone
+27.II.a.2,5686,Norwegian Exclusive Economic Zone
+27.2.a.2,5686,Norwegian Exclusive Economic Zone
+27.II.b.2,5686,Norwegian Exclusive Economic Zone
+27.2.b.2,5686,Norwegian Exclusive Economic Zone
+27.II.b.1,5686,Norwegian Exclusive Economic Zone
+27.2.b.1,5686,Norwegian Exclusive Economic Zone
+27.II.a.1,5686,Norwegian Exclusive Economic Zone
+27.2.a.1,5686,Norwegian Exclusive Economic Zone
+27.II,5686,Norwegian Exclusive Economic Zone
+27.2,5686,Norwegian Exclusive Economic Zone
+27.IV,5686,Norwegian Exclusive Economic Zone
+27.4,5686,Norwegian Exclusive Economic Zone
+27.III,5686,Norwegian Exclusive Economic Zone
+27.3,5686,Norwegian Exclusive Economic Zone
+27.I,5686,Norwegian Exclusive Economic Zone
+27.1,5686,Norwegian Exclusive Economic Zone
+27.II.b,8438,Greenlandic Exclusive Economic Zone
+27.2.b,8438,Greenlandic Exclusive Economic Zone
+27.XII.a,8438,Greenlandic Exclusive Economic Zone
+27.12.a,8438,Greenlandic Exclusive Economic Zone
+21.1.B,8438,Greenlandic Exclusive Economic Zone
+21.0.A,8438,Greenlandic Exclusive Economic Zone
+27.XIV.a,8438,Greenlandic Exclusive Economic Zone
+27.14.a,8438,Greenlandic Exclusive Economic Zone
+21.1.D,8438,Greenlandic Exclusive Economic Zone
+21.0.B,8438,Greenlandic Exclusive Economic Zone
+21.1.E,8438,Greenlandic Exclusive Economic Zone
+27.V.a,8438,Greenlandic Exclusive Economic Zone
+27.5.a,8438,Greenlandic Exclusive Economic Zone
+21.1.F,8438,Greenlandic Exclusive Economic Zone
+27.II.a,8438,Greenlandic Exclusive Economic Zone
+27.2.a,8438,Greenlandic Exclusive Economic Zone
+21.1.A,8438,Greenlandic Exclusive Economic Zone
+21.1.C,8438,Greenlandic Exclusive Economic Zone
+27.XIV.b,8438,Greenlandic Exclusive Economic Zone
+27.14.b,8438,Greenlandic Exclusive Economic Zone
+27.II.a.2,8438,Greenlandic Exclusive Economic Zone
+27.2.a.2,8438,Greenlandic Exclusive Economic Zone
+27.XII.a.3,8438,Greenlandic Exclusive Economic Zone
+27.12.a.3,8438,Greenlandic Exclusive Economic Zone
+27.II.b.2,8438,Greenlandic Exclusive Economic Zone
+27.2.b.2,8438,Greenlandic Exclusive Economic Zone
+27.V.a.2,8438,Greenlandic Exclusive Economic Zone
+27.5.a.2,8438,Greenlandic Exclusive Economic Zone
+27.XII.a.1,8438,Greenlandic Exclusive Economic Zone
+27.12.a.1,8438,Greenlandic Exclusive Economic Zone
+27.XIV.b.2,8438,Greenlandic Exclusive Economic Zone
+27.14.b.2,8438,Greenlandic Exclusive Economic Zone
+27.II,8438,Greenlandic Exclusive Economic Zone
+27.2,8438,Greenlandic Exclusive Economic Zone
+27.XII,8438,Greenlandic Exclusive Economic Zone
+27.12,8438,Greenlandic Exclusive Economic Zone
+21.0,8438,Greenlandic Exclusive Economic Zone
+27.XIV,8438,Greenlandic Exclusive Economic Zone
+27.14,8438,Greenlandic Exclusive Economic Zone
+27.V,8438,Greenlandic Exclusive Economic Zone
+27.5,8438,Greenlandic Exclusive Economic Zone
+21.1,8438,Greenlandic Exclusive Economic Zone
+27.II.b,8437,Jan Mayen Exclusive Economic Zone
+27.2.b,8437,Jan Mayen Exclusive Economic Zone
+27.XIV.a,8437,Jan Mayen Exclusive Economic Zone
+27.14.a,8437,Jan Mayen Exclusive Economic Zone
+27.II.a,8437,Jan Mayen Exclusive Economic Zone
+27.2.a,8437,Jan Mayen Exclusive Economic Zone
+27.II.a.2,8437,Jan Mayen Exclusive Economic Zone
+27.2.a.2,8437,Jan Mayen Exclusive Economic Zone
+27.II.b.2,8437,Jan Mayen Exclusive Economic Zone
+27.2.b.2,8437,Jan Mayen Exclusive Economic Zone
+27.II.b.1,8437,Jan Mayen Exclusive Economic Zone
+27.2.b.1,8437,Jan Mayen Exclusive Economic Zone
+27.II.a.1,8437,Jan Mayen Exclusive Economic Zone
+27.2.a.1,8437,Jan Mayen Exclusive Economic Zone
+27.II,8437,Jan Mayen Exclusive Economic Zone
+27.2,8437,Jan Mayen Exclusive Economic Zone
+27.XIV,8437,Jan Mayen Exclusive Economic Zone
+27.14,8437,Jan Mayen Exclusive Economic Zone
+41.1.4,8464,Brazilian Exclusive Economic Zone
+41.1.1,8464,Brazilian Exclusive Economic Zone
+41.2.2,8464,Brazilian Exclusive Economic Zone
+41.2.4,8464,Brazilian Exclusive Economic Zone
+34.4.2,8464,Brazilian Exclusive Economic Zone
+41.1.2,8464,Brazilian Exclusive Economic Zone
+41.2.1,8464,Brazilian Exclusive Economic Zone
+41.1.3,8464,Brazilian Exclusive Economic Zone
+41.2.3,8464,Brazilian Exclusive Economic Zone
+41.2,8464,Brazilian Exclusive Economic Zone
+41.1,8464,Brazilian Exclusive Economic Zone
+34.4,8464,Brazilian Exclusive Economic Zone
+34.4.1,8379,Ascension Exclusive Economic Zone
+47.A.0,8379,Ascension Exclusive Economic Zone
+47.A,8379,Ascension Exclusive Economic Zone
+34.4,8379,Ascension Exclusive Economic Zone
+34.4.1,8398,Equatorial Guinean Exclusive Economic Zone
+34.3.6,8398,Equatorial Guinean Exclusive Economic Zone
+34.3.5,8398,Equatorial Guinean Exclusive Economic Zone
+34.3.4,8398,Equatorial Guinean Exclusive Economic Zone
+34.3,8398,Equatorial Guinean Exclusive Economic Zone
+34.4,8398,Equatorial Guinean Exclusive Economic Zone
+34.1.1,8368,Western Saharan Exclusive Economic Zone
+34.3.2,8368,Western Saharan Exclusive Economic Zone
+34.1.3,8368,Western Saharan Exclusive Economic Zone
+34.3.1,8368,Western Saharan Exclusive Economic Zone
+34.1.2,8368,Western Saharan Exclusive Economic Zone
+34.1.31,8368,Western Saharan Exclusive Economic Zone
+34.3.11,8368,Western Saharan Exclusive Economic Zone
+34.1.13,8368,Western Saharan Exclusive Economic Zone
+34.1.32,8368,Western Saharan Exclusive Economic Zone
+34.3,8368,Western Saharan Exclusive Economic Zone
+34.1,8368,Western Saharan Exclusive Economic Zone
+34.2,8368,Western Saharan Exclusive Economic Zone
+51.5,8337,Seychellois Exclusive Economic Zone
+51.6,8337,Seychellois Exclusive Economic Zone
+51.6,8339,Juan de Nova Exclusive Economic Zone
+51.5,8479,Tanzanian Exclusive Economic Zone
+51.6,8479,Tanzanian Exclusive Economic Zone
+51.6,8336,Glorioso Exclusive Economic Zone
+51.5,8347,Mozambican Exclusive Economic Zone
+51.8,8347,Mozambican Exclusive Economic Zone
+51.6,8347,Mozambican Exclusive Economic Zone
+51.8,8340,Bassas da India Exclusive Economic Zone
+51.6,8340,Bassas da India Exclusive Economic Zone
+51.8,8341,Ile Europa Exclusive Economic Zone
+51.6,8341,Ile Europa Exclusive Economic Zone
+51.7,8338,R√àunion Exclusive Economic Zone
+51.6,8338,R√àunion Exclusive Economic Zone
+51.5,8334,Comoran Exclusive Economic Zone
+51.6,8334,Comoran Exclusive Economic Zone
+51.5,8343,Mauritian Exclusive Economic Zone
+51.7,8343,Mauritian Exclusive Economic Zone
+51.6,8343,Mauritian Exclusive Economic Zone
+51.6,8335,Mayotte Exclusive Economic Zone
+51.7,8342,Ile Tromelin Exclusive Economic Zone
+51.6,8342,Ile Tromelin Exclusive Economic Zone
+51.6,8348,Madagascan Exclusive Economic Zone
+34.3.3,8390,Sierra Leonian Exclusive Economic Zone
+34.3.1,8390,Sierra Leonian Exclusive Economic Zone
+34.3.13,8390,Sierra Leonian Exclusive Economic Zone
+34.3,8390,Sierra Leonian Exclusive Economic Zone
+34.3.3,8391,Liberian Exclusive Economic Zone
+34.3.4,8391,Liberian Exclusive Economic Zone
+34.3,8391,Liberian Exclusive Economic Zone
+34.3.3,8472,Guinean Exclusive Economic Zone
+34.3.1,8472,Guinean Exclusive Economic Zone
+34.3.13,8472,Guinean Exclusive Economic Zone
+34.3,8472,Guinean Exclusive Economic Zone
+34.3.3,8471,Guinea Bissau Exclusive Economic Zone
+34.3.1,8471,Guinea Bissau Exclusive Economic Zone
+34.3.13,8471,Guinea Bissau Exclusive Economic Zone
+34.3,8471,Guinea Bissau Exclusive Economic Zone
+27.IV.a,5696,United Kingdom Exclusive Economic Zone
+27.4.a,5696,United Kingdom Exclusive Economic Zone
+27.VII.d,5696,United Kingdom Exclusive Economic Zone
+27.7.d,5696,United Kingdom Exclusive Economic Zone
+27.VII.h,5696,United Kingdom Exclusive Economic Zone
+27.7.h,5696,United Kingdom Exclusive Economic Zone
+27.VI.b,5696,United Kingdom Exclusive Economic Zone
+27.6.b,5696,United Kingdom Exclusive Economic Zone
+27.VIII.d,5696,United Kingdom Exclusive Economic Zone
+27.8.d,5696,United Kingdom Exclusive Economic Zone
+27.IV.c,5696,United Kingdom Exclusive Economic Zone
+27.4.c,5696,United Kingdom Exclusive Economic Zone
+27.VII.j,5696,United Kingdom Exclusive Economic Zone
+27.7.j,5696,United Kingdom Exclusive Economic Zone
+27.IV.b,5696,United Kingdom Exclusive Economic Zone
+27.4.b,5696,United Kingdom Exclusive Economic Zone
+27.VII.e,5696,United Kingdom Exclusive Economic Zone
+27.7.e,5696,United Kingdom Exclusive Economic Zone
+27.VI.a,5696,United Kingdom Exclusive Economic Zone
+27.6.a,5696,United Kingdom Exclusive Economic Zone
+27.VII.f,5696,United Kingdom Exclusive Economic Zone
+27.7.f,5696,United Kingdom Exclusive Economic Zone
+27.VII.a,5696,United Kingdom Exclusive Economic Zone
+27.7.a,5696,United Kingdom Exclusive Economic Zone
+27.V.b,5696,United Kingdom Exclusive Economic Zone
+27.5.b,5696,United Kingdom Exclusive Economic Zone
+27.II.a,5696,United Kingdom Exclusive Economic Zone
+27.2.a,5696,United Kingdom Exclusive Economic Zone
+27.VII.g,5696,United Kingdom Exclusive Economic Zone
+27.7.g,5696,United Kingdom Exclusive Economic Zone
+27.VIII.d.1,5696,United Kingdom Exclusive Economic Zone
+27.8.d.1,5696,United Kingdom Exclusive Economic Zone
+27.II.a.2,5696,United Kingdom Exclusive Economic Zone
+27.2.a.2,5696,United Kingdom Exclusive Economic Zone
+27.VIII.d.2,5696,United Kingdom Exclusive Economic Zone
+27.8.d.2,5696,United Kingdom Exclusive Economic Zone
+27.VI.b.2,5696,United Kingdom Exclusive Economic Zone
+27.6.b.2,5696,United Kingdom Exclusive Economic Zone
+27.VI.b.1,5696,United Kingdom Exclusive Economic Zone
+27.6.b.1,5696,United Kingdom Exclusive Economic Zone
+27.V.b.2,5696,United Kingdom Exclusive Economic Zone
+27.5.b.2,5696,United Kingdom Exclusive Economic Zone
+27.VII.j.2,5696,United Kingdom Exclusive Economic Zone
+27.7.j.2,5696,United Kingdom Exclusive Economic Zone
+27.V.b.1,5696,United Kingdom Exclusive Economic Zone
+27.5.b.1,5696,United Kingdom Exclusive Economic Zone
+27.VII.j.1,5696,United Kingdom Exclusive Economic Zone
+27.7.j.1,5696,United Kingdom Exclusive Economic Zone
+27.V.b.1.b,5696,United Kingdom Exclusive Economic Zone
+27.5.b.1.b,5696,United Kingdom Exclusive Economic Zone
+27.II,5696,United Kingdom Exclusive Economic Zone
+27.2,5696,United Kingdom Exclusive Economic Zone
+27.VIII,5696,United Kingdom Exclusive Economic Zone
+27.8,5696,United Kingdom Exclusive Economic Zone
+27.IV,5696,United Kingdom Exclusive Economic Zone
+27.4,5696,United Kingdom Exclusive Economic Zone
+27.VII,5696,United Kingdom Exclusive Economic Zone
+27.7,5696,United Kingdom Exclusive Economic Zone
+27.V,5696,United Kingdom Exclusive Economic Zone
+27.5,5696,United Kingdom Exclusive Economic Zone
+27.VI,5696,United Kingdom Exclusive Economic Zone
+27.6,5696,United Kingdom Exclusive Economic Zone
+37.1.3,5677,French Exclusive Economic Zone
+27.VIII.a,5677,French Exclusive Economic Zone
+27.8.a,5677,French Exclusive Economic Zone
+27.VIII.c,5677,French Exclusive Economic Zone
+27.8.c,5677,French Exclusive Economic Zone
+27.VII.d,5677,French Exclusive Economic Zone
+27.7.d,5677,French Exclusive Economic Zone
+27.VII.h,5677,French Exclusive Economic Zone
+27.7.h,5677,French Exclusive Economic Zone
+27.VIII.b,5677,French Exclusive Economic Zone
+27.8.b,5677,French Exclusive Economic Zone
+27.VIII.d,5677,French Exclusive Economic Zone
+27.8.d,5677,French Exclusive Economic Zone
+27.IV.c,5677,French Exclusive Economic Zone
+27.4.c,5677,French Exclusive Economic Zone
+37.1.1,5677,French Exclusive Economic Zone
+27.VII.e,5677,French Exclusive Economic Zone
+27.7.e,5677,French Exclusive Economic Zone
+37.1.2,5677,French Exclusive Economic Zone
+27.VIII.d.2,5677,French Exclusive Economic Zone
+27.8.d.2,5677,French Exclusive Economic Zone
+27.VIII,5677,French Exclusive Economic Zone
+27.8,5677,French Exclusive Economic Zone
+37.1,5677,French Exclusive Economic Zone
+27.IV,5677,French Exclusive Economic Zone
+27.4,5677,French Exclusive Economic Zone
+27.VII,5677,French Exclusive Economic Zone
+27.7,5677,French Exclusive Economic Zone
+47.1.4,8395,Namibian Exclusive Economic Zone
+47.C.1,8395,Namibian Exclusive Economic Zone
+47.1.3,8395,Namibian Exclusive Economic Zone
+47.1.5,8395,Namibian Exclusive Economic Zone
+47.B.1,8395,Namibian Exclusive Economic Zone
+47.A.0,8395,Namibian Exclusive Economic Zone
+47.1.6,8395,Namibian Exclusive Economic Zone
+47.C,8395,Namibian Exclusive Economic Zone
+47.A,8395,Namibian Exclusive Economic Zone
+47.1,8395,Namibian Exclusive Economic Zone
+47.B,8395,Namibian Exclusive Economic Zone
+21.1.B,8493,Canadian Exclusive Economic Zone
+21.0.A,8493,Canadian Exclusive Economic Zone
+21.3.N,8493,Canadian Exclusive Economic Zone
+21.1.D,8493,Canadian Exclusive Economic Zone
+21.4.V,8493,Canadian Exclusive Economic Zone
+21.0.B,8493,Canadian Exclusive Economic Zone
+21.4.R,8493,Canadian Exclusive Economic Zone
+21.2.G,8493,Canadian Exclusive Economic Zone
+21.5.Y,8493,Canadian Exclusive Economic Zone
+21.4.X,8493,Canadian Exclusive Economic Zone
+21.2.H,8493,Canadian Exclusive Economic Zone
+21.3.O,8493,Canadian Exclusive Economic Zone
+21.1.E,8493,Canadian Exclusive Economic Zone
+21.4.W,8493,Canadian Exclusive Economic Zone
+21.3.L,8493,Canadian Exclusive Economic Zone
+21.5.Z,8493,Canadian Exclusive Economic Zone
+21.3.P,8493,Canadian Exclusive Economic Zone
+21.1.F,8493,Canadian Exclusive Economic Zone
+21.4.S,8493,Canadian Exclusive Economic Zone
+21.3.K,8493,Canadian Exclusive Economic Zone
+21.1.A,8493,Canadian Exclusive Economic Zone
+21.1.C,8493,Canadian Exclusive Economic Zone
+21.4.T,8493,Canadian Exclusive Economic Zone
+21.2.J,8493,Canadian Exclusive Economic Zone
+21.5.Z.e,8493,Canadian Exclusive Economic Zone
+21.3.P.s,8493,Canadian Exclusive Economic Zone
+21.3.P.n,8493,Canadian Exclusive Economic Zone
+21.5.Z.u,8493,Canadian Exclusive Economic Zone
+21.5.Z.c,8493,Canadian Exclusive Economic Zone
+21.5,8493,Canadian Exclusive Economic Zone
+21.3,8493,Canadian Exclusive Economic Zone
+21.0,8493,Canadian Exclusive Economic Zone
+21.2,8493,Canadian Exclusive Economic Zone
+21.1,8493,Canadian Exclusive Economic Zone
+21.4,8493,Canadian Exclusive Economic Zone
+21.6.D,8456,United States Exclusive Economic Zone
+21.5.Y,8456,United States Exclusive Economic Zone
+21.6.B,8456,United States Exclusive Economic Zone
+21.4.X,8456,United States Exclusive Economic Zone
+21.6.C,8456,United States Exclusive Economic Zone
+21.5.Z,8456,United States Exclusive Economic Zone
+21.6.A,8456,United States Exclusive Economic Zone
+21.5.Z.w,8456,United States Exclusive Economic Zone
+21.5.Z.e,8456,United States Exclusive Economic Zone
+21.5.Z.u,8456,United States Exclusive Economic Zone
+21.5,8456,United States Exclusive Economic Zone
+21.6,8456,United States Exclusive Economic Zone
+21.4,8456,United States Exclusive Economic Zone
+87.3.3,8465,Chilean Exclusive Economic Zone (disputed - Peruvian point of view)
+41.3,8465,Chilean Exclusive Economic Zone (disputed - Peruvian point of view)
+87.2,8465,Chilean Exclusive Economic Zone (disputed - Peruvian point of view)
+87.3,8465,Chilean Exclusive Economic Zone (disputed - Peruvian point of view)
+41.3.1,8466,Argentinean Exclusive Economic Zone
+41.3.2,8466,Argentinean Exclusive Economic Zone
+87.3.1,8466,Argentinean Exclusive Economic Zone
+41.2.3,8466,Argentinean Exclusive Economic Zone
+87.3.13,8466,Argentinean Exclusive Economic Zone
+41.3,8466,Argentinean Exclusive Economic Zone
+41.2,8466,Argentinean Exclusive Economic Zone
+87.3,8466,Argentinean Exclusive Economic Zone
+27.IX.b,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.9.b,8363,Portuguese Exclusive Economic Zone (Madeira)
+34.1.1,8363,Portuguese Exclusive Economic Zone (Madeira)
+34.1.2,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.X.a,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.10.a,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.IX.b.1,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.9.b.1,8363,Portuguese Exclusive Economic Zone (Madeira)
+34.1.12,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.X.a.1,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.10.a.1,8363,Portuguese Exclusive Economic Zone (Madeira)
+34.1.11,8363,Portuguese Exclusive Economic Zone (Madeira)
+34.1,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.X,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.10,8363,Portuguese Exclusive Economic Zone (Madeira)
+34.2,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.IX,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.9,8363,Portuguese Exclusive Economic Zone (Madeira)
+27.IX.b,5693,Spanish Exclusive Economic Zone
+27.9.b,5693,Spanish Exclusive Economic Zone
+27.VIII.c,5693,Spanish Exclusive Economic Zone
+27.8.c,5693,Spanish Exclusive Economic Zone
+34.1.1,5693,Spanish Exclusive Economic Zone
+27.VIII.b,5693,Spanish Exclusive Economic Zone
+27.8.b,5693,Spanish Exclusive Economic Zone
+27.VIII.d,5693,Spanish Exclusive Economic Zone
+27.8.d,5693,Spanish Exclusive Economic Zone
+27.IX.a,5693,Spanish Exclusive Economic Zone
+27.9.a,5693,Spanish Exclusive Economic Zone
+37.1.1,5693,Spanish Exclusive Economic Zone
+27.VIII.e,5693,Spanish Exclusive Economic Zone
+27.8.e,5693,Spanish Exclusive Economic Zone
+37.1.2,5693,Spanish Exclusive Economic Zone
+27.IX.b.2,5693,Spanish Exclusive Economic Zone
+27.9.b.2,5693,Spanish Exclusive Economic Zone
+27.VIII.e.1,5693,Spanish Exclusive Economic Zone
+27.8.e.1,5693,Spanish Exclusive Economic Zone
+27.IX.b.1,5693,Spanish Exclusive Economic Zone
+27.9.b.1,5693,Spanish Exclusive Economic Zone
+27.VIII.d.2,5693,Spanish Exclusive Economic Zone
+27.8.d.2,5693,Spanish Exclusive Economic Zone
+27.VIII.e.2,5693,Spanish Exclusive Economic Zone
+27.8.e.2,5693,Spanish Exclusive Economic Zone
+34.1.11,5693,Spanish Exclusive Economic Zone
+27.VIII,5693,Spanish Exclusive Economic Zone
+27.8,5693,Spanish Exclusive Economic Zone
+37.1,5693,Spanish Exclusive Economic Zone
+34.1,5693,Spanish Exclusive Economic Zone
+27.IX,5693,Spanish Exclusive Economic Zone
+27.9,5693,Spanish Exclusive Economic Zone
+27.IX.b,5688,Portuguese Exclusive Economic Zone
+27.9.b,5688,Portuguese Exclusive Economic Zone
+34.1.1,5688,Portuguese Exclusive Economic Zone
+27.IX.a,5688,Portuguese Exclusive Economic Zone
+27.9.a,5688,Portuguese Exclusive Economic Zone
+27.IX.b.2,5688,Portuguese Exclusive Economic Zone
+27.9.b.2,5688,Portuguese Exclusive Economic Zone
+27.IX.b.1,5688,Portuguese Exclusive Economic Zone
+27.9.b.1,5688,Portuguese Exclusive Economic Zone
+34.1.11,5688,Portuguese Exclusive Economic Zone
+34.1,5688,Portuguese Exclusive Economic Zone
+27.IX,5688,Portuguese Exclusive Economic Zone
+27.9,5688,Portuguese Exclusive Economic Zone
+27.III.d,5683,Latvian Exclusive Economic Zone
+27.3.d,5683,Latvian Exclusive Economic Zone
+27.III.d.26,5683,Latvian Exclusive Economic Zone
+27.3.d.26,5683,Latvian Exclusive Economic Zone
+27.III.d.28,5683,Latvian Exclusive Economic Zone
+27.3.d.28,5683,Latvian Exclusive Economic Zone
+27.III.d.28.1,5683,Latvian Exclusive Economic Zone
+27.3.d.28.1,5683,Latvian Exclusive Economic Zone
+27.III.d.28.2,5683,Latvian Exclusive Economic Zone
+27.3.d.28.2,5683,Latvian Exclusive Economic Zone
+27.III,5683,Latvian Exclusive Economic Zone
+27.3,5683,Latvian Exclusive Economic Zone
+27.III.d,5687,Polish Exclusive Economic Zone
+27.3.d,5687,Polish Exclusive Economic Zone
+27.III.d.25,5687,Polish Exclusive Economic Zone
+27.3.d.25,5687,Polish Exclusive Economic Zone
+27.III.d.26,5687,Polish Exclusive Economic Zone
+27.3.d.26,5687,Polish Exclusive Economic Zone
+27.III.d.24,5687,Polish Exclusive Economic Zone
+27.3.d.24,5687,Polish Exclusive Economic Zone
+27.III,5687,Polish Exclusive Economic Zone
+27.3,5687,Polish Exclusive Economic Zone
+27.I.a,5690,Russian Exclusive Economic Zone
+27.1.a,5690,Russian Exclusive Economic Zone
+27.I.b,5690,Russian Exclusive Economic Zone
+27.1.b,5690,Russian Exclusive Economic Zone
+37.4.2,5690,Russian Exclusive Economic Zone
+27.III.d,5690,Russian Exclusive Economic Zone
+27.3.d,5690,Russian Exclusive Economic Zone
+37.4.3,5690,Russian Exclusive Economic Zone
+27.III.d.32,5690,Russian Exclusive Economic Zone
+27.3.d.32,5690,Russian Exclusive Economic Zone
+27.III.d.26,5690,Russian Exclusive Economic Zone
+27.3.d.26,5690,Russian Exclusive Economic Zone
+27.III,5690,Russian Exclusive Economic Zone
+27.3,5690,Russian Exclusive Economic Zone
+37.4,5690,Russian Exclusive Economic Zone
+27.I,5690,Russian Exclusive Economic Zone
+27.1,5690,Russian Exclusive Economic Zone
+27.III.d,5676,Finnish Exclusive Economic Zone
+27.3.d,5676,Finnish Exclusive Economic Zone
+27.III.d.32,5676,Finnish Exclusive Economic Zone
+27.3.d.32,5676,Finnish Exclusive Economic Zone
+27.III.d.30,5676,Finnish Exclusive Economic Zone
+27.3.d.30,5676,Finnish Exclusive Economic Zone
+27.III.d.31,5676,Finnish Exclusive Economic Zone
+27.3.d.31,5676,Finnish Exclusive Economic Zone
+27.III.d.29,5676,Finnish Exclusive Economic Zone
+27.3.d.29,5676,Finnish Exclusive Economic Zone
+27.III,5676,Finnish Exclusive Economic Zone
+27.3,5676,Finnish Exclusive Economic Zone
+27.III.d,5684,Lithuanian Exclusive Economic Zone
+27.3.d,5684,Lithuanian Exclusive Economic Zone
+27.III.d.26,5684,Lithuanian Exclusive Economic Zone
+27.3.d.26,5684,Lithuanian Exclusive Economic Zone
+27.III,5684,Lithuanian Exclusive Economic Zone
+27.3,5684,Lithuanian Exclusive Economic Zone
+27.III.a,5694,Swedish Exclusive Economic Zone
+27.3.a,5694,Swedish Exclusive Economic Zone
+27.III.d,5694,Swedish Exclusive Economic Zone
+27.3.d,5694,Swedish Exclusive Economic Zone
+27.III.d.25,5694,Swedish Exclusive Economic Zone
+27.3.d.25,5694,Swedish Exclusive Economic Zone
+27.III.d.26,5694,Swedish Exclusive Economic Zone
+27.3.d.26,5694,Swedish Exclusive Economic Zone
+27.III.d.30,5694,Swedish Exclusive Economic Zone
+27.3.d.30,5694,Swedish Exclusive Economic Zone
+27.III.d.28,5694,Swedish Exclusive Economic Zone
+27.3.d.28,5694,Swedish Exclusive Economic Zone
+27.III.d.27,5694,Swedish Exclusive Economic Zone
+27.3.d.27,5694,Swedish Exclusive Economic Zone
+27.III.d.24,5694,Swedish Exclusive Economic Zone
+27.3.d.24,5694,Swedish Exclusive Economic Zone
+27.III.d.31,5694,Swedish Exclusive Economic Zone
+27.3.d.31,5694,Swedish Exclusive Economic Zone
+27.III.d.29,5694,Swedish Exclusive Economic Zone
+27.3.d.29,5694,Swedish Exclusive Economic Zone
+27.III.d.28.2,5694,Swedish Exclusive Economic Zone
+27.3.d.28.2,5694,Swedish Exclusive Economic Zone
+27.III,5694,Swedish Exclusive Economic Zone
+27.3,5694,Swedish Exclusive Economic Zone
+27.III.d,5675,Estonian Exclusive Economic Zone
+27.3.d,5675,Estonian Exclusive Economic Zone
+27.III.d.32,5675,Estonian Exclusive Economic Zone
+27.3.d.32,5675,Estonian Exclusive Economic Zone
+27.III.d.28,5675,Estonian Exclusive Economic Zone
+27.3.d.28,5675,Estonian Exclusive Economic Zone
+27.III.d.29,5675,Estonian Exclusive Economic Zone
+27.3.d.29,5675,Estonian Exclusive Economic Zone
+27.III.d.28.1,5675,Estonian Exclusive Economic Zone
+27.3.d.28.1,5675,Estonian Exclusive Economic Zone
+27.III.d.28.2,5675,Estonian Exclusive Economic Zone
+27.3.d.28.2,5675,Estonian Exclusive Economic Zone
+27.III,5675,Estonian Exclusive Economic Zone
+27.3,5675,Estonian Exclusive Economic Zone
+27.IV.c,5669,German Exclusive Economic Zone
+27.4.c,5669,German Exclusive Economic Zone
+27.IV.b,5669,German Exclusive Economic Zone
+27.4.b,5669,German Exclusive Economic Zone
+27.III.d,5669,German Exclusive Economic Zone
+27.3.d,5669,German Exclusive Economic Zone
+27.III.d.24,5669,German Exclusive Economic Zone
+27.3.d.24,5669,German Exclusive Economic Zone
+27.IV,5669,German Exclusive Economic Zone
+27.4,5669,German Exclusive Economic Zone
+27.III,5669,German Exclusive Economic Zone
+27.3,5669,German Exclusive Economic Zone
+27.IV.b,5674,Danish Exclusive Economic Zone
+27.4.b,5674,Danish Exclusive Economic Zone
+27.III.a,5674,Danish Exclusive Economic Zone
+27.3.a,5674,Danish Exclusive Economic Zone
+27.III.d,5674,Danish Exclusive Economic Zone
+27.3.d,5674,Danish Exclusive Economic Zone
+27.III.d.25,5674,Danish Exclusive Economic Zone
+27.3.d.25,5674,Danish Exclusive Economic Zone
+27.III.d.24,5674,Danish Exclusive Economic Zone
+27.3.d.24,5674,Danish Exclusive Economic Zone
+27.IV,5674,Danish Exclusive Economic Zone
+27.4,5674,Danish Exclusive Economic Zone
+27.III,5674,Danish Exclusive Economic Zone
+27.3,5674,Danish Exclusive Economic Zone
+87.1.4,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.2.2,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.1.1,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.1.2,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.2.6,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.1.15,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.1.23,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.2.11,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.1.24,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.1.13,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.1.14,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.1.12,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.1.22,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.1.25,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.2.21,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.2,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+87.1,8432,Peruvian Exclusive Economic Zone (disputed - Peruvian point of view)
+37.4.1,5697,Turkish Exclusive Economic Zone
+37.4.2,5697,Turkish Exclusive Economic Zone
+37.3.2,5697,Turkish Exclusive Economic Zone
+37.3.1,5697,Turkish Exclusive Economic Zone
+37.3,5697,Turkish Exclusive Economic Zone
+37.4,5697,Turkish Exclusive Economic Zone
+41.1.4,8381,Brazilian Exclusive Economic Zone (Trindade)
+41.2.4,8381,Brazilian Exclusive Economic Zone (Trindade)
+41.2,8381,Brazilian Exclusive Economic Zone (Trindade)
+41.1,8381,Brazilian Exclusive Economic Zone (Trindade)
+47.C.1,8396,South African Exclusive Economic Zone
+47.2.1,8396,South African Exclusive Economic Zone
+47.C.0,8396,South African Exclusive Economic Zone
+47.1.5,8396,South African Exclusive Economic Zone
+47.2.2,8396,South African Exclusive Economic Zone
+47.1.6,8396,South African Exclusive Economic Zone
+47.C,8396,South African Exclusive Economic Zone
+51.8,8396,South African Exclusive Economic Zone
+47.2,8396,South African Exclusive Economic Zone
+47.1,8396,South African Exclusive Economic Zone
+51.3,8352,Djiboutian Exclusive Economic Zone
+58.4.4,8384,South African Exclusive Economic Zone (Prince Edward Islands)
+58.4.4.a,8384,South African Exclusive Economic Zone (Prince Edward Islands)
+51.7,8384,South African Exclusive Economic Zone (Prince Edward Islands)
+51.8,8384,South African Exclusive Economic Zone (Prince Edward Islands)
+58.6,8384,South African Exclusive Economic Zone (Prince Edward Islands)
+58.4,8384,South African Exclusive Economic Zone (Prince Edward Islands)
+58.7,8384,South African Exclusive Economic Zone (Prince Edward Islands)
+21.4.V,8494,Saint-Pierre and Miquelon Exclusive Economic Zone
+21.3.P,8494,Saint-Pierre and Miquelon Exclusive Economic Zone
+21.3.P.s,8494,Saint-Pierre and Miquelon Exclusive Economic Zone
+21.3,8494,Saint-Pierre and Miquelon Exclusive Economic Zone
+21.4,8494,Saint-Pierre and Miquelon Exclusive Economic Zone
+34.3.6,8397,Sao Tome and Principe Exclusive Economic Zone
+34.3.5,8397,Sao Tome and Principe Exclusive Economic Zone
+34.3,8397,Sao Tome and Principe Exclusive Economic Zone
+37.1.3,21790,Mon√àgasque Exclusive Economic Zone
+37.1.2,21790,Mon√àgasque Exclusive Economic Zone
+37.1,21790,Mon√àgasque Exclusive Economic Zone
+37.1.3,5682,Italian Exclusive Economic Zone
+37.2.1,5682,Italian Exclusive Economic Zone
+37.1.1,5682,Italian Exclusive Economic Zone
+37.2.2,5682,Italian Exclusive Economic Zone
+37.1.2,5682,Italian Exclusive Economic Zone
+37.1,5682,Italian Exclusive Economic Zone
+37.2,5682,Italian Exclusive Economic Zone
+37.1.3,8366,Tunisian Exclusive Economic Zone
+37.1.1,8366,Tunisian Exclusive Economic Zone
+37.2.2,8366,Tunisian Exclusive Economic Zone
+37.1,8366,Tunisian Exclusive Economic Zone
+37.2,8366,Tunisian Exclusive Economic Zone
+34.1.1,8367,Moroccan Exclusive Economic Zone
+37.1.1,8367,Moroccan Exclusive Economic Zone
+34.1.12,8367,Moroccan Exclusive Economic Zone
+34.1.13,8367,Moroccan Exclusive Economic Zone
+34.1.11,8367,Moroccan Exclusive Economic Zone
+37.1,8367,Moroccan Exclusive Economic Zone
+34.1,8367,Moroccan Exclusive Economic Zone
+37.1.3,8378,Algerian Exclusive Economic Zone
+37.1.1,8378,Algerian Exclusive Economic Zone
+37.1,8378,Algerian Exclusive Economic Zone
+37.1.1,8365,Gibraltarian Exclusive Economic Zone
+37.1,8365,Gibraltarian Exclusive Economic Zone
+57.5.1,8492,Indonesian Exclusive Economic Zone
+57.2,8492,Indonesian Exclusive Economic Zone
+57.5,8492,Indonesian Exclusive Economic Zone
+57.1,8492,Indonesian Exclusive Economic Zone
+57.5.1,8323,Australian Exclusive Economic Zone
+57.5.2,8323,Australian Exclusive Economic Zone
+57.6,8323,Australian Exclusive Economic Zone
+57.3,8323,Australian Exclusive Economic Zone
+57.5,8323,Australian Exclusive Economic Zone
+57.4,8323,Australian Exclusive Economic Zone
+57.5.1,21791,Oecussi Ambeno Exclusive Economic Zone
+57.5,21791,Oecussi Ambeno Exclusive Economic Zone
+57.5.1,8758,East Timor Exclusive Economic Zone
+57.5,8758,East Timor Exclusive Economic Zone
+21.6.D,8402,Bermudian Exclusive Economic Zone
+21.6.E,8402,Bermudian Exclusive Economic Zone
+21.6,8402,Bermudian Exclusive Economic Zone
+58.5.2,8388,Heard and McDonald Islands Exclusive Economic Zone
+58.4.3,8388,Heard and McDonald Islands Exclusive Economic Zone
+58.4.3.b,8388,Heard and McDonald Islands Exclusive Economic Zone
+58.4.3.a,8388,Heard and McDonald Islands Exclusive Economic Zone
+58.5,8388,Heard and McDonald Islands Exclusive Economic Zone
+58.4,8388,Heard and McDonald Islands Exclusive Economic Zone
+37.2.2,5685,Maltese Exclusive Economic Zone
+37.2,5685,Maltese Exclusive Economic Zone
+57.2,8308,Cocos Islands Exclusive Economic Zone
+57.3,8308,Cocos Islands Exclusive Economic Zone
+57.2,8346,Sri Lankan Exclusive Economic Zone
+57.1,8346,Sri Lankan Exclusive Economic Zone
+57.2,8333,Indian Exclusive Economic Zone (Andaman and Nicobar Islands)
+57.1,8333,Indian Exclusive Economic Zone (Andaman and Nicobar Islands)
+57.2,8309,Christmas Island Exclusive Economic Zone
+51.5,8350,Somali Exclusive Economic Zone
+51.3,8350,Somali Exclusive Economic Zone
+58.5.1,8387,Kerguelen Islands Exclusive Economic Zone
+58.5.2,8387,Kerguelen Islands Exclusive Economic Zone
+58.5,8387,Kerguelen Islands Exclusive Economic Zone
+51.4,8480,Indian Exclusive Economic Zone
+57.1,8480,Indian Exclusive Economic Zone
+51.7,8386,Amsterdam Island & St. Paul Island Exclusive Economic Zone
+57.4,8386,Amsterdam Island & St. Paul Island Exclusive Economic Zone
+51.4,8345,Maldives Exclusive Economic Zone
+57.1,8345,Maldives Exclusive Economic Zone
+57.1,8332,Thailand Exclusive Economic Zone
+57.1,8483,Malaysian Exclusive Economic Zone
+57.1,8482,Myanmar Exclusive Economic Zone
+57.1,8481,Bangladeshi Exclusive Economic Zone
+37.3.2,8375,Israeli Exclusive Economic Zone
+37.3,8375,Israeli Exclusive Economic Zone
+51.1,8375,Israeli Exclusive Economic Zone
+34.3.4,8400,Ghanaian Exclusive Economic Zone
+34.3,8400,Ghanaian Exclusive Economic Zone
+27.XII.a,5680,Icelandic Exclusive Economic Zone
+27.12.a,5680,Icelandic Exclusive Economic Zone
+27.XIV.a,5680,Icelandic Exclusive Economic Zone
+27.14.a,5680,Icelandic Exclusive Economic Zone
+27.XII.b,5680,Icelandic Exclusive Economic Zone
+27.12.b,5680,Icelandic Exclusive Economic Zone
+27.V.a,5680,Icelandic Exclusive Economic Zone
+27.5.a,5680,Icelandic Exclusive Economic Zone
+27.V.b,5680,Icelandic Exclusive Economic Zone
+27.5.b,5680,Icelandic Exclusive Economic Zone
+27.II.a,5680,Icelandic Exclusive Economic Zone
+27.2.a,5680,Icelandic Exclusive Economic Zone
+27.XIV.b,5680,Icelandic Exclusive Economic Zone
+27.14.b,5680,Icelandic Exclusive Economic Zone
+27.XII.a.4,5680,Icelandic Exclusive Economic Zone
+27.12.a.4,5680,Icelandic Exclusive Economic Zone
+27.XIV.b.1,5680,Icelandic Exclusive Economic Zone
+27.14.b.1,5680,Icelandic Exclusive Economic Zone
+27.II.a.2,5680,Icelandic Exclusive Economic Zone
+27.2.a.2,5680,Icelandic Exclusive Economic Zone
+27.V.a.2,5680,Icelandic Exclusive Economic Zone
+27.5.a.2,5680,Icelandic Exclusive Economic Zone
+27.XII.a.1,5680,Icelandic Exclusive Economic Zone
+27.12.a.1,5680,Icelandic Exclusive Economic Zone
+27.XIV.b.2,5680,Icelandic Exclusive Economic Zone
+27.14.b.2,5680,Icelandic Exclusive Economic Zone
+27.V.b.1,5680,Icelandic Exclusive Economic Zone
+27.5.b.1,5680,Icelandic Exclusive Economic Zone
+27.V.a.1,5680,Icelandic Exclusive Economic Zone
+27.5.a.1,5680,Icelandic Exclusive Economic Zone
+27.II.a.1,5680,Icelandic Exclusive Economic Zone
+27.2.a.1,5680,Icelandic Exclusive Economic Zone
+27.XII.a.2,5680,Icelandic Exclusive Economic Zone
+27.12.a.2,5680,Icelandic Exclusive Economic Zone
+27.V.b.1.b,5680,Icelandic Exclusive Economic Zone
+27.5.b.1.b,5680,Icelandic Exclusive Economic Zone
+27.II,5680,Icelandic Exclusive Economic Zone
+27.2,5680,Icelandic Exclusive Economic Zone
+27.XII,5680,Icelandic Exclusive Economic Zone
+27.12,5680,Icelandic Exclusive Economic Zone
+27.XIV,5680,Icelandic Exclusive Economic Zone
+27.14,5680,Icelandic Exclusive Economic Zone
+27.V,5680,Icelandic Exclusive Economic Zone
+27.5,5680,Icelandic Exclusive Economic Zone
+27.IV.c,3293,Belgian Exclusive Economic Zone
+27.4.c,3293,Belgian Exclusive Economic Zone
+27.IV,3293,Belgian Exclusive Economic Zone
+27.4,3293,Belgian Exclusive Economic Zone
+27.VII.e,21789,Jersey Exclusive Economic Zone
+27.7.e,21789,Jersey Exclusive Economic Zone
+27.VII,21789,Jersey Exclusive Economic Zone
+27.7,21789,Jersey Exclusive Economic Zone
+27.VII.e,21788,Guernsey Exclusive Economic Zone
+27.7.e,21788,Guernsey Exclusive Economic Zone
+27.VII,21788,Guernsey Exclusive Economic Zone
+27.7,21788,Guernsey Exclusive Economic Zone
+27.IV.c,5668,Dutch Exclusive Economic Zone
+27.4.c,5668,Dutch Exclusive Economic Zone
+27.IV.b,5668,Dutch Exclusive Economic Zone
+27.4.b,5668,Dutch Exclusive Economic Zone
+27.IV,5668,Dutch Exclusive Economic Zone
+27.4,5668,Dutch Exclusive Economic Zone
+27.X.a,8361,Portuguese Exclusive Economic Zone (Azores)
+27.10.a,8361,Portuguese Exclusive Economic Zone (Azores)
+27.X.b,8361,Portuguese Exclusive Economic Zone (Azores)
+27.10.b,8361,Portuguese Exclusive Economic Zone (Azores)
+27.X.a.2,8361,Portuguese Exclusive Economic Zone (Azores)
+27.10.a.2,8361,Portuguese Exclusive Economic Zone (Azores)
+27.X.a.1,8361,Portuguese Exclusive Economic Zone (Azores)
+27.10.a.1,8361,Portuguese Exclusive Economic Zone (Azores)
+27.X,8361,Portuguese Exclusive Economic Zone (Azores)
+27.10,8361,Portuguese Exclusive Economic Zone (Azores)
+34.2,8361,Portuguese Exclusive Economic Zone (Azores)
+27.IV.a,8435,Faeroe Islands Exclusive Economic Zone
+27.4.a,8435,Faeroe Islands Exclusive Economic Zone
+27.V.a,8435,Faeroe Islands Exclusive Economic Zone
+27.5.a,8435,Faeroe Islands Exclusive Economic Zone
+27.VI.a,8435,Faeroe Islands Exclusive Economic Zone
+27.6.a,8435,Faeroe Islands Exclusive Economic Zone
+27.V.b,8435,Faeroe Islands Exclusive Economic Zone
+27.5.b,8435,Faeroe Islands Exclusive Economic Zone
+27.II.a,8435,Faeroe Islands Exclusive Economic Zone
+27.2.a,8435,Faeroe Islands Exclusive Economic Zone
+27.II.a.2,8435,Faeroe Islands Exclusive Economic Zone
+27.2.a.2,8435,Faeroe Islands Exclusive Economic Zone
+27.V.a.2,8435,Faeroe Islands Exclusive Economic Zone
+27.5.a.2,8435,Faeroe Islands Exclusive Economic Zone
+27.V.b.2,8435,Faeroe Islands Exclusive Economic Zone
+27.5.b.2,8435,Faeroe Islands Exclusive Economic Zone
+27.V.b.1,8435,Faeroe Islands Exclusive Economic Zone
+27.5.b.1,8435,Faeroe Islands Exclusive Economic Zone
+27.II.a.1,8435,Faeroe Islands Exclusive Economic Zone
+27.2.a.1,8435,Faeroe Islands Exclusive Economic Zone
+27.V.b.1.b,8435,Faeroe Islands Exclusive Economic Zone
+27.5.b.1.b,8435,Faeroe Islands Exclusive Economic Zone
+27.II,8435,Faeroe Islands Exclusive Economic Zone
+27.2,8435,Faeroe Islands Exclusive Economic Zone
+27.IV,8435,Faeroe Islands Exclusive Economic Zone
+27.4,8435,Faeroe Islands Exclusive Economic Zone
+27.V,8435,Faeroe Islands Exclusive Economic Zone
+27.5,8435,Faeroe Islands Exclusive Economic Zone
+27.VI,8435,Faeroe Islands Exclusive Economic Zone
+27.6,8435,Faeroe Islands Exclusive Economic Zone
+27.VII.h,5681,Irish Exclusive Economic Zone
+27.7.h,5681,Irish Exclusive Economic Zone
+27.VI.b,5681,Irish Exclusive Economic Zone
+27.6.b,5681,Irish Exclusive Economic Zone
+27.VII.j,5681,Irish Exclusive Economic Zone
+27.7.j,5681,Irish Exclusive Economic Zone
+27.VII.k,5681,Irish Exclusive Economic Zone
+27.7.k,5681,Irish Exclusive Economic Zone
+27.VII.b,5681,Irish Exclusive Economic Zone
+27.7.b,5681,Irish Exclusive Economic Zone
+27.VII.c,5681,Irish Exclusive Economic Zone
+27.7.c,5681,Irish Exclusive Economic Zone
+27.VI.a,5681,Irish Exclusive Economic Zone
+27.6.a,5681,Irish Exclusive Economic Zone
+27.VII.a,5681,Irish Exclusive Economic Zone
+27.7.a,5681,Irish Exclusive Economic Zone
+27.VII.g,5681,Irish Exclusive Economic Zone
+27.7.g,5681,Irish Exclusive Economic Zone
+27.VII.c.2,5681,Irish Exclusive Economic Zone
+27.7.c.2,5681,Irish Exclusive Economic Zone
+27.VI.b.2,5681,Irish Exclusive Economic Zone
+27.6.b.2,5681,Irish Exclusive Economic Zone
+27.VI.b.1,5681,Irish Exclusive Economic Zone
+27.6.b.1,5681,Irish Exclusive Economic Zone
+27.VII.k.1,5681,Irish Exclusive Economic Zone
+27.7.k.1,5681,Irish Exclusive Economic Zone
+27.VII.j.2,5681,Irish Exclusive Economic Zone
+27.7.j.2,5681,Irish Exclusive Economic Zone
+27.VII.k.2,5681,Irish Exclusive Economic Zone
+27.7.k.2,5681,Irish Exclusive Economic Zone
+27.VII.c.1,5681,Irish Exclusive Economic Zone
+27.7.c.1,5681,Irish Exclusive Economic Zone
+27.VII,5681,Irish Exclusive Economic Zone
+27.7,5681,Irish Exclusive Economic Zone
+27.VI,5681,Irish Exclusive Economic Zone
+27.6,5681,Irish Exclusive Economic Zone
+37.3.2,8374,Lebanese Exclusive Economic Zone
+37.3,8374,Lebanese Exclusive Economic Zone
+34.3.2,8362,Cape Verdean Exclusive Economic Zone
+34.3.1,8362,Cape Verdean Exclusive Economic Zone
+34.3.12,8362,Cape Verdean Exclusive Economic Zone
+34.3.11,8362,Cape Verdean Exclusive Economic Zone
+34.3,8362,Cape Verdean Exclusive Economic Zone
+34.2,8362,Cape Verdean Exclusive Economic Zone
+34.3.2,8369,Mauritanian Exclusive Economic Zone
+34.1.3,8369,Mauritanian Exclusive Economic Zone
+34.3.1,8369,Mauritanian Exclusive Economic Zone
+34.3.11,8369,Mauritanian Exclusive Economic Zone
+34.1.32,8369,Mauritanian Exclusive Economic Zone
+34.3,8369,Mauritanian Exclusive Economic Zone
+34.1,8369,Mauritanian Exclusive Economic Zone
+34.3.2,8370,Gambian Exclusive Economic Zone
+34.3.1,8370,Gambian Exclusive Economic Zone
+34.3.12,8370,Gambian Exclusive Economic Zone
+34.3,8370,Gambian Exclusive Economic Zone
+34.3.2,8371,Senegalese Exclusive Economic Zone
+34.3.1,8371,Senegalese Exclusive Economic Zone
+34.3.12,8371,Senegalese Exclusive Economic Zone
+34.3.13,8371,Senegalese Exclusive Economic Zone
+34.3.11,8371,Senegalese Exclusive Economic Zone
+34.3,8371,Senegalese Exclusive Economic Zone
+37.2.1,5691,Montenegrin Exclusive Economic Zone
+37.2.2,5691,Montenegrin Exclusive Economic Zone
+37.2,5691,Montenegrin Exclusive Economic Zone
+87.1.4,8403,Ecuadorean Exclusive Economic Zone (Galapagos)
+87.1.3,8403,Ecuadorean Exclusive Economic Zone (Galapagos)
+87.1,8403,Ecuadorean Exclusive Economic Zone (Galapagos)
+41.2.2,8467,Uruguayan Exclusive Economic Zone
+41.2.3,8467,Uruguayan Exclusive Economic Zone
+41.2,8467,Uruguayan Exclusive Economic Zone
+87.1.4,8424,Costa Rican Exclusive Economic Zone
+87.1,8424,Costa Rican Exclusive Economic Zone
+34.1.1,8364,Spanish Exclusive Economic Zone (Canary Islands)
+34.1.3,8364,Spanish Exclusive Economic Zone (Canary Islands)
+34.1.2,8364,Spanish Exclusive Economic Zone (Canary Islands)
+34.1.12,8364,Spanish Exclusive Economic Zone (Canary Islands)
+34.1.31,8364,Spanish Exclusive Economic Zone (Canary Islands)
+34.1.13,8364,Spanish Exclusive Economic Zone (Canary Islands)
+34.1,8364,Spanish Exclusive Economic Zone (Canary Islands)
+34.2,8364,Spanish Exclusive Economic Zone (Canary Islands)
+37.4.2,5678,Georgian Exclusive Economic Zone
+37.4,5678,Georgian Exclusive Economic Zone
+37.4.2,5689,Romanian Exclusive Economic Zone
+37.4,5689,Romanian Exclusive Economic Zone
+37.4.2,5695,Ukrainian Exclusive Economic Zone
+37.4.3,5695,Ukrainian Exclusive Economic Zone
+37.4,5695,Ukrainian Exclusive Economic Zone
+37.4.2,5672,Bulgarian Exclusive Economic Zone
+37.4,5672,Bulgarian Exclusive Economic Zone
+51.3,8469,Iranian Exclusive Economic Zone
+51.2,8469,Iranian Exclusive Economic Zone
+51.4,8469,Iranian Exclusive Economic Zone
+47.C.0,8382,Tristan Da Cunha Exclusive Economic Zone
+47.D.0,8382,Tristan Da Cunha Exclusive Economic Zone
+47.C,8382,Tristan Da Cunha Exclusive Economic Zone
+47.D,8382,Tristan Da Cunha Exclusive Economic Zone
+87.1.4,8426,Colombian Exclusive Economic Zone
+87.1.1,8426,Colombian Exclusive Economic Zone
+87.1.2,8426,Colombian Exclusive Economic Zone
+87.1.21,8426,Colombian Exclusive Economic Zone
+87.1.11,8426,Colombian Exclusive Economic Zone
+87.1,8426,Colombian Exclusive Economic Zone
+87.1.4,8423,Panamanian Exclusive Economic Zone
+87.1.1,8423,Panamanian Exclusive Economic Zone
+87.1.2,8423,Panamanian Exclusive Economic Zone
+87.1.21,8423,Panamanian Exclusive Economic Zone
+87.1.11,8423,Panamanian Exclusive Economic Zone
+87.1,8423,Panamanian Exclusive Economic Zone
+87.1.4,8431,Ecuadorean Exclusive Economic Zone
+87.1.1,8431,Ecuadorean Exclusive Economic Zone
+87.1.2,8431,Ecuadorean Exclusive Economic Zone
+87.1.21,8431,Ecuadorean Exclusive Economic Zone
+87.1.11,8431,Ecuadorean Exclusive Economic Zone
+87.1.12,8431,Ecuadorean Exclusive Economic Zone
+87.1.22,8431,Ecuadorean Exclusive Economic Zone
+87.1,8431,Ecuadorean Exclusive Economic Zone
+51.2,8470,Iraqi Exclusive Economic Zone
+51.3,8360,United Arab Emirates Exclusive Economic Zone
+51.2,8360,United Arab Emirates Exclusive Economic Zone
+37.2.1,5673,Croatian Exclusive Economic Zone
+37.2.2,5673,Croatian Exclusive Economic Zone
+37.2,5673,Croatian Exclusive Economic Zone
+37.2.1,22491,Bosnian and Herzegovinian Exclusive Economic Zone
+37.2,22491,Bosnian and Herzegovinian Exclusive Economic Zone
+37.2.1,5670,Albanian Exclusive Economic Zone
+37.2.2,5670,Albanian Exclusive Economic Zone
+37.2,5670,Albanian Exclusive Economic Zone
+37.2.1,5692,Slovenian Exclusive Economic Zone
+37.2,5692,Slovenian Exclusive Economic Zone
+41.1.1,8462,French Guiana Exclusive Economic Zone
+41.1,8462,French Guiana Exclusive Economic Zone
+71.6.1,8318,Marshall Islands Exclusive Economic Zone
+71.6.2,8318,Marshall Islands Exclusive Economic Zone
+87.2.5,21787,Chilean Exclusive Economic Zone (Easter Island)
+87.2.6,21787,Chilean Exclusive Economic Zone (Easter Island)
+87.2,21787,Chilean Exclusive Economic Zone (Easter Island)
+34.3.6,8476,Gabonese Exclusive Economic Zone
+47.A.0,8476,Gabonese Exclusive Economic Zone
+34.3.5,8476,Gabonese Exclusive Economic Zone
+47.1.1,8476,Gabonese Exclusive Economic Zone
+34.3,8476,Gabonese Exclusive Economic Zone
+47.A,8476,Gabonese Exclusive Economic Zone
+47.1,8476,Gabonese Exclusive Economic Zone
+47.A.1,8380,St. Helena Exclusive Economic Zone
+47.A.0,8380,St. Helena Exclusive Economic Zone
+47.A,8380,St. Helena Exclusive Economic Zone
+51.4,8359,Pakistani Exclusive Economic Zone
+34.3.6,8477,Democratic Republic of the Congo Exclusive Economic Zone
+47.1.1,8477,Democratic Republic of the Congo Exclusive Economic Zone
+34.3,8477,Democratic Republic of the Congo Exclusive Economic Zone
+47.1,8477,Democratic Republic of the Congo Exclusive Economic Zone
+34.3.6,8394,Congolese Exclusive Economic Zone
+47.1.1,8394,Congolese Exclusive Economic Zone
+34.3,8394,Congolese Exclusive Economic Zone
+47.1,8394,Congolese Exclusive Economic Zone
+47.1.3,8478,Angolan Exclusive Economic Zone
+34.3.6,8478,Angolan Exclusive Economic Zone
+47.A.0,8478,Angolan Exclusive Economic Zone
+47.1.1,8478,Angolan Exclusive Economic Zone
+47.1.2,8478,Angolan Exclusive Economic Zone
+34.3,8478,Angolan Exclusive Economic Zone
+47.A,8478,Angolan Exclusive Economic Zone
+47.1,8478,Angolan Exclusive Economic Zone
+51.5,8353,Yemeni Exclusive Economic Zone
+51.3,8353,Yemeni Exclusive Economic Zone
+51.1,8353,Yemeni Exclusive Economic Zone
+51.7,8344,British Indian Ocean Territory Exclusive Economic Zone
+51.4,8344,British Indian Ocean Territory Exclusive Economic Zone
+51.7,8385,Crozet Islands Exclusive Economic Zone
+58.6,8385,Crozet Islands Exclusive Economic Zone
+51.1,8491,Jordanian Exclusive Economic Zone
+51.1,8355,Sudanese Exclusive Economic Zone
+37.3.2,8490,Egyptian Exclusive Economic Zone
+37.3,8490,Egyptian Exclusive Economic Zone
+51.1,8490,Egyptian Exclusive Economic Zone
+51.3,8351,Eritrean Exclusive Economic Zone
+51.1,8351,Eritrean Exclusive Economic Zone
+51.2,8356,Saudi Arabian Exclusive Economic Zone
+51.1,8356,Saudi Arabian Exclusive Economic Zone
+37.2.2,5679,Greek Exclusive Economic Zone
+37.3.2,5679,Greek Exclusive Economic Zone
+37.3.1,5679,Greek Exclusive Economic Zone
+37.3,5679,Greek Exclusive Economic Zone
+37.2,5679,Greek Exclusive Economic Zone
+34.3.4,8393,Beninese Exclusive Economic Zone
+34.3,8393,Beninese Exclusive Economic Zone
+41.3.1,8389,Falkland Islands Exclusive Economic Zone
+41.3.2,8389,Falkland Islands Exclusive Economic Zone
+41.3,8389,Falkland Islands Exclusive Economic Zone
+34.3.4,8473,Ivory Coast Exclusive Economic Zone
+34.3,8473,Ivory Coast Exclusive Economic Zone
+37.3.2,8373,Syrian Exclusive Economic Zone
+37.3,8373,Syrian Exclusive Economic Zone
+37.3.2,8376,Cypriote Exclusive Economic Zone
+37.3,8376,Cypriote Exclusive Economic Zone
+37.2.2,8372,Libyan Exclusive Economic Zone
+37.3.2,8372,Libyan Exclusive Economic Zone
+37.3,8372,Libyan Exclusive Economic Zone
+37.2,8372,Libyan Exclusive Economic Zone
+48.4,8383,South Georgian Exclusive Economic Zone
+48.2,8383,South Georgian Exclusive Economic Zone
+48.6,8383,South Georgian Exclusive Economic Zone
+48.3,8383,South Georgian Exclusive Economic Zone
+51.5,8349,Kenyan Exclusive Economic Zone
+51.2,8468,Qatari Exclusive Economic Zone
+51.2,8357,Kuwaiti Exclusive Economic Zone
+51.3,8354,Omani Exclusive Economic Zone
+51.2,8354,Omani Exclusive Economic Zone
+51.4,8354,Omani Exclusive Economic Zone
+51.2,8358,Bahraini Exclusive Economic Zone
+71.6.1,8316,Micronesian Exclusive Economic Zone
+71.6.2,8316,Micronesian Exclusive Economic Zone
+34.3.5,8475,Cameroonian Exclusive Economic Zone
+34.3,8475,Cameroonian Exclusive Economic Zone
+34.3.5,8474,Nigerian Exclusive Economic Zone
+34.3.4,8474,Nigerian Exclusive Economic Zone
+34.3,8474,Nigerian Exclusive Economic Zone
+71.6.1,8320,Northern Mariana Islands and Guam Exclusive Economic Zone
+71.6.1,8487,Japanese Exclusive Economic Zone
+71.6.1,8315,Palau Exclusive Economic Zone
+48.6,8399,Bouvet Island Exclusive Economic Zone
+71.6.2,8319,Wake Island Exclusive Economic Zone
+34.3.4,8392,Togolese Exclusive Economic Zone
+34.3,8392,Togolese Exclusive Economic Zone
+71.6.2,8488,Kiribati Exclusive Economic Zone
