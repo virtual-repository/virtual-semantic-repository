@@ -4,7 +4,7 @@
 	<groupId>org.virtualrepository</groupId>
 	<artifactId>virtual-semantic-repository</artifactId>
 	
-	<version>1.1.0-SNAPSHOT</version>
+	<version>1.2.0-SNAPSHOT</version>
 	<name>Virtual Semantic Repository</name>
 	<description>A Virtual Repository Plugin for the Semantic Repository	</description>
 
@@ -38,8 +38,14 @@
 			<artifactId>virtual-repository</artifactId>
 			<version>[1.0.0-SNAPSHOT,2.0.0-SNAPSHOT)</version>
 		</dependency>
-                
-                <dependency>
+		
+		<dependency>
+			<groupId>org.virtualrepository</groupId>
+			<artifactId>virtual-gis-ext</artifactId>
+			<version>[1.0.0-SNAPSHOT,2.0.0-SNAPSHOT)</version>
+		</dependency>
+
+		<dependency>
                     <groupId>org.slf4j</groupId>
                     <artifactId>log4j-over-slf4j</artifactId>
                     <version>1.7.2</version>
