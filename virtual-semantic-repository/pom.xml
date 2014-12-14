@@ -13,6 +13,17 @@
 	</properties>
 
 	<repositories>
+	    <repository>
+      <id>gcube-snapshots</id>
+      <name>gCube Snapshots</name>
+      <url>http://maven.research-infrastructures.eu/nexus/content/repositories/gcube-snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
 		<repository>
 			<snapshots />
 			<id>fips-snapshots</id>
@@ -140,22 +151,8 @@
 					</execution>
 				</executions>
 			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.8</version>
-				<executions>
-					<execution>
-						<id>generate-doc</id>
-						<phase>install</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
+			
+			</plugins>
 
 	</build>
 

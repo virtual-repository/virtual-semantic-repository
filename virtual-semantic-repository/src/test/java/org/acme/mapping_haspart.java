@@ -5,30 +5,32 @@
  */
 package org.acme;
 
+import static org.fao.fi.comet.mapping.dsl.DataProviderDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingDetailDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingElementDSL.*;
+import static org.fao.fi.comet.mapping.dsl.MappingElementIdentifierDSL.*;
+import static org.fao.fi.comet.mapping.model.utils.jaxb.JAXB2DOMUtils.*;
+
+import java.net.URI;
+import java.util.Date;
+
+import org.apache.jena.web.DatasetGraphAccessorHTTP;
+import org.fao.fi.comet.mapping.model.Mapping;
+import org.fao.fi.comet.mapping.model.MappingData;
+import org.fao.fi.comet.mapping.model.MappingElement;
+import org.virtual.sr.RepositoryPlugin;
+import org.virtualrepository.RepositoryService;
+import org.virtualrepository.VirtualRepository;
+import org.virtualrepository.comet.CometAsset;
+import org.virtualrepository.impl.Repository;
+
 import com.hp.hpl.jena.graph.Graph;
 import com.hp.hpl.jena.graph.Node;
 import com.hp.hpl.jena.graph.NodeFactory;
 import com.hp.hpl.jena.graph.Triple;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import com.hp.hpl.jena.vocabulary.DCTerms;
-import java.net.URI;
-import java.util.Date;
-import org.apache.jena.web.DatasetGraphAccessorHTTP;
-import static org.fao.fi.comet.mapping.dsl.DataProviderDSL.provider;
-import static org.fao.fi.comet.mapping.dsl.MappingDSL.map;
-import static org.fao.fi.comet.mapping.dsl.MappingDetailDSL.target;
-import static org.fao.fi.comet.mapping.dsl.MappingElementDSL.wrap;
-import static org.fao.fi.comet.mapping.dsl.MappingElementIdentifierDSL.identifierFor;
-import org.fao.fi.comet.mapping.model.Mapping;
-import org.fao.fi.comet.mapping.model.MappingData;
-import org.fao.fi.comet.mapping.model.MappingElement;
-import static org.fao.fi.comet.mapping.model.utils.jaxb.JAXB2DOMUtils.asElement;
-import org.virtual.sr.RepositoryPlugin;
-import org.virtual.sr.vocabularies.SKOS_CORE;
-import org.virtualrepository.RepositoryService;
-import org.virtualrepository.VirtualRepository;
-import org.virtualrepository.comet.CometAsset;
-import org.virtualrepository.impl.Repository;
 
 /**
  *

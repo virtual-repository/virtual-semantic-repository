@@ -20,7 +20,6 @@ import org.virtualrepository.RepositoryService;
 import org.virtualrepository.comet.CometAsset;
 import org.virtualrepository.spi.Transform;
 
-import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.NodeIterator;
 import com.hp.hpl.jena.rdf.model.ResIterator;
@@ -82,14 +81,14 @@ public class Rdf2CometMapping implements Transform<CometAsset, Model, CodelistBe
                 Resource subjectEntity = subjectEntities.next();
                 NodeIterator labels = m.listObjectsOfProperty(subjectEntity, SKOS_CORE.prefLabel);
                 while (labels.hasNext()) {
-                    Literal label = labels.next().asLiteral();
+//                    Literal label = labels.next().asLiteral();
 //                    code.addName(label.getLanguage(), label.getLexicalForm());
                 }
             }
 
             NodeIterator definitions = m.listObjectsOfProperty(code_resource, SKOS_CORE.definition);
             while (definitions.hasNext()) {
-                Literal def = definitions.next().asLiteral();
+//                Literal def = definitions.next().asLiteral();
 //                code.addDescription(def.getLanguage(), def.getLexicalForm());
             }
 
@@ -108,12 +107,5 @@ public class Rdf2CometMapping implements Transform<CometAsset, Model, CodelistBe
     @Override
     public Class<CodelistBean> outputAPI() {
         return CodelistBean.class;
-    }
-
-    //helpers
-    private String adaptId(String id) {
-
-        //TODO add to this simple adaptation
-        return id.replace(".", "_");
     }
 }
