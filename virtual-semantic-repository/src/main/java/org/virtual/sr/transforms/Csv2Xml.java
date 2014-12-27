@@ -60,7 +60,7 @@ public class Csv2Xml implements XmlTransform<Table> {
 	}
 
 	@Override
-	public String type() {
+	public String name() {
 		return "csv";
 	}
 }

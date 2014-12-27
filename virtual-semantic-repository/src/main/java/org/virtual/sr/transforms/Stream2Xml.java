@@ -8,7 +8,7 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.virtualrepository.Asset;
 
-public class GeoFeatureStream2Xml implements XmlTransform<InputStream> {
+public class Stream2Xml implements XmlTransform<InputStream> {
 	
 	@Override
 	public Source toXml(InputStream stream, Asset asset) throws JAXBException {
@@ -22,7 +22,7 @@ public class GeoFeatureStream2Xml implements XmlTransform<InputStream> {
 	}
 
 	@Override
-	public String type() {
-		return "geofeature stream";
+	public String name() {
+		return "xml stream";
 	}
 }

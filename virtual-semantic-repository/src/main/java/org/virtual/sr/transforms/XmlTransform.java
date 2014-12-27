@@ -31,5 +31,5 @@ public interface XmlTransform<T> {
 	 * Returns a name for the transformed type.
 	 * @return the name
 	 */
-	String type();
+	String name();
 }

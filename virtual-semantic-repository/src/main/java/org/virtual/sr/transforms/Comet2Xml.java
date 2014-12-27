@@ -47,7 +47,7 @@ public class Comet2Xml implements XmlTransform<MappingData> {
 	}
 
 	@Override
-	public String type() {
+	public String name() {
 		return "mapping";
 	}
 }

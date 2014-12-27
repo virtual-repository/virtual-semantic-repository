@@ -51,7 +51,7 @@ public class PublishIntegrationTests {
 
         System.setProperty("org.slf4j.simpleLogger.log.org.virtual.sr ", "trace");
     }
-
+    
     @Test
     public void publishBaseSdmxCodelist() {
 
